@@ -20,10 +20,10 @@
         - Soft hands 
         - Good working knowledge of Tupac’s back collection 
     </view>
-    <view class="job_post_time">
-      <view>Job posted on:</view>
-      <view class="desc">Jobs appear up to 30 days from date of posting</view>
-    </view>
-    <button class="apply">Apply Now</button>
   </view>
+  <view class="job_post_time">
+    <view>Job posted on:</view>
+    <view class="desc">Jobs appear up to 30 days from date of posting</view>
+  </view>
+  <button class="apply">Apply Now</button>
 </view>
