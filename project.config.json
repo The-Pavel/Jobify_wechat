@@ -47,7 +47,8 @@
 				{
 					"id": -1,
 					"name": "saved job",
-					"pathName": "pages/savedjob/savedjob"
+					"pathName": "pages/savedjob/savedjob",
+					"query": ""
 				}
 			]
 		}
