@@ -36,3 +36,16 @@ textarea {
   padding-left: 30rpx;
   padding-right: 30rpx;  
 }
+
+.container1{
+  /* justify-content: center; */
+  text-align: justify;
+  justify-content: space-between;
+  display: flex-inline;
+}
+
+
+#buttonstyle{
+ margin: 0 auto;
+ background-color: white;
+}

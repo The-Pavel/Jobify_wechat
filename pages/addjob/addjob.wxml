@@ -18,6 +18,9 @@
         <textarea auto-focus="true" placeholder="Company Name" name="nickName" auto-height />
       </view>
       <view class="textarea-wrp">
+        <textarea placeholder="Location" name="location" auto-height />
+      </view>  
+      <view class="textarea-wrp">
         <textarea placeholder="email@email.com" name="email" auto-height />
       </view>
       <view class="textarea-wrp">
@@ -47,9 +50,11 @@
            
     <view class="page-section">
       <view class="page-section-title">3. What are you looking for?</view>
-  <picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected" >
-    <button class="picker">{{array[index]}}</button>
-</picker>
+      <view class = "container1">
+      <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
+      {{arrayitem}}
+      </button>
+      </view>
     </view>
     
     <view class="btn-area">
