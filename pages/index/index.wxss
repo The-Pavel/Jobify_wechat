@@ -80,6 +80,6 @@ image {
 
 .number {
   height: 240rpx;
-  width: 60rpx
+  width: 60rpx;
   font-size: 30rpx;
 }
