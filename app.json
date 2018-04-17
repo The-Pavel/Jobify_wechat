@@ -5,10 +5,12 @@
     "pages/job/job"
 
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+"window": {
+  "navigationBarBackgroundColor": "#8FBAF3",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "Jobify",
+  "backgroundColor": "#8FBAF3",
+  "selectedColor": "#8FBAF3",
+  "backgroundTextStyle": "light"
+}
 }

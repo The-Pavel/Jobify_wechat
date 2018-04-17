@@ -17,6 +17,7 @@ page {
 button{
   margin-top: 20rpx;
   margin-bottom: 20rpx;
+  background-color: #F2FCFC;
 }
 
 .h1 {
@@ -24,6 +25,7 @@ button{
   font-weight:800;
   font-size: 38rpx;
   text-align: center;
+  color: #02337D;
 }
 
 .h3 {
