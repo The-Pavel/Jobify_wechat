@@ -33,9 +33,11 @@
 			"list": [
 				{
 					"id": -1,
+
 					"name": "add job",
 					"pathName": "pages/addjob/addjob",
 					"scene": "1001"
+
 				}
 			]
 		}

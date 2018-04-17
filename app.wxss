@@ -8,3 +8,47 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+page {
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+button{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.h1 {
+  font-family: Quicksand; 
+  font-weight:800;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+.h3 {
+  font-weight:bold;
+  font-size: 30rpx; 
+  font-family: Quicksand; 
+}
+
+.desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  font-weight: lighter;
+}
+
+.page-section-title{
+  font-size: 28rpx;
+  color: black;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.page-section-gap .page-section-title{
+  padding-left: 0;
+  padding-right: 0;
+}
