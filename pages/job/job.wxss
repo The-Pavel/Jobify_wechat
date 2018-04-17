@@ -1,1 +1,28 @@
 /* pages/job/job.wxss */
+.company_info {
+  text-align: center;
+  padding: 50rpx 50rpx 0rpx 50rpx;
+}
+.job_logo {
+  width: 100rpx;
+  height: 100rpx;
+}
+.company_title {
+  padding: 30rpx 0rpx 30rpx 0rpx;
+  font-weight: bold;
+}
+.job_info {
+  margin: 50rpx 50rpx 50rpx 50rpx;
+  align-items: center;
+}
+.job_title{
+  padding: 0rpx 0rpx 30rpx 0rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.job_type {
+  margin: 0rpx 0rpx 30rpx 0rpx;
+}
+.job_post_time {
+  padding: 30rpx 0rpx 30rpx 0rpx;
+}

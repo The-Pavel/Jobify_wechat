@@ -1,2 +1,27 @@
 <!--pages/job/job.wxml-->
-<text>pages/job/job.wxml</text>
+  <view class="company_info">
+    <image class="job_logo" src="/image/logo.png"/>
+    <view class="company_title">
+      DEUCE BIGALOW & CO
+    </view>
+    <view class="tagline">
+      20 years of pimping. Join the best in the     business. You’re in safe hands. 
+    </view>
+  </view>
+
+  <view class="job_info">
+    <view class="job_title">MALE GIGOLO</view>
+    <button class="job_type">Full-time</button>
+    <view class="job_descritiopn">
+        - 5 foot 5 maximum 
+        - Dark brown hair preferred 
+        - Funny as fuck 
+        - Soft hands 
+        - Good working knowledge of Tupac’s back collection 
+    </view>
+    <view class="job_post_time">
+      <view>Job posted on:</view>
+      <view class="30-day">Jobs appear up to 30 days from date of posting</view>
+    </view>
+    <button class="job_type">Apply Now</button>
+  </view>
