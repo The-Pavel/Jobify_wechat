@@ -12,6 +12,25 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  postjob: function (e) {
+    wx.navigateTo({
+      url:`/pages/addjob/addjob`,
+    })
+  },
+
+  savedjobs: function (e) {
+    wx.navigateTo({
+      url: `/pages/savedjob/savedjob`,
+    })
+  },
+
+  newjobs: function (e) {
+    wx.navigateTo({
+      url: `/pages/job/job`,
+    })
+  },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this

@@ -13,7 +13,7 @@
 
 <!-- Post job card  -->
 <view class="row1container">
-  <view class="card">  
+  <view class="card" bindtap="postjob">  
      <view class="number">  </view>
     <!-- PULL THE NUMBER OF JOBS POSTED IF ANY -->
   <view> Jobs Posted </view>
@@ -34,7 +34,7 @@
 
 <!-- Saved Jobs Card  -->
 <view class="row2container">
-  <view class="card2">  
+  <view class="card2" bindtap="savedjobs">  
     <!-- PULL THE NUMBER OF SAVED JOBS IF ANY -->
     <view class="number">   </view>
     <view class="card-category1"> SAVED JOBS </view>
@@ -46,7 +46,7 @@
 <!-- New Jobs Card  -->
 
   <view class="card">  
-    <image src="/images/new_job.svg" style="width: 150rpx; height: 150rpx;"></image>
+    <image src="/images/new_job.svg" style="width: 150rpx; height: 150rpx;" bindtap="newjobs" ></image>
     <view class="card-category2"> NEW JOBS </view>
     <!--NEED TO LINK THE ABOVE TO NEW JOBS CARDS -->
     <!-- NEED TO GREY OUT/NOT CLICKABLE IF THERE ARE NO NEW JOBS  -->
