@@ -40,7 +40,7 @@
     </view> 
            
     <view class="page-section">
-      <view class="page-section-title">3. Who are you looking for?</view>
+      <view class="page-section-title">3. What are you looking for?</view>
  <checkbox-group name="offer">
         <view class="checkbox">
           <checkbox value="full-time" checked="true"/>Full time position
