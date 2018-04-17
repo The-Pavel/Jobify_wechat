@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -48,6 +48,18 @@
 					"id": -1,
 					"name": "saved job",
 					"pathName": "pages/savedjob/savedjob",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "questions",
+					"pathName": "pages/quiz/quiz",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "job_lookup",
+					"pathName": "pages/job/job",
 					"query": ""
 				}
 			]

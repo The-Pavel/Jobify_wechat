@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/addjob/addjob",
     "pages/job/job",
-    "pages/savedjob/savedjob"
+    "pages/savedjob/savedjob",
+    "pages/quiz/quiz",
+    "pages/userscore/userscore"
 
   ],
 "window": {

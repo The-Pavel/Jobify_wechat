@@ -1,4 +1,4 @@
-// pages/job/job.js
+// pages/userscore/userscore.js
 Page({
 
   /**
@@ -16,17 +16,8 @@ Page({
     const user = wx.getStorageSync('user')
     wx.request({
       url: `http://localhost:3000/api/v1/users/${user.id}`,
-      success: function (res) {
-        console.log(res.data.tag_list)
-        page.setData({ user_tags: res.data.tag_list })
-      }
-    })
-    wx.request({
-      url: `http://localhost:3000/api/v1/jobs`,
-      method: 'PUT',
-      data: {user_id: user.id},
-      success: function (res) {
-        console.log(res)
+      success: function(res) {
+        page.setData({tags: res.data.tag_list})
       }
     })
   },
