@@ -12,7 +12,6 @@
 page {
   font-size: 32rpx;
   line-height: 1.6;
-  font-family: Roboto, Pass Through;
 }
 
 button{
@@ -21,13 +20,24 @@ button{
 }
 
 .h1 {
+  font-family: Quicksand; 
   font-weight:800;
   font-size: 38rpx;
+  text-align: center;
 }
 
 .h3 {
   font-weight:bold;
   font-size: 30rpx; 
+  font-family: Quicksand; 
+}
+
+.desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  font-weight: lighter;
 }
 
 .page-section-title{
