@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/addjob/addjob",
     "pages/job/job"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
