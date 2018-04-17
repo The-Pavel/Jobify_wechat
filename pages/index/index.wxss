@@ -8,7 +8,7 @@
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
+  margin: 50rpx;
   border-radius: 50%;
 }
 
@@ -18,4 +18,68 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+/*Additional CSS  */
+.container {
+  width:100%;
+  height:200px;
+  padding: 0;
+}
+
+image {
+  margin: 60rpx 0px 20rpx 0px;
+} 
+
+.card {
+  width: 320rpx;
+  height: 320rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  font-family: Roboto;
+  font-style: Bold;background-size: cover !important;
+  background-position: center;
+  color: #0245A3;
+  position: relative;
+  background-color: #8FBAF3;
+  margin-left:20px;
+  margin-bottom: 20px;
+  opacity: 40%;
+  padding: 0px 0px 0px 0px;
+}
+
+.row1container {
+  display: flex;
+}
+
+.row2container {
+  display: flex;
+}
+
+.card2 {
+  width: 320rpx;
+  height: 320rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  font-family: Roboto;
+  font-style: Bold;background-size: cover !important;
+  background-position: center;
+  color: #0245A3;
+  position: relative;
+  background-color: #F2FCFC;
+  margin-left:20px;
+  margin-bottom: 20px;
+  padding: 0px 0px 0px 0px;
+}
+
+.card-category{
+  padding: 10px 0px 0px 20px;
+}
+
+.number {
+  height: 240rpx;
+  width: 60rpx
+  font-size: 30rpx;
 }

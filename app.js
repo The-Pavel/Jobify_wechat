@@ -5,13 +5,32 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+  },
+  getUserInfo: function (cb) {
+    var that = this
+    if (this.globalData.userInfo) {
+      typeof cb == "function" && cb(this.globalData.userInfo)
+    } else {
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+      wx.login({
+        success: function () {
+          wx.getUserInfo({
+            success: function (res) {
+              that.globalData.userInfo = res.userInfo
+              typeof cb == "function" && cb(that.globalData.userInfo)
+            }
+          })
+        }
+      })
+    }
+  },
+  globalData: {
+    userInfo: null
+  }
+})
     // 获取用户信息
     wx.getSetting({
       success: res => {
