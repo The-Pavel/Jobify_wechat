@@ -1,0 +1,18 @@
+/* pages/savedjob/savedjob.wxss */
+.saved_job_card {
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  display: inline-flex;
+  width: 100%;
+  border-top: 2rpx solid #BDBDBD;
+  border-bottom: 2rpx solid #BDBDBD;
+}
+.job_title, .company_name {
+  text-align: left;
+  width: 600rpx;
+}
+.job_logo {
+  width: 100rpx;
+  height: 100rpx;
+  justify-content: center;
+  padding: 15rpx 15rpx 15rpx 15rpx;
+}

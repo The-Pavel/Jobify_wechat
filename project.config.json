@@ -29,15 +29,25 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
-
 					"name": "add job",
 					"pathName": "pages/addjob/addjob",
+					"query": "",
 					"scene": "1001"
-
+				},
+				{
+					"id": -1,
+					"name": "job",
+					"pathName": "pages/job/job",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "saved job",
+					"pathName": "pages/savedjob/savedjob"
 				}
 			]
 		}

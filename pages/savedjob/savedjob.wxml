@@ -1,0 +1,8 @@
+<!--pages/savedjob/savedjob.wxml-->
+<view class="saved_job_card">
+  <view class="job_info">
+    <view class="h1 job_title">Job Title</view>
+    <view class="h1 company_name">Company Name</view>
+  </view>
+  <image class="job_logo" src="/image/logo.png"/>
+</view>
