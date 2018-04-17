@@ -1,13 +1,55 @@
 <!--index.wxml-->
+
+<!--profile picture  -->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+<!-- Post job card  -->
+<view class="row1container">
+  <view class="card">  
+     <view class="number">  </view>
+    <!-- PULL THE NUMBER OF JOBS POSTED IF ANY -->
+  <view> Jobs Posted </view>
+    <view class="card-category1"> POST JOB </view>
+    <!--NEED TO LINK THE ABOVE TO THE POST JOBS FORM  -->
+  </view>
+
+
+ <!-- Quiz card  -->
+
+<view class="card2">  
+    <image src="/images/quiz.svg" style="width: 150rpx; height: 150rpx;" />
+    <view class="card-category2"> <view class="h2"> TAKE QUIZ</view> </view>
+<!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
+  </view>  
+  
+</view> 
+
+<!-- Saved Jobs Card  -->
+<view class="row2container">
+  <view class="card2">  
+    <!-- PULL THE NUMBER OF SAVED JOBS IF ANY -->
+    <view class="number">   </view>
+    <view class="card-category1"> SAVED JOBS </view>
+    <!--NEED TO LINK THE ABOVE TO SAVED JOBS LIST -->
+    <!-- NEED TO GREY OUT/NOT CLICKABLE IF THERE ARE NO SAVED JOBS  -->
+  </view>
+
+
+<!-- New Jobs Card  -->
+
+  <view class="card">  
+    <image src="/images/new_job.svg" style="width: 150rpx; height: 150rpx;"></image>
+    <view class="card-category2"> NEW JOBS </view>
+    <!--NEED TO LINK THE ABOVE TO NEW JOBS CARDS -->
+    <!-- NEED TO GREY OUT/NOT CLICKABLE IF THERE ARE NO NEW JOBS  -->
+  </view>
+</view>
+
