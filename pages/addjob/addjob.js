@@ -33,9 +33,11 @@ Page({
   },
 
 
-  bindSubmit: function (e) {
+  bindFormSubmit: function (e) {
     //collect data from form
     let new_job = e.detail.value
+    console.log(e.detail.value)
+    console.log(this.data.tag_list)
 
     wx.request({
       //url: 'http://jobify.wogengapp.cn/api/v1/jobs/',
@@ -54,15 +56,16 @@ Page({
     })
 
     // relaunch at index
-    wx.reLaunch({
-      url: '/pages/index/index'
-    })
+    // wx.reLaunch({
+    //   url: '/pages/index/index'
+    // })
 
 
   },
   checkboxChange: function (e) {
+    const page = this
     var checked = e.detail.value
-    console.log(e)
+    // console.log(e)
     var changed = {}
     for (var i = 0; i < this.data.checkboxItems.length; i++) {
       if (checked.indexOf(this.data.checkboxItems[i].name) !== -1) {
@@ -72,6 +75,8 @@ Page({
       }
     }
     this.setData(changed)
+    page.setData({tag_list: checked})
+    console.log(page.data.tag_list)
   },
   /**
    * 生命周期函数--监听页面加载
