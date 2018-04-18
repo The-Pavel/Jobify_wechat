@@ -27,3 +27,5 @@
   </view>
   <button class="apply">Apply Now</button>
 </view>
+
+<button data-id='{{jobs[0].id}}' bindtap='saveJob'>Save {{jobs[0].title}}</button>

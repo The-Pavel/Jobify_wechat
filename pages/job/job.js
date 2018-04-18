@@ -17,7 +17,7 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/users/${user.id}`,
       success: function (res) {
-        console.log(res.data.tag_list)
+        console.log(res.data)
         page.setData({ user_tags: res.data.tag_list })
       }
     })
@@ -27,7 +27,24 @@ Page({
       method: 'PUT',
       data: data,
       success: function (res) {
-        console.log(res)
+        page.setData(res.data)
+      }
+    })
+  },
+
+  saveJob: function(e) {
+    const job = e.currentTarget.dataset.id
+    const page = this
+    const user = wx.getStorageSync('user')
+    let data = {job_id: job, user_id: user.id}
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${user.id}`,
+      method: 'PUT',
+      data: data,
+      success: function (res) {
+        wx.reLaunch({
+          url: '/pages/job/job',
+        })
       }
     })
   },
