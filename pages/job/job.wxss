@@ -1,4 +1,7 @@
 /* pages/job/job.wxss */
+swiper {
+   height: 2000rpx !important; 
+}
 .job_card {
   margin: 50rpx 50rpx 50rpx 50rpx;
   border: 2rpx solid #BDBDBD;

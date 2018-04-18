@@ -1,29 +1,31 @@
 <!--pages/job/job.wxml-->
-<view class="job_card">
-  <view class="company_info">
-    <image class="job_logo" src="/image/logo.png"/>
-    <view class="h1">
-      DEUCE BIGALOW & CO
-    </view>
-    <view class="desc">
-      20 years of pimping. Join the best in the     business. You’re in safe hands. 
-    </view>
-  </view>
+  <swiper bindchange="changeswiper">
+  <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}"> 
+    <swiper-item class="swipe"> 
+      <view class="job_card">
+        <view class="company_info">
+          <image class="job_logo" src="/image/logo.png"/>
+          <view class="h1">
+            {{job.company}}
+          </view>
+          <view class="desc">
+            company description 
+          </view>
+        </view>
+        <view class="job_info">
+          <view class="h1">{{job.title}}</view>
+          <button class="job_type">job-type</button>
+          <view class="desc">
+              job-description
+          </view>
+        </view>
+        <view class="job_post_time">
+          <view>Job posted on:</view>
+          <view class="desc">Jobs appear up to 30 days from date of posting</view>
+        </view>
+        <button class="apply">Apply Now</button>
+      </view>
+     </swiper-item>
+  </block>
+</swiper> 
 
-  <view class="job_info">
-    <view class="h1">MALE GIGOLO</view>
-    <button class="job_type">Full-time</button>
-    <view class="desc">
-        - 5 foot 5 maximum 
-        - Dark brown hair preferred 
-        - Funny as fuck 
-        - Soft hands 
-        - Good working knowledge of Tupac’s back collection 
-    </view>
-  </view>
-  <view class="job_post_time">
-    <view>Job posted on:</view>
-    <view class="desc">Jobs appear up to 30 days from date of posting</view>
-  </view>
-  <button class="apply">Apply Now</button>
-</view>

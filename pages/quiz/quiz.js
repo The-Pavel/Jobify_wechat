@@ -17,13 +17,15 @@ Page({
   onLoad: function (options) {
     const page = this
     const user = wx.getStorageSync('user')
+    let data = { user_id: user.id, id: user.id }
     wx.request({
-      url: 'http://localhost:3000/api/v1/questions/',
-      success(res) {
-        console.log(res)
-        page.setData({ questions: res.data.questions.slice((user.last_question_id - 1), user.last_question_id + 4)})
-
-    }})
+      url: `http://localhost:3000/api/v1/questions`,
+      method: 'PUT',
+      data: data,
+      success: function (res) {
+        page.setData(res.data)
+      }
+    })
   },
 
   switch1Change: function (e) {
