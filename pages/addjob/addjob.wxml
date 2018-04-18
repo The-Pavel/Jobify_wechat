@@ -18,6 +18,9 @@
         <textarea auto-focus="true" placeholder="Company Name" name="nickName" auto-height />
       </view>
       <view class="textarea-wrp">
+        <textarea placeholder="Location" name="location" auto-height />
+      </view>  
+      <view class="textarea-wrp">
         <textarea placeholder="email@email.com" name="email" auto-height />
       </view>
       <view class="textarea-wrp">
@@ -25,36 +28,33 @@
       </view>
       <view class="textarea-wrp">
         <textarea placeholder="wechat" name="wechat" auto-height />
-      </view>              
+      </view>  
+      <view class="textarea-wrp">
+        <textarea placeholder="upload picture" name="upload_logo" auto-height />
+      </view>            
     </view>
 
     <view class="page-section">
       <view class="page-section-title">2. Your offer</view>
-       <view class="textarea-wrp">
+        <view class="textarea-wrp">
         <textarea placeholder="Job title" name="title" auto-height />
-      </view> 
+        </view> 
       <text class="page-section-details">Describe the job, pitch or product; technologies involved...</text>
       <view class="textarea-wrp">
       <textarea style="height: 12em" placeholder="Job Description" name="description" maxlength="-1" />
-      </view>   
+      </view>  
+      <button>
+        <textarea placeholder="upload pdf" name="upload" auto-height />
+      </button>  
     </view> 
            
     <view class="page-section">
       <view class="page-section-title">3. What are you looking for?</view>
- <checkbox-group name="offer">
-        <view class="checkbox">
-          <checkbox value="full-time" checked="true"/>Full time position
-        </view>
-        <view class="checkbox">
-          <checkbox value="part-time"/>Part time hire
-        </view>
-        <view class="checkbox">
-          <checkbox value="freelance"/>Freelance work
-        </view>
-        <view class="checkbox">
-          <checkbox value="partnership"/>Partnership!
-        </view>
-      </checkbox-group>   
+      <view class = "container1">
+      <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
+      {{arrayitem}}
+      </button>
+      </view>
     </view>
     
     <view class="btn-area">
@@ -69,3 +69,18 @@
 
 </form>
 </view>
+
+ <!-- <checkbox-group name="offer">
+        <view class="checkbox">
+          <checkbox value="full-time" checked="true"/>Full time position
+        </view>
+        <view class="checkbox">
+          <checkbox value="part-time"/>Part time hire
+        </view>
+        <view class="checkbox">
+          <checkbox value="freelance"/>Freelance work
+        </view>
+        <view class="checkbox">
+          <checkbox value="partnership"/>Partnership!
+        </view>
+      </checkbox-group>    -->
