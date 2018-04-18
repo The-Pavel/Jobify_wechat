@@ -31,9 +31,9 @@ scroll-view {
   height: 30rpx;
   margin-left: 100rpx;
   margin-right: 100rpx;
-  border-top: 2rpx solid #BDBDBD;
+  /* border-top: 2rpx solid #BDBDBD;
   border-right: 2rpx solid #BDBDBD;
-  border-left: 2rpx solid #BDBDBD;
+  border-left: 2rpx solid #BDBDBD; */
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
   background-color: #8FBAF3;
