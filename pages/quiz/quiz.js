@@ -21,7 +21,7 @@ Page({
       url: 'http://localhost:3000/api/v1/questions/',
       success(res) {
         console.log(res)
-        page.setData({ questions: res.data.questions.slice((user.last_question_id - 1), user.last_question_id + 4)})
+        page.setData({ questions: res.data.questions.slice((user.last_question_id), user.last_question_id + 5)})
 
     }})
   },
