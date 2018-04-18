@@ -37,11 +37,8 @@ textarea {
   padding-right: 30rpx;  
 }
 
-.container1{
-  /* justify-content: center; */
-  text-align: justify;
-  justify-content: space-between;
-  display: flex-inline;
+.group {
+  display: inline-flex;
 }
 
 
@@ -49,3 +46,52 @@ textarea {
  margin: 0 auto;
  background-color: white;
 }
+
+
+.label-1{
+    margin: 10rpx 10rpx;
+    width: 180rpx;
+
+}
+.label-1__text{
+    /* display: inline-block; */
+    position: absolute;
+    top: 10rpx;
+    bottom: 10rpx;
+    left: 5rpx;
+    right: 5rpx;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 30rpx;
+    
+    /* vertical-align: middle; */
+}
+
+.label-1__icon {
+    position: relative;
+    margin-right: 20rpx;
+     /* display: inline-block;  */
+    vertical-align: middle;
+    width: 180rpx;
+    height: 50rpx;
+    background: white;
+    border: 2px solid #8FBAF3;
+    border-radius: 12px;
+}
+
+.label-1__icon-checked {
+    position: absolute;
+    width: 180rpx;
+    height: 50rpx;
+    background: #8FBAF3;
+    border-radius: 8px;
+}
+
+#container1{  
+  display: flex;  
+  flex-wrap: wrap; 
+  height: 80%;
+  justify-content: center;
+  margin: 0 20rpx;
+}  
+

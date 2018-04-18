@@ -5,30 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['outgoing',
-'aggressive',
-'assertive',
-'sociable',
-'extraverted',
-'distant',
-'non- conflicting',
-'reserved',
-'loyal',
-'introverted',
-'talkative',
-'empathetic',
-'light- hearted',
-'agreeable',
-'warm- hearted',
-'collaborative',
-'independent',
-'stubborn',
-'direct',
-'unemotional',
-'responsible',
-'conscientious',
-'structure- freak',
-'perfectionist']
+    checkboxItems: [
+      { name: "outgoing", value: 'outgoing'},
+      { name: 'aggressive', value: 'aggressive'},
+      { name: 'assertive', value:'assertive'},
+      { name: 'sociable', value:'sociable'},
+      { name: 'extraverted',value:'extraverted'},
+      { name: 'distant',value:'distant'},
+      { name: 'non- conflicting',value:'non- conflicting'},
+      { name: 'reserved',value:'reserved'},
+      { name: 'loyal',value:'loyal'},
+      { name: 'introverted',value:'introverted'},
+      { name: 'talkative',value:'talkative'},
+      { name: 'empathetic',value:'empathetic'},
+      { name: 'light- hearted',value:'light- hearted'},
+      { name: 'agreeable',value:'agreeable'},
+      { name: 'warm- hearted',value:'warm- hearted'},
+      { name: 'collaborative',value:'collaborative'},
+      { name: 'independent',value:'independent'},
+      { name: 'stubborn',value:'stubborn'},
+      { name: 'direct' ,value:'direct'},
+      { name: 'unemotional',value:'unemotional'},
+      { name: 'responsible',value:'responsible'},
+      { name: 'conscientious',value:'conscientious'},
+      { name: 'structure- freak' ,value:'structure- freak'},
+      { name: 'perfectionist',value:'perfectionist'}]
   },
 
 
@@ -58,6 +59,19 @@ Page({
     })
 
 
+  },
+  checkboxChange: function (e) {
+    var checked = e.detail.value
+    console.log(e)
+    var changed = {}
+    for (var i = 0; i < this.data.checkboxItems.length; i++) {
+      if (checked.indexOf(this.data.checkboxItems[i].name) !== -1) {
+        changed['checkboxItems[' + i + '].checked'] = true
+      } else {
+        changed['checkboxItems[' + i + '].checked'] = false
+      }
+    }
+    this.setData(changed)
   },
   /**
    * 生命周期函数--监听页面加载
