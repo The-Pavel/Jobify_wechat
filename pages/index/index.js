@@ -22,13 +22,13 @@ Page({
 
   postedjobs: function (e) {
     wx.navigateTo({
-      url: `/pages/postedjob/postedjob`,
+      url: `/pages/postedjobs/postedjobs`,
     })
   },
 
-  newjobs: function (e) {
+  personality: function (e) {
     wx.navigateTo({
-      url: `/pages/job/job`,
+      url: `/pages/userscore/userscore`,
     })
   },
 

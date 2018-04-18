@@ -44,7 +44,7 @@
 <!-- New Jobs Card  -->
 
   <view class="card" bindtap="postedjobs">  
-    <image src="/image/savejobs.png" style="width: 150rpx; height: 150rpx;" ></image>
+    <image src="/image/saved_jobs.png" style="width: 150rpx; height: 150rpx;" ></image>
     <view class="card-category2">MY POSTED JOBS </view>
     <!--NEED TO LINK THE ABOVE TO POSTED JOBS LIST -->
   </view>
