@@ -29,7 +29,9 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+
+			"current": 0,
+
 			"list": [
 				{
 					"id": -1,

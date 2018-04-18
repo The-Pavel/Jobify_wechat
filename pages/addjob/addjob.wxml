@@ -50,17 +50,34 @@
            
     <view class="page-section">
       <view class="page-section-title">3. What are you looking for?</view>
-      <view class = "container1">
-      <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
+     
+       <!-- <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
       {{arrayitem}}
-      </button>
+      </button>  -->
+      <!-- <view class="checkbox">
+          <checkbox value="full-time" checked="true"/>Full time position
+        </view> -->
+
+     <checkbox-group class="group" bindchange="checkboxChange" >
+      <view id = "container1">
+        <view class="label-1" wx:for="{{checkboxItems}}">
+          <label>
+            <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <view class="label-1__icon">
+            <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+              <text class="label-1__text">{{item.value}}</text>
+            </view>
+          </label>
+        </view>  
       </view>
-    </view>
+    </checkbox-group>
+   
+      </view>
+   
     
     <view class="btn-area">
       <button type="primary" form-type="submit" loading="{{loading}}" bindtap="bindSubmit">Send</button>
     </view>
-
   </view>
 
 <!-- <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
@@ -84,3 +101,18 @@
           <checkbox value="partnership"/>Partnership!
         </view>
       </checkbox-group>    -->
+<!-- 
+       <checkbox-group class="group" bindchange="checkboxChange">
+<view class = "container1">
+  <view class="label-1" wx:for="{{checkboxItems}}">
+    <label>
+      <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+      <view class="label-1__icon">
+        <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+           <text class="label-1__text">{{item.value}}</text>
+      </view>
+   
+    </label>
+  </view>
+  </view>
+</checkbox-group> -->
