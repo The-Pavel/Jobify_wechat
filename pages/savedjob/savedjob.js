@@ -86,10 +86,24 @@ Page({
   //删除事件
   del: function (e) {
     const page = this
+    const user = wx.getStorageSync('user')
+    const index = e.currentTarget.dataset.index
     page.data.items.splice(e.currentTarget.dataset.index, 1)
     page.setData({
       items: page.data.items
     })
+    
+    const data = {user_id: user.id, i: index}
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${user.id}/saved_jobs`,
+      method: 'PUT',
+      data: data,
+      success: function (res) {
+        console.log(res)
+      }
+
+    })
   }
+  
     
 },)
