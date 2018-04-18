@@ -15,15 +15,23 @@
         <view class="job_info">
           <view class="h1">{{job.title}}</view>
           <button class="job_type">job-type</button>
-          <view class="desc">
-              job-description
-          </view>
+          <view class="desc">job-description</view>
+            <view>
+              <text class="h3">Salary: </text>
+              <text class="desc">{{job.salary}}</text>    
+            </view>
+            <view>
+              <text class="h3">Location: </text>
+              <text class="desc">{{job.location}}</text>    
+            </view>
+            <view class="desc">{{job.email}}</view>
+            <text class="desc">{{job.phone}} | WeChat: @{{job.wechat}}</text>
         </view>
         <view class="job_post_time">
-          <view>Job posted on:</view>
-          <view class="desc">Jobs appear up to 30 days from date of posting</view>
+          <view class="h3">Job posted on:</view>
+          <view class="notice">Jobs appear up to 30 days from date of posting</view>
         </view>
-        <button class="apply">Apply Now</button>
+        <!-- <button class="apply">Apply Now</button> -->
       </view>
      </swiper-item>
   </block>
