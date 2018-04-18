@@ -8,14 +8,17 @@
 <view class="sep"></view>
 
 <view class="container form">
-<form bindsubmit="bindFormSubmit">
+<form bindsubmit="bindSubmit">
 
   <view class="page-body">
 
     <view class="page-section">
       <view class="page-section-title">1. Your company's contact details</view>
       <view class="textarea-wrp">
-        <textarea auto-focus="true" placeholder="Company Name" name="nickName" auto-height />
+        <input auto-focus="true" 
+              type="text" 
+              placeholder="Company Name" 
+              name="nickName" auto-height />
       </view>
       <view class="textarea-wrp">
         <textarea placeholder="Location" name="location" auto-height />
@@ -29,8 +32,12 @@
       <view class="textarea-wrp">
         <textarea placeholder="wechat" name="wechat" auto-height />
       </view>  
+      
       <view class="textarea-wrp">
-        <textarea placeholder="upload picture" name="upload_logo" auto-height />
+        
+        <button bindtap="uploadlogo"> Upload Picture</button> 
+
+
       </view>            
     </view>
 
@@ -76,7 +83,7 @@
    
     
     <view class="btn-area">
-      <button type="primary" form-type="submit" loading="{{loading}}" bindtap="bindSubmit">Send</button>
+      <button type="primary" formType="submit" loading="{{loading}}">Send</button>
     </view>
   </view>
 

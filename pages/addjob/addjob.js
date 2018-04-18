@@ -1,10 +1,10 @@
 // pages/addjob/addjob.js
+const AV = require('../../utils/av-weapp-min.js')
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
+    companyLogo: null,
     checkboxItems: [
       { name: "outgoing", value: 'outgoing'},
       { name: 'aggressive', value: 'aggressive'},
@@ -36,7 +36,7 @@ Page({
   bindSubmit: function (e) {
     //collect data from form
     let new_job = e.detail.value
-
+    debugger
     wx.request({
       //url: 'http://jobify.wogengapp.cn/api/v1/jobs/',
       url: 'http://localhost:3000/api/v1/jobs/',
@@ -73,60 +73,43 @@ Page({
     }
     this.setData(changed)
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
   onLoad: function (options) {
-  
+
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+
   onReady: function () {
-  
+
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+
   onShow: function () {
-  
+
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+
   onHide: function () {
-  
+
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
+
   onUnload: function () {
-  
+
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
+
   onPullDownRefresh: function () {
-  
+
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
+
   onReachBottom: function () {
-  
+
   },
 
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-  
+
   },
   // listenerPickerSelected: function (e) {
   //   //改变index值，通过setData()方法重绘界面
@@ -137,5 +120,29 @@ Page({
 
   click:function(e){
     console.log(e)
+  },
+
+  uploadlogo: function() {
+    var that = this
+    wx.chooseImage({
+      success: function(data){
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("company", {
+          blob: {
+            uri:tempFiles
+          }
+        })
+      file.save()
+        .then(savedFile => {
+         const companyLogo = savedFile.attributes.url
+         that.setData({companyLogo})
+        })
+        .catch(err => {
+          console.error(err)
+        })  
+      }
+    })
   }
+
+
 })
