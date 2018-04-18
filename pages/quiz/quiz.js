@@ -26,7 +26,6 @@ Page({
         page.setData(res.data)
       }
     })
-    
   },
 
   switch1Change: function (e) {
