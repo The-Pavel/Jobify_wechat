@@ -20,9 +20,9 @@ Page({
   },
 
 
-  savedjobs: function (e) {
+  postedjobs: function (e) {
     wx.navigateTo({
-      url: `/pages/savedjob/savedjob`,
+      url: `/pages/postedjob/postedjob`,
     })
   },
 

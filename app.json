@@ -28,9 +28,9 @@
         "text": "Saved Jobs"
       },
       {
-        "pagePath": "pages/quiz/quiz",
-        "iconPath": "image/quiz.png",
-        "selectedIconPath": "image/quiz_active.png",
+        "pagePath": "pages/index/index",
+        "iconPath": "image/profile.png",
+        "selectedIconPath": "image/profile_active.png",
         "text": "Profile"
       },
       {
