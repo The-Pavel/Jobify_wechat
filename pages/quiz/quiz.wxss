@@ -1,8 +1,8 @@
 /* pages/quiz/quiz.wxss */
 scroll-view {
   height: 100vh;
-  background-color: #F2FCFC; 
-  border-top: 2rpx solid #BDBDBD;
+  /* background-color: #629FF0;  */
+  /* border-top: 2rpx solid #BDBDBD; */
 }
 .quiz-card {
   height: 700rpx;
@@ -10,22 +10,22 @@ scroll-view {
   margin-left: 80rpx;
   margin-right: 80rpx;
   margin-bottom: 80rpx;
-  border: 2rpx solid #BDBDBD;
+  /* border: 2rpx solid #BDBDBD; */
   border-radius: 10rpx;
   text-align: center;
-  background-color:#8FBAF3;
+  background: linear-gradient(#F2FCFC, #BDF1F6);
 }
 .quiz-outer1{
   height: 30rpx;
   margin-top: 120rpx;
   margin-left: 120rpx;
   margin-right: 120rpx;
-  border-top: 2rpx solid #BDBDBD;
+  /* border-top: 2rpx solid #BDBDBD;
   border-right: 2rpx solid #BDBDBD;
-  border-left: 2rpx solid #BDBDBD;
+  border-left: 2rpx solid #BDBDBD; */
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
-  background-color:#0245A3;
+  background-color:#3771C1;
 }
 .quiz-outer2 {
   height: 30rpx;
@@ -36,7 +36,7 @@ scroll-view {
   border-left: 2rpx solid #BDBDBD;
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
-  background-color: #BDF1F6;
+  background-color: #8FBAF3;
 }
 .question{
   height: 480rpx;
@@ -51,12 +51,14 @@ scroll-view {
   height: 200rpx;
   width: 150rpx;
   margin-right: 30rpx;
+  margin-top: 30rpx;
   
 }
 #quiz-answer-2 {
   height: 200rpx;
   width: 150rpx;
   margin-left: 30rpx;
+  margin-top: 30rpx;
 }
 .answers {
   display: inline-flex;
