@@ -4,7 +4,8 @@
     "pages/addjob/addjob",
     "pages/job/job",
     "pages/savedjob/savedjob",
-    "pages/quiz/quiz"
+    "pages/quiz/quiz",
+    "pages/userscore/userscore"
   ],
   "window": {
     "navigationBarBackgroundColor": "#8FBAF3",

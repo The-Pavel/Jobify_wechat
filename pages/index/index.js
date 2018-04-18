@@ -3,8 +3,8 @@
 var app = getApp()
 Page({
   data: {
-    motto: '',
-    userInfo: {}
+    motto: ''
+    
   },
   //事件处理函数
   // bindViewTap: function () {
@@ -18,6 +18,7 @@ Page({
       url:`/pages/addjob/addjob`,
     })
   },
+
 
   savedjobs: function (e) {
     wx.navigateTo({
@@ -48,4 +49,5 @@ Page({
   //     })
   //   })
   // }
+
 })

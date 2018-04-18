@@ -5,14 +5,60 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+
+    questions: '',
+    answers: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const page = this
+    const user = wx.getStorageSync('user')
+    wx.request({
+      url: 'http://localhost:3000/api/v1/questions/',
+      success(res) {
+        console.log(res)
+        page.setData({ questions: res.data.questions.slice((user.last_question_id - 1), user.last_question_id + 4)})
+
+    }})
+  },
+
+  switch1Change: function (e) {
+    console.log('switch1', e)
+    let answer = {}
+    let user = wx.getStorageSync('user')
+    answer.user_id = user.id
+    answer.question_id = e.currentTarget.dataset.id
+    answer.swiped_yes = false
+    this.data.answers.push(answer)
+  },
+  switch2Change: function (e) {
+    console.log('switch2', e)
+    let answer = {}
+    let user = wx.getStorageSync('user')
+    answer.user_id = user.id
+    answer.question_id = e.currentTarget.dataset.id
+    answer.swiped_yes = true
+    this.data.answers.push(answer)
+  },
+
+  sendAnswers: function(e) {
+    this.data.answers.forEach(function (answer) {
+      wx.request({
+        url: 'http://localhost:3000/api/v1/answers/',
+        method: 'POST',
+        data: answer,
+        success: function(res) {
+          wx.navigateTo({
+            url: '/pages/userscore/userscore',
+          })
+        }
+      })
+    });
+
   },
 
   /**
