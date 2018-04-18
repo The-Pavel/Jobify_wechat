@@ -17,6 +17,7 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/users/${user.id}`,
       success: function(res) {
+        console.log(res)
         page.setData({tags: res.data.tag_list})
       }
     })
