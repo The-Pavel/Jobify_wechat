@@ -20,15 +20,15 @@ Page({
   },
 
 
-  savedjobs: function (e) {
+  postedjobs: function (e) {
     wx.navigateTo({
-      url: `/pages/savedjob/savedjob`,
+      url: `/pages/postedjobs/postedjobs`,
     })
   },
 
-  newjobs: function (e) {
+  personality: function (e) {
     wx.navigateTo({
-      url: `/pages/job/job`,
+      url: `/pages/userscore/userscore`,
     })
   },
 

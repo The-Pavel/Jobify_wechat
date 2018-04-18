@@ -33,24 +33,20 @@
   
 </view> 
 
-<!-- Saved Jobs Card  -->
+<!-- Personality Card  -->
 <view class="row2container">
-  <view class="card2" bindtap="savedjobs">  
-    <!-- PULL THE NUMBER OF SAVED JOBS IF ANY -->
-    <view class="number">5 Saved Jobs </view>
-    <view class="card-category1"> SAVED JOBS </view>
-    <!--NEED TO LINK THE ABOVE TO SAVED JOBS LIST -->
-    <!-- NEED TO GREY OUT/NOT CLICKABLE IF THERE ARE NO SAVED JOBS  -->
+  <view class="card2" bindtap="personality">  
+    <view class="card-category1"> My Personality </view>
+    <!--NEED TO LINK THE ABOVE TO PERSONALITY CLOUD LIST -->
   </view>
 
 
 <!-- New Jobs Card  -->
 
-  <view class="card" bindtap="newjobs">  
-    <image src="/image/newjobs.png" style="width: 150rpx; height: 150rpx;" ></image>
-    <view class="card-category2"> NEW JOBS </view>
-    <!--NEED TO LINK THE ABOVE TO NEW JOBS CARDS -->
-    <!-- NEED TO GREY OUT/NOT CLICKABLE IF THERE ARE NO NEW JOBS  -->
+  <view class="card" bindtap="postedjobs">  
+    <image src="/image/saved_jobs.png" style="width: 150rpx; height: 150rpx;" ></image>
+    <view class="card-category2">MY POSTED JOBS </view>
+    <!--NEED TO LINK THE ABOVE TO POSTED JOBS LIST -->
   </view>
 </view>
 
