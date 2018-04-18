@@ -15,10 +15,10 @@
     <view class="page-section">
       <view class="page-section-title">1. Your company's contact details</view>
       <view class="textarea-wrp">
-        <textarea auto-focus="true" placeholder="Company Name" name="nickName" auto-height />
+        <textarea auto-focus="true" placeholder="Company Name" name="company" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea placeholder="Location" name="location" auto-height />
+        <textarea placeholder="location" name="location" auto-height />
       </view>  
       <view class="textarea-wrp">
         <textarea placeholder="email@email.com" name="email" auto-height />
@@ -30,7 +30,7 @@
         <textarea placeholder="wechat" name="wechat" auto-height />
       </view>  
       <view class="textarea-wrp">
-        <textarea placeholder="upload picture" name="upload_logo" auto-height />
+        <textarea placeholder="upload picture" name="image" auto-height />
       </view>            
     </view>
 
@@ -42,6 +42,9 @@
       <text class="page-section-details">Describe the job, pitch or product; technologies involved...</text>
       <view class="textarea-wrp">
       <textarea style="height: 12em" placeholder="Job Description" name="description" maxlength="-1" />
+      </view>
+      <view class="textarea-wrp">
+        <textarea placeholder="Salary" name="salary" auto-height />
       </view>  
       <button>
         <textarea placeholder="upload pdf" name="upload" auto-height />
