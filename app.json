@@ -2,15 +2,44 @@
   "pages":[
     "pages/index/index",
     "pages/addjob/addjob",
-    "pages/job/job"
-
+    "pages/job/job",
+    "pages/savedjob/savedjob",
+    "pages/quiz/quiz",
+    "pages/userscore/userscore",
+    "pages/postedjobs/postedjobs"
   ],
-"window": {
-  "navigationBarBackgroundColor": "#8FBAF3",
-  "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "Jobify",
-  "backgroundColor": "#8FBAF3",
-  "selectedColor": "#8FBAF3",
-  "backgroundTextStyle": "light"
-}
+  "window": {
+    "navigationBarBackgroundColor": "#8FBAF3",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Jobify",
+    "backgroundColor": "#8FBAF3",
+    "selectedColor": "#8FBAF3",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor": "#F2FCFC",
+    "selectedColor": "#8FBAF3",
+    "borderStyle": "gray",
+    "color": "#0245A3",
+    "list": [
+      {
+        "pagePath": "pages/savedjob/savedjob",
+        "iconPath": "image/saved_jobs.png",
+        "selectedIconPath": "image/saved_jobs_active.png",
+        "text": "Saved Jobs"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/profile.png",
+        "selectedIconPath": "image/profile_active.png",
+        "text": "Profile"
+      },
+      {
+        "pagePath": "pages/job/job",
+        "iconPath": "image/newjobs.png",
+        "selectedIconPath": "image/newjobs_active.png",
+        "text": "New Jobs"
+      }
+    ]
+  }
 }

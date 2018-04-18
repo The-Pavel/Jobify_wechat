@@ -1,4 +1,4 @@
-// pages/job/job.js
+// pages/postedjobs/postedjobs.js
 Page({
 
   /**
@@ -12,24 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const page = this
-    const user = wx.getStorageSync('user')
-    wx.request({
-      url: `http://localhost:3000/api/v1/users/${user.id}`,
-      success: function (res) {
-        console.log(res.data.tag_list)
-        page.setData({ user_tags: res.data.tag_list })
-      }
-    })
-    let data = { user_id: user.id, id: user.id }
-    wx.request({
-      url: `http://localhost:3000/api/v1/jobs`,
-      method: 'PUT',
-      data: data,
-      success: function (res) {
-        console.log(res)
-      }
-    })
+  
   },
 
   /**

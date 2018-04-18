@@ -1,0 +1,9 @@
+<!--pages/userscore/userscore.wxml-->
+<text>pages/userscore/userscore.wxml</text>
+
+<view class="tag" wx:for="{{tags}}" wx:for-item="tag" wx:key="tag.id" data-tag="{{tag}}">
+  <view class="card">
+   <view class = "text"> {{tag}} </view> 
+
+  </view>
+</view>

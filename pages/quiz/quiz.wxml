@@ -1,0 +1,18 @@
+<!--pages/quiz/quiz.wxml-->
+<text>pages/quiz/quiz.wxml</text>
+
+
+<view class="question" wx:for="{{questions}}" wx:for-item="question" wx:key="question.id" data-question="{{question}}">
+  <view class="card">
+   <view class = "text"> {{question.title}} </view> 
+    <view class="body-view">
+    That's not me
+        <switch data-id='{{question.id}}' bindchange="switch1Change"/>   
+         <switch data-id='{{question.id}}' bindchange="switch2Change"/> 
+         That's me
+    </view>
+
+  </view>
+</view>
+
+<button bindtap='sendAnswers'>That's Me!</button>
