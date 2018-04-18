@@ -21,10 +21,11 @@ Page({
         page.setData({ user_tags: res.data.tag_list })
       }
     })
+    let data = { user_id: user.id, id: user.id }
     wx.request({
       url: `http://localhost:3000/api/v1/jobs`,
       method: 'PUT',
-      data: {user_id: user.id},
+      data: data,
       success: function (res) {
         console.log(res)
       }
