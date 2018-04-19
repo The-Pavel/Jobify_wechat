@@ -28,5 +28,5 @@
           <view class="h3">Job posted on: {{job.created_at}}</view>
           <view class="notice">Jobs appear up to 30 days from date of posting</view>
         </view>
-        <!-- <button class="apply">Apply Now</button> -->
+        <image src="/image/save.png" class="save"/> 
       </view>

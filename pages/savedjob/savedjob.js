@@ -6,7 +6,8 @@ Page({
     startX: 0, //开始坐标
     startY: 0
   },
-  onLoad: function () {
+  onShow: function () {
+    this.data.items = []
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
@@ -17,6 +18,7 @@ Page({
       data: data,
       success: function(res) {
         page.setData({saved_jobs: res.data})
+        console.log(res)
 
         for (var i = 0; i < page.data.saved_jobs.length; i++) {
           page.data.items.push({
@@ -29,9 +31,7 @@ Page({
         page.setData({
           items: page.data.items
         })
-      },
-      
-      
+      },  
     })
   },
     touchstart: function (e) {
