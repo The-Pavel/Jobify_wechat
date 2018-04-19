@@ -1,5 +1,5 @@
 const AV = require('./utils/av-weapp-min.js')
-const keys = require('./secret_keys.js')
+// const keys = require('./secret_keys.js')
 
 //app.js
 App({

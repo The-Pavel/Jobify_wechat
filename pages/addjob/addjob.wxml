@@ -19,7 +19,7 @@
         <input auto-focus="true" 
               type="text" 
               placeholder="Company Name" 
-              name="nickName" auto-height />
+              name="company" auto-height />
 
         <!--  <textarea auto-focus="true" placeholder="Company Name" name="company" auto-height />  -->
 
