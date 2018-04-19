@@ -45,6 +45,7 @@ Page({
       duration: 1500
     });
     wx.request({
+      // url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
       url: `http://localhost:3000/api/v1/jobs/${id}`,
       method: 'GET',
       success(res) {
