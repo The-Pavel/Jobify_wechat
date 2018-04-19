@@ -1,3 +1,6 @@
+const AV = require('./utils/av-weapp-min.js')
+const keys = require('./secret_keys.js')
+
 //app.js
 App({
   onLaunch: function () {
@@ -7,11 +10,15 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    // call my own function
+    this.initleancloud()
+
+
     // 登录
     wx.login({
       success: function (res) {
         const page = this
-        
+
         if (res.code) {
           // console.log(res.code)
 
@@ -67,9 +74,17 @@ App({
       }
     });
     // 获取用户信息
-    
+
   },
 
+  // initialize lean cloud and call it in global data
+  initleancloud() {
+    AV.init({
+    appId: keys.appId,
+    appKey: keys.appKey
+    })
+    this.globalData.AV = AV
+  },
 
 
   //   // 展示本地存储能力
@@ -108,7 +123,7 @@ App({
   //                       // 可以将 res 发送给后台解码出 unionId
   //                       this.globalData.userInfo = res.userInfo
 
-                        
+
   //                     }
   //                   })
   //                 }
@@ -123,11 +138,13 @@ App({
   //     }
   //   })
   //   // 获取用户信息
-    
+
   // },
-    
+
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    AV: null
   }
-        })
+
+})
