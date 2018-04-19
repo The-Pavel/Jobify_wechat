@@ -37,3 +37,10 @@ swiper {
 .apply {
   margin: 0px 50rpx 30rpx 50rpx;
 }
+.notice{
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 25rpx;
+  font-family: Roboto; 
+  font-weight: lighter;
+}

@@ -33,18 +33,26 @@ Page({
   },
 
 
-  bindSubmit: function (e) {
+  bindFormSubmit: function (e) {
     //collect data from form
+    let page = this
     let new_job = e.detail.value
-    debugger
+
+//     debugger
+
+    console.log(new_job)
+    console.log(page.data.tag_list)
+    new_job.tag_list = page.data.tag_list
+
+
     wx.request({
-      //url: 'http://jobify.wogengapp.cn/api/v1/jobs/',
+      //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
       url: 'http://localhost:3000/api/v1/jobs/',
       method: 'POST',
       data: new_job,
       success: function () {
         wx.showToast({
-          title: 'Done!',
+          title: 'Created!',
           icon: 'success'
         })
         wx.reLaunch({
@@ -54,15 +62,16 @@ Page({
     })
 
     // relaunch at index
-    wx.reLaunch({
-      url: '/pages/index/index'
-    })
+    // wx.reLaunch({
+    //   url: '/pages/index/index'
+    // })
 
 
   },
   checkboxChange: function (e) {
+    const page = this
     var checked = e.detail.value
-    console.log(e)
+    // console.log(e)
     var changed = {}
     for (var i = 0; i < this.data.checkboxItems.length; i++) {
       if (checked.indexOf(this.data.checkboxItems[i].name) !== -1) {
@@ -72,6 +81,8 @@ Page({
       }
     }
     this.setData(changed)
+    page.setData({tag_list: checked})
+    console.log(page.data.tag_list)
   },
 
   onLoad: function (options) {

@@ -24,6 +24,7 @@ Page({
       data: data,
       success: function (res) {
         page.setData(res.data)
+        // console.log(res.data)
       }
     })
   },
