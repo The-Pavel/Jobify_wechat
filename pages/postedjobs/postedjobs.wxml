@@ -1,2 +1,23 @@
-<!--pages/postedjobs/postedjobs.wxml-->
-<text>pages/postedjobs/postedjobs.wxml</text>
+<!--pages/savedjob/savedjob.wxml-->
+<!-- <view class="saved_job_card">
+  <view class="job_info">
+    <view class="h1 job_title">Job Title</view>
+    <view class="h1 company_name">Company Name</view>
+  </view>
+  <image class="job_logo" src="/image/logo.png"/>
+</view> -->
+
+<!-- swipe left delete -->
+
+<view class="saved_card">
+<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+
+     <image class="job_logo" src="{{item.image}}"/> 
+    <view class="job_info">
+      <view class="job_title">{{item.job_title}}</view>
+      <view class="company_name">{{item.company_name}}</view>
+    </view>
+
+  <view class="del" catchtap="edit" data-index="{{index}}">edit</view>
+ </view>
+</view>
