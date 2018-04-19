@@ -1,9 +1,55 @@
 <!--pages/userscore/userscore.wxml-->
-<text>pages/userscore/userscore.wxml</text>
 
-<view class="tag" wx:for="{{tags}}" wx:for-item="tag" wx:key="tag.id" data-tag="{{tag}}">
+
+<!--NEED TO LINK BACKEND TO QUIZ  -->
+  <view class="h1">My Personality Type</view>
+  
+  <checkbox-group class="group" bindchange="checkboxChange" >
+      <view id = "container1">
+        <view class="label-1" wx:for="{{checkboxItems}}">
+          <label>
+            <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <view class="label-1__icon">
+              <text class="label-1__text">{{item.value}}</text>
+            </view>
+          </label>
+        </view>
+      </view>
+    </checkbox-group>
+
+<!--need to insert profile underneath  -->
+
+   <!-- <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+</view> -->
+
+<image src="/image/profile.png" bindtap='toprofile'/>
+
+
+<!-- <view class="tag" wx:for="{{tags}}" wx:for-item="tag" wx:key="tag.id" data-tag="{{tag}}">
   <view class="card">
    <view class = "text"> {{tag}} </view> 
 
   </view>
+</view> -->
+
+<view class="row1container">
+  <view class="card" bindtap="newjobs"> 
+     <image src="/image/newjobs.png" style="width: 100rpx; height: 100rpx;" class="icon"/> 
+     <view class="number">  </view>
+    <view class="card-category"> JOBS </view>
+  
+    <!--NEED TO LINK THE ABOVE TO THE POST JOBS FORM  -->
+  </view>
+
+
+ <!-- Share card  -->
+
+<view class="card" bindtap="backtoquiz">  
+    <image src="/image/quiz.png" style="width: 100rpx; height: 100rpx;" class="icon" />
+    <view class="card-category"> BACK TO QUIZ</view> 
+<!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
+  </view>  
 </view>
+
