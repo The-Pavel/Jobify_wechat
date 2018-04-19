@@ -16,12 +16,14 @@
       <view class="page-section-title">1. Your contact details</view>
       <view class="textarea-wrp">
 
+
         <textarea auto-focus="true"
               type="text"
               class="desc"
               class="info"
               placeholder="Company Name"
               name="nickName" auto-height />
+
 
         <!--  <textarea auto-focus="true" placeholder="Company Name" name="company" auto-height />  -->
 
