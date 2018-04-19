@@ -27,6 +27,7 @@ App({
 
             url: 'http://localhost:3000/api/v1/users/',
 
+//NEED TO LINK TO DOKU 
             // url: 'http://e-charge.herokuapp.com/api/v1/users/',
             method: "POST",
             data: {
