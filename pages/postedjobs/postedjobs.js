@@ -12,7 +12,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const page = this
+    const user = wx.getStorageSync('user')
+    let data = { id: user.id }
+    // console.log(data.id)
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${user.id}`,
+      method: 'POST',
+      data: data,
+      success: function (res) {
+        console.log(res)
+        page.setData({ my_jobs: res.data })
+      }
+    })
   },
 
   /**

@@ -33,16 +33,17 @@ Page({
   },
 
 
-  bindFormSubmit: function (e) {
+  bindSubmit: function (e) {
     //collect data from form
     let page = this
     let new_job = e.detail.value
-
+    let user = wx.getStorageSync('user')
 //     debugger
 
     console.log(new_job)
     console.log(page.data.tag_list)
     new_job.tag_list = page.data.tag_list
+    new_job.user_id = user.id
 
 
     wx.request({
