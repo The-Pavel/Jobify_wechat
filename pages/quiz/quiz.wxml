@@ -1,23 +1,24 @@
 <!--pages/quiz/quiz.wxml-->
-<scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" wx:for="{{questions}}" wx:for-item="question" wx:key="question.id" data-question="{{question}}">
-  <view class="quiz-outer1"></view>
-  <view class="quiz-outer2"></view>
-  <view class="quiz-card" >
-    <view class = "h1 question"> {{question.title}}</view>
-    <view class="answers">
-      <view class="bubbles">
-        <image id="quiz-answer-1" src="/image/nobubble.png"data-id='{{question.id}}' bindtap="switch1Change"/>  
-        <image id="quiz-answer-2" src="/image/yesbubble.png" data-id='{{question.id}}' bindtap="switch2Change"/> 
-      </view>
-      <image id="face" src="/image/face.png"/> 
-    </view>   
-  </view>
-  <view class="submit-btn" bindtap='sendAnswers'>
-    <image id="submit-img" src="/image/submit.png"></image>
-    <text id="submit-text">submit</text>
+<scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+  <view class="question-set" wx:for="{{questions}}" wx:for-item="question" wx:key="question.id" data-question="{{question}}">
+    <view class="quiz-outer1"></view>
+    <view class="quiz-outer2"></view>
+    <view class="quiz-card" >
+      <view class = "h1 question"> {{question.title}}</view>
+      <view class="answers">
+        <view class="bubbles">
+          <image id="quiz-answer-1" src="/image/nobubble.png" data-id='{{question.id}}' bindtap="switch1Change"/>  
+          <image id="quiz-answer-2" src="/image/yesbubble.png" data-id='{{question.id}}' bindtap="switch2Change"/> 
+        </view>
+        <image id="face" src="/image/face.png"/> 
+      </view>   
+    </view>
   </view> 
 </scroll-view>
-
+<view class="submit-btn" bindtap='sendAnswers'>
+  <image id="submit-img" src="/image/submit.png"></image>
+  <text id="submit-text">submit</text>
+</view>
 
 
 <!-- ORIGINAL CODE -->

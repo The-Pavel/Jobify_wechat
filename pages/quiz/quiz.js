@@ -5,10 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    toView:'',
     questions: '',
-    answers: []
-
+    answers: [],
+    scrollTop: 0,
   },
 
   /**
@@ -37,8 +37,24 @@ Page({
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = false
     this.data.answers.push(answer)
+
+    this.setData({
+      scrollTop: this.data.scrollTop + 480
+    })
+    // const questions = this.data.questions
+    
+    // for (var i = 0; i < questions.length; ++i) {
+    //   if (questions[i] === this.data.toView) {
+    //     this.setData({
+    //       toView: questions[i + 1]
+    //     })
+    //     break
+    //   }
+    // }
+    console.log(questions)
   },
   switch2Change: function (e) {
+    
     console.log('switch2', e)
     let answer = {}
     let user = wx.getStorageSync('user')
@@ -46,6 +62,20 @@ Page({
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = true
     this.data.answers.push(answer)
+
+    this.setData({
+      scrollTop: this.data.scrollTop + 480
+    })
+    // const questions = this.data.questions
+    // console.log(questions)
+    // for (var i = 0; i < questions.length; ++i) {
+    //   if (questions[i] === this.data.toView) {
+    //     this.setData({
+    //       toView: questions[i + 1]
+    //     })
+    //     break
+    //   }
+    // }
   },
 
   sendAnswers: function(e) {
