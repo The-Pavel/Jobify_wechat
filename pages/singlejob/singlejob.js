@@ -14,11 +14,11 @@ Page({
   onLoad: function (options) {
     let page = this;
     // loading specific station data from api
-    const id = 26 //options.id
+    const id = options.id
 
     wx.request({
             url: `http://localhost:3000/api/v1/jobs/${id}`,
-      // url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
+            // url: `http://jobify.wogengapp.cn/api/v1/stations/${id}`,
       success: function (res) {
         console.log(res.data)
         page.setData({job: res.data});

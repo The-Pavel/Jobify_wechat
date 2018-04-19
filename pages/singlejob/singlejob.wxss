@@ -32,8 +32,10 @@
   padding: 30rpx 0rpx 0rpx 0rpx;
   border-top: 0.5px solid #BDBDBD;
 }
-.apply {
-  margin: 0px 50rpx 30rpx 50rpx;
+.save {
+  height: 80rpx;
+  width: 60rpx;
+  margin: 0rpx 300rpx 30rpx 300rpx;
 }
 .notice{
   margin-top: 20rpx;
