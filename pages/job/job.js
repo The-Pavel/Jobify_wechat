@@ -51,6 +51,7 @@ Page({
 
     let data = { user_id: user.id, id: user.id }
     wx.request({
+      // url: `https://jobify.wogengapp.cn/api/v1/jobs`,
       url: `http://localhost:3000/api/v1/jobs`,
       method: 'PUT',
       data: data,
@@ -69,6 +70,7 @@ Page({
     const user = wx.getStorageSync('user')
     let data = {job_id: job, user_id: user.id}
     wx.request({
+      url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
       url: `http://localhost:3000/api/v1/users/${user.id}`,
       method: 'PUT',
       data: data,
