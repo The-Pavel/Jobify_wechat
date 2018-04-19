@@ -1,0 +1,32 @@
+<!--pages/singlejob/singlejob.wxml-->
+<text>pages/singlejob/singlejob.wxml</text>
+
+<view class="job_card">
+        <view class="company_info">
+          <image class="job_logo" src="{{job.image}}"/>
+          <view class="h1">
+            {{job.company}}
+          </view>
+          
+        </view>
+        <view class="job_info">
+          <view class="h1">{{job.title}}</view>
+          <button class="job_type">Matched by: {{job.tag_list}}</button>
+          <view wx:if="{{job.description !== null}}" class="desc">{{job.description}}</view>
+            <view wx:if="{{job.salary !== null}}">
+              <text class="h3">Salary: </text>
+              <text class="desc">{{job.salary}}</text>    
+            </view>
+            <view wx:if="{{job.location !== null}}">
+              <text class="h3">Location: </text>
+              <text class="desc">{{job.location}}</text>    
+            </view>
+            <view wx:if="{{job.email !== null}}" class="desc">{{job.email}}</view>
+            <text wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</text> | <text wx:if="{{job.wechat !== null}}" class="desc">WeChat: @{{job.wechat}}</text>
+        </view>
+        <view class="job_post_time">
+          <view class="h3">Job posted on: {{job.created_at}}</view>
+          <view class="notice">Jobs appear up to 30 days from date of posting</view>
+        </view>
+        <!-- <button class="apply">Apply Now</button> -->
+      </view>

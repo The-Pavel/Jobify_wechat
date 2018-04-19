@@ -8,49 +8,67 @@
 <view class="sep"></view>
 
 <view class="container form">
-<form bindsubmit="bindFormSubmit">
+<form bindsubmit="bindSubmit">
 
   <view class="page-body">
 
     <view class="page-section">
-      <view class="page-section-title">1. Your company's contact details</view>
+      <view class="page-section-title">1. Your contact details</view>
       <view class="textarea-wrp">
-        <textarea auto-focus="true" placeholder="Company Name" name="nickName" auto-height />
+
+
+        <textarea auto-focus="true"
+              type="text"
+              class="desc"
+              class="info"
+              placeholder="Company Name"
+              name="nickName" auto-height />
+
+
+        <!--  <textarea auto-focus="true" placeholder="Company Name" name="company" auto-height />  -->
+
       </view>
       <view class="textarea-wrp">
-        <textarea placeholder="Location" name="location" auto-height />
-      </view>  
-      <view class="textarea-wrp">
-        <textarea placeholder="email@email.com" name="email" auto-height />
+        <textarea class="desc2" placeholder="location" name="location" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea placeholder="+86 185******" name="phone" auto-height />
+        <textarea class="desc2" placeholder="email@email.com" name="email" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea placeholder="wechat" name="wechat" auto-height />
-      </view>  
+        <textarea class="desc2" placeholder="+86 185******" name="phone" auto-height />
+      </view>
       <view class="textarea-wrp">
-        <textarea placeholder="upload picture" name="upload_logo" auto-height />
-      </view>            
+        <textarea class="desc2" placeholder="wechat" name="wechat" auto-height />
+      </view>
+
+
+        <button bindtap='uploadlogo'class="desc" class="button2">
+        <!-- <textarea placeholder="upload picture" name="image"
+        auto-height /> -->
+      + Add Company Logo</button>
+
     </view>
 
     <view class="page-section">
       <view class="page-section-title">2. Your offer</view>
+
         <view class="textarea-wrp">
-        <textarea placeholder="Job title" name="title" auto-height />
-        </view> 
-      <text class="page-section-details">Describe the job, pitch or product; technologies involved...</text>
+          <textarea placeholder="Job title" class="desc2" name="title" auto-height />
+        </view>
+        <view class="textarea-wrp">
+          <textarea placeholder="Salary" class="desc2" name="salary" auto-height />
+      </view>
       <view class="textarea-wrp">
-      <textarea style="height: 12em" placeholder="Job Description" name="description" maxlength="-1" />
-      </view>  
-      <button>
-        <textarea placeholder="upload pdf" name="upload" auto-height />
-      </button>  
-    </view> 
-           
+        <textarea style="height: 12em" class="desc2" placeholder="Job Description" name="description" maxlength="-1" />
+      </view>
+
+      
+      <button class="button2" bindtap='uploadDesc' class="text" class="desc" class="button2">+ Img Attachment (1 pg max)</button>
+    </view>
+
     <view class="page-section">
       <view class="page-section-title">3. What are you looking for?</view>
-     
+
        <!-- <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
       {{arrayitem}}
       </button>  -->
@@ -68,20 +86,20 @@
               <text class="label-1__text">{{item.value}}</text>
             </view>
           </label>
-        </view>  
+        </view>
       </view>
     </checkbox-group>
-   
+
       </view>
-   
-    
+
+
     <view class="btn-area">
-      <button type="primary" form-type="submit" loading="{{loading}}" bindtap="bindSubmit">Send</button>
+      <button class="button3" formType="submit" loading="{{loading}}">Post Job</button>
     </view>
   </view>
 
-<!-- <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
-            确认提交么？  
+<!-- <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">
+            确认提交么？
         </modal>    -->
 
 </form>
@@ -101,7 +119,7 @@
           <checkbox value="partnership"/>Partnership!
         </view>
       </checkbox-group>    -->
-<!-- 
+<!--
        <checkbox-group class="group" bindchange="checkboxChange">
 <view class = "container1">
   <view class="label-1" wx:for="{{checkboxItems}}">
@@ -111,7 +129,7 @@
         <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
            <text class="label-1__text">{{item.value}}</text>
       </view>
-   
+
     </label>
   </view>
   </view>

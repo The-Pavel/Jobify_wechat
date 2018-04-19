@@ -1,4 +1,4 @@
-// pages/postedjobs/postedjobs.js
+// pages/singlejob/singlejob.js
 Page({
 
   /**
@@ -12,17 +12,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const page = this
-    const user = wx.getStorageSync('user')
-    let data = { id: user.id }
-    // console.log(data.id)
+    let page = this;
+    // loading specific station data from api
+    const id = 26 //options.id
+
     wx.request({
-      url: `http://localhost:3000/api/v1/users/${user.id}`,
-      method: 'POST',
-      data: data,
+            url: `http://localhost:3000/api/v1/jobs/${id}`,
+      // url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       success: function (res) {
-        console.log(res)
-        page.setData({ my_jobs: res.data })
+        console.log(res.data)
+        page.setData({job: res.data});
       }
     })
   },

@@ -1,35 +1,51 @@
 var app = getApp()
 Page({
   data: {
+    saved_jobs: [],
     items: [],
     startX: 0, //开始坐标
     startY: 0
   },
   onLoad: function () {
-    for (var i = 0; i < 10; i++) {
-      this.data.items.push({
-        job_title: "Job Title" + i,
-        company_name: "Company Name",
-        isTouchMove: false //默认全隐藏删除
+    const page = this
+    const user = wx.getStorageSync('user')
+    let data = { id: user.id }
+    wx.request({
+      url: 'http://localhost:3000/api/v1/saved_jobs/',
+      method: 'PUT',
+      data: data,
+      success: function(res) {
+        page.setData({saved_jobs: res.data})
+
+        for (var i = 0; i < page.data.saved_jobs.length; i++) {
+          page.data.items.push({
+            job_title: page.data.saved_jobs[i].title,
+            company_name: page.data.saved_jobs[i].company,
+            image: page.data.saved_jobs[i].image,
+            isTouchMove: false //默认全隐藏删除
+          })
+        }
+        page.setData({
+          items: page.data.items
+        })
+      },
+      
+      
+    })
+  },
+    touchstart: function (e) {
+      const page = this
+      //开始触摸时 重置所有删除
+      page.data.items.forEach(function (v, i) {
+        if (v.isTouchMove)//只操作为true的
+          v.isTouchMove = false;
       })
-    }
-    this.setData({
-      items: this.data.items
-    })
-  },
-  //手指触摸动作开始 记录起点X坐标
-  touchstart: function (e) {
-    //开始触摸时 重置所有删除
-    this.data.items.forEach(function (v, i) {
-      if (v.isTouchMove)//只操作为true的
-        v.isTouchMove = false;
-    })
-    this.setData({
-      startX: e.changedTouches[0].clientX,
-      startY: e.changedTouches[0].clientY,
-      items: this.data.items
-    })
-  },
+      page.setData({
+        startX: e.changedTouches[0].clientX,
+        startY: e.changedTouches[0].clientY,
+        items: page.data.items
+      })
+    },
   //滑动事件处理
   touchmove: function (e) {
     var that = this,
@@ -69,9 +85,25 @@ Page({
   },
   //删除事件
   del: function (e) {
-    this.data.items.splice(e.currentTarget.dataset.index, 1)
-    this.setData({
-      items: this.data.items
+    const page = this
+    const user = wx.getStorageSync('user')
+    const index = e.currentTarget.dataset.index
+    page.data.items.splice(e.currentTarget.dataset.index, 1)
+    page.setData({
+      items: page.data.items
+    })
+    
+    const data = {user_id: user.id, i: index}
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${user.id}/saved_jobs`,
+      method: 'PUT',
+      data: data,
+      success: function (res) {
+        console.log(res)
+      }
+
     })
   }
-})
+  
+    
+},)

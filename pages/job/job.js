@@ -13,8 +13,10 @@ Page({
   // SWIPER
 
   changeswiper: function (e) {
+    
     var index = e.detail.current;//当前所在页面的 index
     if (index > this.data.activeIndex) {//左滑事件判断
+      console.log(e)
       this.setData({
         left: true//若为左滑，left值为true,触发图片动画效果
       })

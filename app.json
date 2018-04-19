@@ -6,7 +6,8 @@
     "pages/savedjob/savedjob",
     "pages/quiz/quiz",
     "pages/userscore/userscore",
-    "pages/postedjobs/postedjobs"
+    "pages/postedjobs/postedjobs",
+    "pages/singlejob/singlejob"
   ],
   "window": {
     "navigationBarBackgroundColor": "#8FBAF3",
