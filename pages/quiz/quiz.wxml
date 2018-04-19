@@ -6,9 +6,12 @@
     <view class="quiz-card" >
       <view class = "h1 question"> {{question.title}}</view>
       <view class="answers">
-        <view class="bubbles">
-          <image id="quiz-answer-1" src="/image/nobubble.png" data-id='{{question.id}}' bindtap="switch1Change"/>  
-          <image id="quiz-answer-2" src="/image/yesbubble.png" data-id='{{question.id}}' bindtap="switch2Change"/> 
+        <view id="bubbles">
+          <image id="quiz-answer-1" wx:if="{{showNoButton}}" src="/image/nobubble.png" data-id='{{question}}' bindtap="switch1Change"/>
+          <image id="quiz-answer-1" wx:if="{{showNoButton[index] === true}}" src="/image/nobubbleactive.png" data-id='{{question.id}}' bindtap="switch1Change"/>    
+      
+          <image id="quiz-answer-2" wx:if="{{showYesButton}}" src="/image/yesbubble.png" data-id='{{question.id}}' bindtap="switch2Change"/> 
+          <image id="quiz-answer-2" wx:if="{{showYesButton[index] === true}}" src="/image/yesbubbleactive.png" data-id='{{question.id}}' bindtap="switch2Change"/>  
         </view>
         <image id="face" src="/image/face.png"/> 
       </view>   

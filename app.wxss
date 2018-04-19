@@ -14,13 +14,13 @@ page {
   line-height: 1.6;
 }
 
-button{
+ button {
   margin-top: 20rpx;
   margin-bottom: 20rpx;
   background-color: #F2FCFC;
   
   
-}
+} 
 
 .h1 {
   font-family: Quicksand; 

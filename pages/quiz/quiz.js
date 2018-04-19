@@ -5,10 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showYesButton: [false, false, false, false, false],
+    showNoButton: [false, false, false, false, false],
     toView:'',
     questions: '',
     answers: [],
     scrollTop: 0,
+    index: 0
   },
 
   /**
@@ -30,17 +33,23 @@ Page({
   },
 
   switch1Change: function (e) {
-    console.log('switch1', e)
+    let question = e.currentTarget.dataset.id
+    let index = this.data.questions.indexOf(question)
+    console.log(question)
+    console.log(index, e)
     let answer = {}
     let user = wx.getStorageSync('user')
     answer.user_id = user.id
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = false
     this.data.answers.push(answer)
-
+    
     this.setData({
+      showNoButton: this.data.showNoButton.splice(index, 1, true),
       scrollTop: this.data.scrollTop + 480
     })
+    this.data.index++
+    console.log(this.data.showNoButton)
     // const questions = this.data.questions
     
     // for (var i = 0; i < questions.length; ++i) {
@@ -51,9 +60,9 @@ Page({
     //     break
     //   }
     // }
-    console.log(questions)
   },
   switch2Change: function (e) {
+
     
     console.log('switch2', e)
     let answer = {}
@@ -62,10 +71,15 @@ Page({
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = true
     this.data.answers.push(answer)
-
+    this.data.showYesButton[index] = !this.data.showYesButton[index]
+    console.log(this.data.showYesButton)
+    console.log(this.data.questions)
     this.setData({
+      // showYesButton: this.data.showYesButton.splice(index, 1, true),
       scrollTop: this.data.scrollTop + 480
     })
+    // console.log(this.data.showYesButton)
+    this.data.index++
     // const questions = this.data.questions
     // console.log(questions)
     // for (var i = 0; i < questions.length; ++i) {

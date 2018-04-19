@@ -14,7 +14,6 @@ scroll-view {
   border-radius: 10rpx;
   text-align: center;
   background: linear-gradient(#F2FCFC, #BDF1F6);
-  
 }
 .quiz-outer1{
   height: 30rpx;
@@ -49,15 +48,15 @@ scroll-view {
   margin-bottom: 0rpx;
 }
 #quiz-answer-1 {
-  height: 130rpx;
-  width: 100rpx;
+  height: 120rpx;
+  width: 120rpx;
   margin-right: 50rpx;
   margin-top: 10rpx;
-  
+  padding: none;
 }
 #quiz-answer-2 {
-  height: 130rpx;
-  width: 100rpx;
+  height: 120rpx;
+  width: 120rpx;
   margin-left: 50rpx;
   margin-top: 10rpx;
 }
@@ -86,4 +85,10 @@ scroll-view {
   width: 100rpx;
   color:#0245A3;
   font-weight: lighter;
+}
+
+#bubble {
+  margin: 10rpx;
+  display: flex;
+  flex-direction: row;
 }
