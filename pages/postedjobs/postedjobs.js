@@ -23,12 +23,15 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
-  //   wx.request({
-  //     url: 'http://localhost:3000/api/v1/saved_jobs/',
-  //     method: 'PUT',
-  //     data: data,
-  //     success: function (res) {
-  //       page.setData({ post_jobs: res.data })
+    // wx.request({
+    //   url: `http://localhost:3000/api/v1/users/${user.id}`,
+    //   method: 'POST',
+    //   data: data,
+    //   success: function (res) {
+    //   console.log(res)
+    //   page.setData({ my_jobs: res.data })
+    //   }
+    //    })
 
         for (var i = 0; i < page.data.post_jobs.length; i++) {
           page.data.items.push({
@@ -118,8 +121,14 @@ Page({
   },
 
   click: function(e){
-    console.log(e)
-  }
+    console.log(e.currentTarget.dataset.id)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+      }
+ 
+
 
 
 }, )
