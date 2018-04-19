@@ -6,18 +6,16 @@
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> 
 </view>
 
 <!-- Post job card  -->
 <view class="row1container">
-  <view class="card" bindtap="postjob">  
-     <view class="number">  </view>
+  <view class="card" bindtap="takequiz"> 
+
+     <image src="/image/quiz.png" style="width: 130rpx; height: 130rpx;" />
     <!-- PULL THE NUMBER OF JOBS POSTED IF ANY -->
-  <view> 5 Jobs Posted </view>
-    <view class="card-category1"> POST JOB </view>
+ 
+    <view class="card-category1"> TAKE QUIZ </view>
   
     <!--NEED TO LINK THE ABOVE TO THE POST JOBS FORM  -->
   </view>
@@ -25,9 +23,9 @@
 
  <!-- Quiz card  -->
 
-<view class="card2" bindtap="takequiz">  
-    <image src="/image/quiz.png" style="width: 150rpx; height: 150rpx;" />
-    <view class="card-category2"> <view class="h2"> TAKE QUIZ</view> </view>
+<view class="card2" bindtap="personality">  
+    <image src="/image/personality.png" style="width: 130rpx; height: 130rpx;" />
+    <view class="card-category2"> <view class="h2"> MY PERSONALITY</view> </view>
 <!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
   </view>  
   
@@ -35,8 +33,9 @@
 
 <!-- Personality Card  -->
 <view class="row2container">
-  <view class="card2" bindtap="personality">  
-    <view class="card-category1"> My Personality </view>
+  <view class="card2" bindtap="postjobs">  
+    <image src="/image/postjob3.png" style="width: 130rpx; height: 130rpx;" />
+      <view class="card-category1"> POST JOB </view>
     <!--NEED TO LINK THE ABOVE TO PERSONALITY CLOUD LIST -->
   </view>
 
@@ -44,8 +43,8 @@
 <!-- New Jobs Card  -->
 
   <view class="card" bindtap="postedjobs">  
-    <image src="/image/saved_jobs.png" style="width: 150rpx; height: 150rpx;" ></image>
-    <view class="card-category2">MY POSTED JOBS </view>
+    <view> X Jobs Posted </view>
+      <view class="card-category2">MY POSTED JOBS </view>
     <!--NEED TO LINK THE ABOVE TO POSTED JOBS LIST -->
   </view>
 </view>

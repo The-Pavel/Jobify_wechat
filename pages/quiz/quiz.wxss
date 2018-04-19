@@ -53,12 +53,14 @@ scroll-view {
   margin-right: 50rpx;
   margin-top: 10rpx;
   padding: none;
+  animation: pulse-no 2s infinite;
 }
 #quiz-answer-2 {
   height: 120rpx;
   width: 120rpx;
   margin-left: 50rpx;
   margin-top: 10rpx;
+  animation: pulse-yes 2s infinite;
 }
 .answers {
   display: flex;
@@ -68,13 +70,21 @@ scroll-view {
 #face {
   height: 110rpx;
   width: 100rpx;
-  margin: auto 220rpx;
+  margin: auto 230rpx;
   
 }
 .submit-btn {
+  position: fixed;
+  bottom: -25rpx;
   display:flex;
-  margin: 50rpx 330rpx;
+  margin: 50rpx 0rpx;
+  margin-left: 222rpx;
   flex-direction: column;
+  background-color: white;
+  padding: 20rpx 100rpx;
+  border: 5rpx solid #0245A3;
+  border-radius: 20rpx;
+  animation: wiggle 5s infinite;
 }
 #submit-img {
   width: 80rpx;
@@ -91,4 +101,85 @@ scroll-view {
   margin: 10rpx;
   display: flex;
   flex-direction: row;
+}
+
+@keyframes pulse-no {
+  20% {
+    /* box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1);
+  }
+
+  25% {
+    /* box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1.08);
+  }
+  
+  30% {
+    /* box-shadow:  inset -11px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1.03);
+  }
+  
+  35% {
+    /* box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1.05);
+  }
+  
+  40% {
+    /* box-shadow:  inset -8px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-yes {
+  5% {
+    /* box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1.08);
+  }
+  
+  10% {
+    /* box-shadow:  inset -11px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1.03);
+  }
+  
+  15% {
+    /* box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1.05);
+  }
+  
+  20% {
+    /* box-shadow:  inset -8px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(1);
+  }
+  
+  100% {
+    /* box-shadow:  inset -7px 0 5px 0 rgba(0,0,0,.4); */
+    transform: scale(0deg);
+  }
+}
+
+@keyframes wiggle {
+  3% {
+    box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4);
+    transform: rotate(5deg);
+  }
+  
+  7% {
+    box-shadow:  inset -11px 0 5px 0 rgba(0,0,0,.4);
+    transform: rotate(-4deg);
+  }
+  
+  10% {
+    box-shadow:  inset -5px 0 5px 0 rgba(0,0,0,.4);
+    transform: rotate(2deg);
+  }
+  
+  13% {
+    box-shadow:  inset -8px 0 5px 0 rgba(0,0,0,.4);
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    box-shadow:  inset -7px 0 5px 0 rgba(0,0,0,.4);
+    transform: rotate(0deg);
+  }
 }
