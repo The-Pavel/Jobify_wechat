@@ -151,7 +151,29 @@ Page({
         })
         .catch(err => {
           console.error(err)
-        })  
+        })
+      }
+    })
+  },
+
+  uploadDesc: function() {
+    var that = this
+    wx.chooseImage({
+      success: function(data){
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("jobDesc", {
+          blob: {
+            uri:tempFiles
+          }
+        })
+      file.save()
+        .then(savedFile => {
+         const jobDesc = savedFile.attributes.url
+         that.setData({jobDesc})
+        })
+        .catch(err => {
+          console.error(err)
+        })
       }
     })
   }
