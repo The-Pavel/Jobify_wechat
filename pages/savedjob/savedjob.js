@@ -6,19 +6,23 @@ Page({
     startX: 0, //开始坐标
     startY: 0
   },
-  onLoad: function () {
+  onShow: function () {
+    this.data.items = []
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
     wx.request({
+      // url: "https://jobify.wogengapp.cn/api/v1/saved_jobs/",
       url: 'http://localhost:3000/api/v1/saved_jobs/',
       method: 'PUT',
       data: data,
       success: function(res) {
         page.setData({saved_jobs: res.data})
+        console.log(res)
 
         for (var i = 0; i < page.data.saved_jobs.length; i++) {
           page.data.items.push({
+            job_id: page.data.saved_jobs[i].id,
             job_title: page.data.saved_jobs[i].title,
             company_name: page.data.saved_jobs[i].company,
             image: page.data.saved_jobs[i].image,
@@ -28,11 +32,11 @@ Page({
         page.setData({
           items: page.data.items
         })
-      },
-      
-      
+      },  
     })
   },
+
+  
     touchstart: function (e) {
       const page = this
       //开始触摸时 重置所有删除
@@ -95,6 +99,7 @@ Page({
     
     const data = {user_id: user.id, i: index}
     wx.request({
+      // url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}/saved_jobs`,
       url: `http://localhost:3000/api/v1/users/${user.id}/saved_jobs`,
       method: 'PUT',
       data: data,
@@ -103,7 +108,15 @@ Page({
       }
 
     })
-  }
+  },
+  tojobcard: function (e) {
+    console.log(e.currentTarget.dataset)
+    let page = this
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/singlejob/singlejob?id=${id}`
+    })
+  },
   
     
 },)

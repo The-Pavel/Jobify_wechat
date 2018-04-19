@@ -27,9 +27,9 @@
   padding: 0;
 }
 
-image {
+ image {
   margin: 60rpx 0px 20rpx 0px;
-} 
+}  
 
 .card {
   width: 320rpx;
@@ -38,7 +38,8 @@ image {
   text-align: center;
   line-height: 16px;
   font-family: Roboto;
-  font-style: Bold;background-size: cover !important;
+  font-style: Bold;
+  background-size: cover !important;
   background-position: center;
   color: #0245A3;
   position: relative;
@@ -76,6 +77,14 @@ image {
 
 .card-category{
   padding: 10px 0px 0px 20px;
+  font-family: Roboto;
+  font-style: Bold;
+  font-family: Roboto; 
+  font-weight:400;
+  font-size: 30rpx;
+  text-align: center;
+  color: #024583;
+  margin:10px;
 }
 
 .number {
@@ -83,3 +92,4 @@ image {
   width: 60rpx;
   font-size: 30rpx;
 }
+

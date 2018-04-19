@@ -10,6 +10,7 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
+
     wx.request({
       url: `http://localhost:3000/api/v1/users/${user.id}`,
       method: 'POST',
@@ -31,6 +32,7 @@ Page({
       console.log(page.data.items)
       }
        })
+
 
 
         
@@ -104,9 +106,11 @@ Page({
 
     // const data = { user_id: user.id, i: index }
     wx.request({
+
       url: `http://localhost:3000/api/v1/jobs/${id}`,
       method: 'DELETE',
       // data: data,
+
       success: function (res) {
         console.log(res)
       }

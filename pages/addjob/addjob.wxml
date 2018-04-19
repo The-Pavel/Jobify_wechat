@@ -81,8 +81,7 @@
         <view class="label-1" wx:for="{{checkboxItems}}">
           <label>
             <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
-            <view class="label-1__icon">
-            <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+            <view class="label-1__shape" style="background:{{item.checked ? '#8FBAF3': 'white'}}">
               <text class="label-1__text">{{item.value}}</text>
             </view>
           </label>

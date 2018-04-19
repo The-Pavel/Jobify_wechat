@@ -57,7 +57,7 @@ Page({
           title: 'Created!',
           icon: 'success'
         })
-        wx.reLaunch({
+        wx.redirectTo({
           url: '/pages/index/index',
         })
       }
