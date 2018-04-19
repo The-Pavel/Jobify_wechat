@@ -7,13 +7,13 @@ Page({
   data: {
     left: false,
     right: false,
-    activeIndex: 0
+    activeIndex: 0,
+    saveJobBtn: false
   },
 
   // SWIPER
 
   changeswiper: function (e) {
-    
     var index = e.detail.current;//当前所在页面的 index
     if (index > this.data.activeIndex) {//左滑事件判断
       console.log(e)
@@ -51,11 +51,12 @@ Page({
 
     let data = { user_id: user.id, id: user.id }
     wx.request({
-      // url: `https://jobify.wogengapp.cn/api/v1/jobs`,
+      //url: `https://jobify.wogengapp.cn/api/v1/jobs`,
       url: `http://localhost:3000/api/v1/jobs`,
       method: 'PUT',
       data: data,
       success: function (res) {
+        console.log(res)
         page.setData(res.data);
         // console.log(res.data)
         console.log(page.data.jobs)
@@ -65,24 +66,27 @@ Page({
   },
 
   saveJob: function(e) {
+    console.log(e)
     const job = e.currentTarget.dataset.id
+    console.log(e.currentTarget.dataset)
     const page = this
+    page.setData({saveJobBtn: !page.data.saveJobBtn})
+    console.log(page.data.saveJobBtn)
+    console.log(!page.data.saveJobBtn)
     const user = wx.getStorageSync('user')
     let data = {job_id: job, user_id: user.id}
     wx.request({
-      url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
+      //url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
       url: `http://localhost:3000/api/v1/users/${user.id}`,
       method: 'PUT',
       data: data,
       success: function (res) {
-        wx.reLaunch({
-          url: '/pages/job/job',
-        })
+        // wx.reLaunch({
+        //   url: '/pages/job/job',
+        // })
       }
     })
-    
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
