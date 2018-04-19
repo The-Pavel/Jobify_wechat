@@ -44,6 +44,7 @@ Page({
     console.log(page.data.tag_list)
     new_job.tag_list = page.data.tag_list
     new_job.user_id = user.id
+    new_job.image = page.data.image
 
 
     wx.request({
@@ -56,7 +57,7 @@ Page({
           title: 'Created!',
           icon: 'success'
         })
-        wx.reLaunch({
+        wx.redirectTo({
           url: '/pages/index/index',
         })
       }
@@ -147,7 +148,8 @@ Page({
       file.save()
         .then(savedFile => {
          const companyLogo = savedFile.attributes.url
-         that.setData({companyLogo})
+         console.log('hello ' + companyLogo)
+         that.setData({image: companyLogo})
         })
         .catch(err => {
           console.error(err)
@@ -158,22 +160,16 @@ Page({
 
   uploadDesc: function() {
     var that = this
-    wx.chooseImage({
-      success: function(data){
-        const tempFiles = data.tempFilePaths[0]
-        const file = new AV.File("jobDesc", {
+    wx.uploadFile({
+      success: function(res){
+        res.tempFilePaths.map(tempFilePath => () => new AV.File('filename', {
           blob: {
-            uri:tempFiles
-          }
-        })
-      file.save()
-        .then(savedFile => {
-         const jobDesc = savedFile.attributes.url
-         that.setData({jobDesc})
-        })
-        .catch(err => {
-          console.error(err)
-        })
+            uri: tempFilePath,
+          },
+        }).save()).reduce(
+          (m, p) => m.then(v => AV.Promise.all([...v, p()])),
+          AV.Promise.resolve([])
+          ).then(files => console.log(files.map(file => file.url()))).catch(console.error);
       }
     })
   }
