@@ -22,7 +22,7 @@
               class="desc"
               class="info"
               placeholder="Company Name"
-              name="nickName" auto-height />
+              name="company" auto-height />
 
 
         <!--  <textarea auto-focus="true" placeholder="Company Name" name="company" auto-height />  -->

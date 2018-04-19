@@ -1,7 +1,7 @@
 
 
 <view class="saved_card">
-<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" bindlongtap='click'data-id= "{{item.job_id}}">
+ <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" bindlongtap='click'data-id= "{{item.job_id}}"> 
 
     <image class="job_logo" src="{{item.image}}"/>
     <view class="job_info">

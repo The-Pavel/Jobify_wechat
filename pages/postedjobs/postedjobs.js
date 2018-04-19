@@ -1,20 +1,7 @@
 var app = getApp()
 Page({
   data: {
-    post_jobs: [
-      {
-        id: 1,
-      title: 'engineer',
-      company: "google",
-      image: "/image/logo.png"
-    },
-      {
-        id: 13,
-        title: 'cook',
-        company: "google",
-        image: "/image/logo.png"
-      }
-    ],
+    my_jobs: [],
     items: [],
     startX: 0, //开始坐标
     startY: 0
@@ -23,31 +10,30 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
-    // wx.request({
-    //   url: `http://localhost:3000/api/v1/users/${user.id}`,
-    //   method: 'POST',
-    //   data: data,
-    //   success: function (res) {
-    //   console.log(res)
-    //   page.setData({ my_jobs: res.data })
-    //   }
-    //    })
-
-
-        for (var i = 0; i < page.data.post_jobs.length; i++) {
-          page.data.items.push({
-            job_id: page.data.post_jobs[i].id,
-            job_title: page.data.post_jobs[i].title,
-            company_name: page.data.post_jobs[i].company,
-            image: page.data.post_jobs[i].image,
-            isTouchMove: false //默认全隐藏删除
-          })
-        }
-        page.setData({
-          items: page.data.items
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${user.id}`,
+      method: 'POST',
+      data: data,
+      success: function (res) {
+      
+      page.setData({ my_jobs: res.data })
+      // console.log(page.data.my_jobs)
+      for (var i = 0; i < page.data.my_jobs.length; i++) {
+        page.data.items.push({
+          job_id: page.data.my_jobs[i].id,
+          job_title: page.data.my_jobs[i].title,
+          company_name: page.data.my_jobs[i].company,
+          image: page.data.my_jobs[i].image,
+          isTouchMove: false //默认全隐藏删除
         })
-    //   },
-    // })
+      }
+      page.setData({items: page.data.items})
+      console.log(page.data.items)
+      }
+       })
+
+
+        
 
   /**
    * 生命周期函数--监听页面加载

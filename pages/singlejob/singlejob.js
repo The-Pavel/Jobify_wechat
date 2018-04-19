@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     let page = this;
     // loading specific station data from api
-    const id = 26 //options.id
+    const id = options.id
 
     wx.request({
             url: `http://localhost:3000/api/v1/jobs/${id}`,

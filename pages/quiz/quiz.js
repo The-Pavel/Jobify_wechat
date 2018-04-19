@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    phrases: ["Got it!", "Cool!", "Gotcha!", "I see!", "Alright!"],
     showYesButton: [false, false, false, false, false],
     showNoButton: [false, false, false, false, false],
     toView:'',
@@ -20,14 +21,14 @@ Page({
   onLoad: function (options) {
     const page = this
     const user = wx.getStorageSync('user')
-    let data = { user_id: user.id, id: user.id }
+    let data = { user_id: user.id }
     wx.request({
       url: `http://localhost:3000/api/v1/questions`,
       method: 'PUT',
       data: data,
       success: function (res) {
-        page.setData(res.data)
-        // console.log(res.data)
+        console.log(res)
+        page.setData(res.data) 
       }
     })
   },
@@ -37,15 +38,19 @@ Page({
     let index = this.data.questions.indexOf(question)
     console.log(question)
     console.log(index, e)
+    let page = this
     let answer = {}
     let user = wx.getStorageSync('user')
     answer.user_id = user.id
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = false
     this.data.answers.push(answer)
-    
+    // wx.showToast({
+    //   title: 'Next!',
+    //   image: '../../image/noBubbleActive.png'
+    // })
     this.setData({
-      showNoButton: this.data.showNoButton.splice(index, 1, true),
+      // showNoButton: this.data.showNoButton.splice(index, 1, true),
       scrollTop: this.data.scrollTop + 480
     })
     this.data.index++
@@ -62,7 +67,7 @@ Page({
     // }
   },
   switch2Change: function (e) {
-
+    let page = this
     
     console.log('switch2', e)
     let answer = {}
@@ -71,9 +76,13 @@ Page({
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = true
     this.data.answers.push(answer)
-    this.data.showYesButton[index] = !this.data.showYesButton[index]
-    console.log(this.data.showYesButton)
-    console.log(this.data.questions)
+    // this.data.showYesButton[index] = !this.data.showYesButton[index]
+    // console.log(this.data.showYesButton)
+    // console.log(this.data.questions)
+    // wx.showToast({
+    //   title: 'Next!',
+    //   image: '../../image/yesBubbleActive.png'
+    // })
     this.setData({
       // showYesButton: this.data.showYesButton.splice(index, 1, true),
       scrollTop: this.data.scrollTop + 480
