@@ -14,6 +14,7 @@ scroll-view {
   border-radius: 10rpx;
   text-align: center;
   background: linear-gradient(#F2FCFC, #BDF1F6);
+  
 }
 .quiz-outer1{
   height: 30rpx;
@@ -39,37 +40,41 @@ scroll-view {
   background-color: #8FBAF3;
 }
 .question{
-  height: 480rpx;
+  height: 250rpx;
   padding: 20rpx;
-  margin: 80rpx 50rpx;
+  margin: 50rpx 30rpx;
   font-family: roboto;
   font-size: 48rpx;
   line-height: 70rpx;
-
+  margin-bottom: 0rpx;
 }
 #quiz-answer-1 {
-  height: 200rpx;
-  width: 150rpx;
-  margin-right: 30rpx;
-  margin-top: 30rpx;
+  height: 130rpx;
+  width: 100rpx;
+  margin-right: 50rpx;
+  margin-top: 10rpx;
   
 }
 #quiz-answer-2 {
-  height: 200rpx;
-  width: 150rpx;
-  margin-left: 30rpx;
-  margin-top: 30rpx;
+  height: 130rpx;
+  width: 100rpx;
+  margin-left: 50rpx;
+  margin-top: 10rpx;
 }
 .answers {
-  display: inline-flex;
-  margin-top: 100rpx;
-  margin: 80rpx auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+#face {
+  height: 110rpx;
+  width: 100rpx;
+  margin: auto 220rpx;
+  
 }
 .submit-btn {
   display:flex;
-
   margin: 50rpx 330rpx;
- 
   flex-direction: column;
 }
 #submit-img {
