@@ -1,0 +1,44 @@
+/* pages/singlejob/singlejob.wxss */
+
+.job_card {
+  margin: 50rpx 50rpx 50rpx 50rpx;
+  border: 2rpx solid #BDBDBD;
+  border-radius: 10rpx;
+  box-shadow: 3px 3px 1px 1px #BDBDBD;
+}
+.company_info {
+  text-align: center;
+  padding: 50rpx 50rpx 0rpx 50rpx;
+}
+.job_logo {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 0rpx 0rpx 30rpx 0rpx;
+}
+.job_info {
+  margin: 50rpx 50rpx 50rpx 50rpx;
+  padding: 30rpx 0rpx 0rpx 0rpx;
+  align-items: center;
+  border-top: 0.5px solid #BDBDBD;
+}
+.job_type {
+  width: 250rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  background-color: #F2F2F2;
+}
+.job_post_time {
+  margin: 50rpx 50rpx 50rpx 50rpx;
+  padding: 30rpx 0rpx 0rpx 0rpx;
+  border-top: 0.5px solid #BDBDBD;
+}
+.apply {
+  margin: 0px 50rpx 30rpx 50rpx;
+}
+.notice{
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 25rpx;
+  font-family: Roboto; 
+  font-weight: lighter;
+}

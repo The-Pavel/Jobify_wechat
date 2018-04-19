@@ -33,16 +33,17 @@ Page({
   },
 
 
-  bindFormSubmit: function (e) {
+  bindSubmit: function (e) {
     //collect data from form
     let page = this
     let new_job = e.detail.value
-
+    let user = wx.getStorageSync('user')
 //     debugger
 
     console.log(new_job)
     console.log(page.data.tag_list)
     new_job.tag_list = page.data.tag_list
+    new_job.user_id = user.id
 
 
     wx.request({
@@ -150,7 +151,29 @@ Page({
         })
         .catch(err => {
           console.error(err)
-        })  
+        })
+      }
+    })
+  },
+
+  uploadDesc: function() {
+    var that = this
+    wx.chooseImage({
+      success: function(data){
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("jobDesc", {
+          blob: {
+            uri:tempFiles
+          }
+        })
+      file.save()
+        .then(savedFile => {
+         const jobDesc = savedFile.attributes.url
+         that.setData({jobDesc})
+        })
+        .catch(err => {
+          console.error(err)
+        })
       }
     })
   }

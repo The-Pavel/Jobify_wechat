@@ -31,7 +31,9 @@
 		"miniprogram": {
 
 
+
 			"current": 5,
+
 
 			"list": [
 				{
@@ -69,6 +71,12 @@
 					"id": -1,
 					"name": "quiz",
 					"pathName": "pages/quiz/quiz",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "single job card (jobs#show)",
+					"pathName": "pages/singlejob/singlejob",
 					"query": ""
 				}
 			]
