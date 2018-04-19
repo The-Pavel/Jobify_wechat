@@ -22,6 +22,7 @@ Page({
 
         for (var i = 0; i < page.data.saved_jobs.length; i++) {
           page.data.items.push({
+            job_id: page.data.saved_jobs[i].id,
             job_title: page.data.saved_jobs[i].title,
             company_name: page.data.saved_jobs[i].company,
             image: page.data.saved_jobs[i].image,
@@ -34,6 +35,8 @@ Page({
       },  
     })
   },
+
+  
     touchstart: function (e) {
       const page = this
       //开始触摸时 重置所有删除
@@ -105,7 +108,15 @@ Page({
       }
 
     })
-  }
+  },
+  tojobcard: function (e) {
+    console.log(e.currentTarget.dataset)
+    let page = this
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/singlejob/singlejob?id=${id}`
+    })
+  },
   
     
 },)

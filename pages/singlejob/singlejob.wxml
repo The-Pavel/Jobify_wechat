@@ -1,6 +1,4 @@
 <!--pages/singlejob/singlejob.wxml-->
-<text>pages/singlejob/singlejob.wxml</text>
-
 <view class="job_card">
         <view class="company_info">
           <image class="job_logo" src="{{job.image}}"/>
