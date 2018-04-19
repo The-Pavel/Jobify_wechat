@@ -1,20 +1,7 @@
 var app = getApp()
 Page({
   data: {
-    post_jobs: [
-      {
-        id: 1,
-      title: 'engineer',
-      company: "google",
-      image: "/image/logo.png"
-    },
-      {
-        id: 13,
-        title: 'cook',
-        company: "google",
-        image: "/image/logo.png"
-      }
-    ],
+    my_jobs: [],
     items: [],
     startX: 0, //开始坐标
     startY: 0
@@ -23,32 +10,32 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
-    // wx.request({
-          // url: `https://jobify.wogengapp.cn/api/v1/user/${user.id}`
-      // url: `http://localhost:3000/api/v1/users/${user.id}`,
-    //   method: 'POST',
-    //   data: data,
-    //   success: function (res) {
-    //   console.log(res)
-    //   page.setData({ my_jobs: res.data })
-    //   }
-    //    })
 
-
-        for (var i = 0; i < page.data.post_jobs.length; i++) {
-          page.data.items.push({
-            job_id: page.data.post_jobs[i].id,
-            job_title: page.data.post_jobs[i].title,
-            company_name: page.data.post_jobs[i].company,
-            image: page.data.post_jobs[i].image,
-            isTouchMove: false //默认全隐藏删除
-          })
-        }
-        page.setData({
-          items: page.data.items
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${user.id}`,
+      method: 'POST',
+      data: data,
+      success: function (res) {
+      
+      page.setData({ my_jobs: res.data })
+      // console.log(page.data.my_jobs)
+      for (var i = 0; i < page.data.my_jobs.length; i++) {
+        page.data.items.push({
+          job_id: page.data.my_jobs[i].id,
+          job_title: page.data.my_jobs[i].title,
+          company_name: page.data.my_jobs[i].company,
+          image: page.data.my_jobs[i].image,
+          isTouchMove: false //默认全隐藏删除
         })
-    //   },
-    // })
+      }
+      page.setData({items: page.data.items})
+      console.log(page.data.items)
+      }
+       })
+
+
+
+        
 
   /**
    * 生命周期函数--监听页面加载
@@ -107,20 +94,23 @@ Page({
   },
   //删除事件
   del: function (e) {
+    console.log(e)
     const page = this
     const user = wx.getStorageSync('user')
     const index = e.currentTarget.dataset.index
+    const id = e.currentTarget.dataset.id
     page.data.items.splice(e.currentTarget.dataset.index, 1)
     page.setData({
       items: page.data.items
     })
 
-    const data = { user_id: user.id, i: index }
+    // const data = { user_id: user.id, i: index }
     wx.request({
-      // url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}/saved_jobs`,
-      url: `http://localhost:3000/api/v1/users/${user.id}/saved_jobs`,
-      method: 'PUT',
-      data: data,
+
+      url: `http://localhost:3000/api/v1/jobs/${id}`,
+      method: 'DELETE',
+      // data: data,
+
       success: function (res) {
         console.log(res)
       }

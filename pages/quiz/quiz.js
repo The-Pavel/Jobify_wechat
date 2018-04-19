@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    phrases: ["Got it!", "Cool!", "Gotcha!", "I see!", "Alright!"],
     showYesButton: [false, false, false, false, false],
     showNoButton: [false, false, false, false, false],
     toView:'',
@@ -20,30 +21,35 @@ Page({
   onLoad: function (options) {
     const page = this
     const user = wx.getStorageSync('user')
-    let data = { user_id: user.id, id: user.id }
+    let data = { user_id: user.id }
     wx.request({
       // url: `https://jobify.wogengapp.cn/api/v1/question`,
       url: `http://localhost:3000/api/v1/questions`,
       method: 'PUT',
       data: data,
       success: function (res) {
-        page.setData(res.data)
-        // console.log(res.data)
+        console.log(res)
+        page.setData(res.data) 
       }
     })
   },
 
   switch1Change: function (e) {
-    // let question = e.currentTarget.dataset.id
-    // let index = this.data.questions.indexOf(question)
-    // console.log(question)
-    // console.log(index, e)
+
+    let question = e.currentTarget.dataset.id
+    let index = this.data.questions.indexOf(question)
+    console.log(question)
+    console.log(index, e)
+    let page = this
+
     let answer = {}
     let user = wx.getStorageSync('user')
     answer.user_id = user.id
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = false
     this.data.answers.push(answer)
+
+
 
     this.setData({
       // showNoButton: this.data.showNoButton.splice(index, 1, true),
@@ -63,16 +69,19 @@ Page({
     // }
   },
   switch2Change: function (e) {
-    // let question = e.currentTarget.dataset.id
-    // // let index = this.data.questions.indexOf(question)
-    // console.log(question)
-    // console.log(index, e)
+
+    let page = this
+    
+    console.log('switch2', e)
+
     let answer = {}
     let user = wx.getStorageSync('user')
     answer.user_id = user.id
     answer.question_id = e.currentTarget.dataset.id
     answer.swiped_yes = true
     this.data.answers.push(answer)
+
+
 
     this.setData({
       // showNoButton: this.data.showNoButton.splice(index, 1, true),
