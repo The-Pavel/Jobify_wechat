@@ -19,7 +19,7 @@ App({
             success: res => {
               console.log(res.userInfo)
               // 可以将 res 发送给后台解码出 unionId
-              app.setData({ userInfo: res.userInfo})
+              getApp().globalData.userInfo = res.userInfo
             }
           })
 
