@@ -33,6 +33,7 @@ Page({
     //   }
     //    })
 
+
         for (var i = 0; i < page.data.post_jobs.length; i++) {
           page.data.items.push({
             job_id: page.data.post_jobs[i].id,
@@ -47,6 +48,11 @@ Page({
         })
     //   },
     // })
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+
   },
   touchstart: function (e) {
     const page = this
@@ -124,7 +130,7 @@ Page({
     console.log(e.currentTarget.dataset.id)
     const id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/show/show?id=${id}`,
+      url: `/pages/singlejob/singlejob?id=${id}`,
     })
       }
  

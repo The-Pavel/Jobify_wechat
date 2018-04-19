@@ -7,7 +7,9 @@
     "pages/quiz/quiz",
     "pages/userscore/userscore",
     "pages/postedjobs/postedjobs",
-    "pages/edit/edit"
+    "pages/edit/edit",
+    "pages/singlejob/singlejob"
+
   ],
   "window": {
     "navigationBarBackgroundColor": "#8FBAF3",
