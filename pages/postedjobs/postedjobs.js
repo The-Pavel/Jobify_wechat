@@ -1,7 +1,20 @@
 var app = getApp()
 Page({
   data: {
-    saved_jobs: [],
+    post_jobs: [
+      {
+        id: 1,
+      title: 'engineer',
+      company: "google",
+      image: "/image/logo.png"
+    },
+      {
+        id: 13,
+        title: 'cook',
+        company: "google",
+        image: "/image/logo.png"
+      }
+    ],
     items: [],
     startX: 0, //开始坐标
     startY: 0
@@ -10,28 +23,27 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     let data = { id: user.id }
-    wx.request({
-      url: 'http://localhost:3000/api/v1/jobs/',
-      method: 'PUT',
-      data: data,
-      success: function (res) {
-        page.setData({ saved_jobs: res.data })
+  //   wx.request({
+  //     url: 'http://localhost:3000/api/v1/saved_jobs/',
+  //     method: 'PUT',
+  //     data: data,
+  //     success: function (res) {
+  //       page.setData({ post_jobs: res.data })
 
-        for (var i = 0; i < page.data.saved_jobs.length; i++) {
+        for (var i = 0; i < page.data.post_jobs.length; i++) {
           page.data.items.push({
-            job_title: page.data.saved_jobs[i].title,
-            company_name: page.data.saved_jobs[i].company,
-            image: page.data.saved_jobs[i].image,
+            job_id: page.data.post_jobs[i].id,
+            job_title: page.data.post_jobs[i].title,
+            company_name: page.data.post_jobs[i].company,
+            image: page.data.post_jobs[i].image,
             isTouchMove: false //默认全隐藏删除
           })
         }
         page.setData({
           items: page.data.items
         })
-      },
-
-
-    })
+    //   },
+    // })
   },
   touchstart: function (e) {
     const page = this
@@ -83,8 +95,8 @@ Page({
     //返回角度 /Math.atan()返回数字的反正切值
     return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
   },
-  //edit事件
- edit: function (e) {
+  //删除事件
+  del: function (e) {
     const page = this
     const user = wx.getStorageSync('user')
     const index = e.currentTarget.dataset.index
@@ -103,6 +115,10 @@ Page({
       }
 
     })
+  },
+
+  click: function(e){
+    console.log(e)
   }
 
 

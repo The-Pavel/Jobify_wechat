@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -67,6 +67,11 @@
 					"name": "quiz",
 					"pathName": "pages/quiz/quiz",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "post",
+					"pathName": "pages/postedjobs/postedjobs"
 				}
 			]
 		}
