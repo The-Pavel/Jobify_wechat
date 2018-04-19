@@ -42,7 +42,8 @@ Page({
     console.log('onLoad')
     var that = this
     const app = getApp()
-   
+    // console.log(getApp().globalData.userInfo)
+    that.setData({userInfo: getApp().globalData.userInfo})
   }
 
 })
