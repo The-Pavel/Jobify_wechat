@@ -9,25 +9,24 @@ Page({
       { name: 'sociable', value: 'sociable' },
       { name: 'extraverted', value: 'extraverted' },
       { name: 'distant', value: 'distant' },
-      { name: 'non- conflicting', value: 'non-conflicting' },
-      { name: 'reserved', value: 'reserved' },
-      { name: 'loyal', value: 'loyal' },
-      { name: 'introverted', value: 'introverted' },
-      { name: 'talkative', value: 'talkative' },
+
+      {name: 'talkative', value:'talkative'},
       { name: 'empathetic', value: 'empathetic' },
-      { name: 'light- hearted', value: 'light-hearted' },
-      { name: 'agreeable', value: 'agreeable' },
-      { name: 'warm- hearted', value: 'warm-hearted' },
-      { name: 'collaborative', value: 'collaborative' },
-      { name: 'independent', value: 'independent' },
-      { name: 'stubborn', value: 'stubborn' },
-      { name: 'direct', value: 'direct' },
-      { name: 'unemotional', value: 'unemotional' },
-      { name: 'responsible', value: 'responsible' },
-      { name: 'conscientious', value: 'conscientious' },
-      { name: 'structure- freak', value: 'structure-freak' },
-      { name: 'perfectionist', value: 'perfectionist' }]
+  { name: 'light- hearted', value: 'light-hearted' },
+  { name: 'agreeable', value: 'agreeable' },
+  { name: 'warm- hearted', value: 'warm-hearted' },
+  { name: 'collaborative', value: 'collaborative' },
+  { name: 'independent', value: 'independent' },
+  { name: 'stubborn', value: 'stubborn' },
+  { name: 'direct', value: 'direct' },
+  { name: 'unemotional', value: 'unemotional' },
+  { name: 'responsible', value: 'responsible' },
+  { name: 'conscientious', value: 'conscientious' },
+  { name: 'structure- freak', value: 'structure-freak' },
+      { name: 'non- conflicting', value: 'non-conflicting' }]
+
   },
+   
 
   toprofile: function (e) {
     console.log(e)

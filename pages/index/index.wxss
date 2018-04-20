@@ -6,19 +6,25 @@
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 50rpx;
+  width: 250rpx;
+  height: 250rpx;
+  margin-top: 40rpx;
+  margin-bottom: 10rpx;
   border-radius: 50%;
+  font-family: Montserrat; 
+
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color:  #0245A3;
+  font-size: 30rpx;
+  font-family: Roboto;
+  
+
+
 }
 
-.usermotto {
-  margin-top: 200px;
-}
+
 
 /*Additional CSS  */
 .container {
@@ -28,7 +34,7 @@
 }
 
  image {
-  margin: 60rpx 0px 20rpx 0px;
+  margin: 80rpx 0px 40rpx 0px;
 }  
 
 .card {
@@ -43,7 +49,28 @@
   background-position: center;
   color: #0245A3;
   position: relative;
-  background-color: #8FBAF3;
+  background: linear-gradient(to bottom right,#8FBAF3,#BDF1F6);
+  margin-top:20px;
+  margin-left:20px;
+  margin-bottom: 20px;
+  opacity: 40%;
+  padding: 0px 0px 0px 0px;
+}
+
+.card2 {
+  width: 320rpx;
+  height: 320rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  font-family: Roboto;
+  font-style: Bold;
+  background-size: cover !important;
+  background-position: center;
+  color: #0245A3;
+  position: relative;
+  background: linear-gradient(to bottom left, #BDF1F6, #F2FCFC);
+  margin-top:20px;
   margin-left:20px;
   margin-bottom: 20px;
   opacity: 40%;
@@ -58,7 +85,7 @@
   display: flex;
 }
 
-.card2 {
+.card3 {
   width: 320rpx;
   height: 320rpx;
   font-size: 14px;
@@ -69,9 +96,30 @@
   background-position: center;
   color: #0245A3;
   position: relative;
-  background-color: #F2FCFC;
+  background: linear-gradient(to top right, #BDF1F6, #F2FCFC);
+  
   margin-left:20px;
   margin-bottom: 20px;
+  padding: 0px 0px 0px 0px;
+}
+
+.card4 {
+  width: 320rpx;
+  height: 320rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  font-family: Roboto;
+  font-style: Bold;
+  background-size: cover !important;
+  background-position: center;
+  color: #0245A3;
+  position: relative;
+  background: linear-gradient(to top left,#8FBAF3,#BDF1F6);
+ 
+  margin-left:20px;
+  margin-bottom: 20px;
+  opacity: 40%;
   padding: 0px 0px 0px 0px;
 }
 
