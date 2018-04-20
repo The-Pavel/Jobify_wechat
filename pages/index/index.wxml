@@ -12,20 +12,20 @@
 <view class="row1container">
   <view class="card" bindtap="takequiz"> 
 
-     <image src="/image/quiz.png" style="width: 130rpx; height: 130rpx;" />
+     <image src="/image/quiz.png" style="width: 100rpx; height:100rpx;" />
     <!-- PULL THE NUMBER OF JOBS POSTED IF ANY -->
  
-    <view class="card-category1"> TAKE QUIZ </view>
+    <view class="card-category1"> Take Quiz </view>
   
     <!--NEED TO LINK THE ABOVE TO THE POST JOBS FORM  -->
   </view>
 
 
- <!-- Quiz card  -->
+ <!-- Personality card  -->
 
 <view class="card2" bindtap="personality">  
-    <image src="/image/personality.png" style="width: 130rpx; height: 130rpx;" />
-    <view class="card-category2"> <view class="h2"> MY PERSONALITY</view> </view>
+    <image src="/image/personality.png" style="width: 100rpx; height: 100rpx;" />
+    <view class="card-category2"> <view class="h2"> My Personality</view> </view>
 <!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
   </view>  
   
@@ -33,18 +33,18 @@
 
 <!-- New Job Card  -->
 <view class="row2container">
-  <view class="card2" bindtap="postjob">  
-    <image src="/image/postjob3.png" style="width: 130rpx; height: 130rpx;" />
-      <view class="card-category1"> POST JOB </view>
+  <view class="card3" bindtap="postjob">  
+    <image src="/image/jobpost.png" style="width: 100rpx; height: 100rpx;" />
+      <view class="card-category1"> Post Job </view>
     <!--NEED TO LINK THE ABOVE TO PERSONALITY CLOUD LIST -->
   </view>
 
 
 <!-- Posted Jobs Card  -->
 
-  <view class="card" bindtap="postedjobs">  
-    <view> X Jobs Posted </view>
-      <view class="card-category2">MY POSTED JOBS </view>
+  <view class="card4" bindtap="postedjobs">  
+    <image src="/image/postjob3.png" style="width: 100rpx; height: 100rpx;" />
+      <view class="card-category2">Posted Jobs </view>
     <!--NEED TO LINK THE ABOVE TO POSTED JOBS LIST -->
   </view>
 </view>
