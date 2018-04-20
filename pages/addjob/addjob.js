@@ -12,13 +12,13 @@ Page({
       { name: 'sociable', value:'sociable'},
       { name: 'extraverted',value:'extraverted'},
       { name: 'distant',value:'distant'},
-      { name: 'non- conflicting',value:'non- conflicting'},
+      { name: 'non- conflicting',value:'non-conflicting'},
       { name: 'reserved',value:'reserved'},
       { name: 'loyal',value:'loyal'},
       { name: 'introverted',value:'introverted'},
       { name: 'talkative',value:'talkative'},
       { name: 'empathetic',value:'empathetic'},
-      { name: 'light- hearted',value:'light- hearted'},
+      { name: 'light- hearted',value:'light-hearted'},
       { name: 'agreeable',value:'agreeable'},
       { name: 'warm- hearted',value:'warm- hearted'},
       { name: 'collaborative',value:'collaborative'},
@@ -28,7 +28,7 @@ Page({
       { name: 'unemotional',value:'unemotional'},
       { name: 'responsible',value:'responsible'},
       { name: 'conscientious',value:'conscientious'},
-      { name: 'structure- freak' ,value:'structure- freak'},
+      { name: 'structure- freak' ,value:'structure-freak'},
       { name: 'perfectionist',value:'perfectionist'}]
   },
 
@@ -45,11 +45,12 @@ Page({
     new_job.tag_list = page.data.tag_list
     new_job.user_id = user.id
     new_job.image = page.data.image
+    new_job.attachment= page.data.attachment
 
 
     wx.request({
-      //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-      url: 'http://localhost:3000/api/v1/jobs/',
+      url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
+      // url: 'http://localhost:3000/api/v1/jobs/',
       method: 'POST',
       data: new_job,
       success: function () {
@@ -139,6 +140,10 @@ Page({
     var that = this
     wx.chooseImage({
       success: function(data){
+        wx.showToast({
+          title: 'Success',
+          icon: "success"
+        })
         const tempFiles = data.tempFilePaths[0]
         const file = new AV.File("company", {
           blob: {
@@ -160,16 +165,26 @@ Page({
 
   uploadDesc: function() {
     var that = this
-    wx.uploadFile({
-      success: function(res){
-        res.tempFilePaths.map(tempFilePath => () => new AV.File('filename', {
+    wx.chooseImage({
+      success: function (data) {
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("company", {
           blob: {
-            uri: tempFilePath,
-          },
-        }).save()).reduce(
-          (m, p) => m.then(v => AV.Promise.all([...v, p()])),
-          AV.Promise.resolve([])
-          ).then(files => console.log(files.map(file => file.url()))).catch(console.error);
+            uri: tempFiles
+          }
+        })
+        file.save()
+          .then(savedFile => {
+            const companyLogo = savedFile.attributes.url
+
+            console.log('hello ' + companyLogo)
+       
+            that.setData({ attachment: companyLogo })
+
+          })
+          .catch(err => {
+            console.error(err)
+          })
       }
     })
   }
