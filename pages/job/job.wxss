@@ -29,6 +29,9 @@ swiper {
   font-size: 30rpx;
   background-color: #F2F2F2;
 }
+.location {
+  margin-top: 30rpx;
+}
 .job_post_time {
   margin: 50rpx 50rpx 50rpx 50rpx;
   padding: 30rpx 0rpx 0rpx 0rpx;
@@ -45,4 +48,70 @@ swiper {
   font-size: 25rpx;
   font-family: Roboto; 
   font-weight: lighter;
+}
+#right-arrow {
+  height: 50rpx;
+  width: 50rpx;
+  position:absolute;
+  left:650rpx;
+  top:400rpx;
+  z-index:1; 
+}
+#left-arrow {
+  height: 50rpx;
+  width: 50rpx;
+  position:absolute;
+  right:650rpx;
+  top:400rpx;
+  z-index:1; 
+
+  animation: assetAnim 2s 1;
+  animation-delay: 2s;
+}
+
+.label-1__icon {
+    position: relative;
+    margin: 0rpx 10rpx;
+     /* display: inline-block;  */
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    background: white;
+    border: 1px solid #8FBAF3;
+    border-radius: 12px;
+}
+
+
+#container1{  
+  display: inline-flex;  
+  flex-wrap: wrap; 
+  height: auto;
+  justify-content: center;
+  margin: 20rpx 20rpx;
+}  
+
+.label-1__text{
+    text-align: center;
+    line-height: 15rpx;
+    font-size: 20rpx;
+    font-family: Roboto;
+    font-weight: lighter;
+    fill-opacity: 40rpx;
+     padding: 5rpx; 
+    /* vertical-align: middle; */
+}
+
+.group {
+  display: inline-flex;
+  margin-top: 10rpx;
+}
+
+.label-1{
+    margin: 5rpx 5rpx;
+    width: auto;
+}
+
+#job-desc {
+  text-align:justify;
+  text-justify:inter-word;
 }

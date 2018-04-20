@@ -97,7 +97,7 @@ Page({
   },
 
   newjobs: function (e) {
-    wx.navigateTo({
+    wx.reLaunch({
       url: `/pages/job/job`,
     })
   },

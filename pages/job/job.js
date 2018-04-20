@@ -8,7 +8,7 @@ Page({
     left: false,
     right: false,
     activeIndex: 0,
-    saveJobBtn: false
+    jobCard: false
   },
 
   // SWIPER
@@ -66,6 +66,7 @@ Page({
       }
     })
   },
+
 
   saveJob: function(e) {
     console.log(e)
