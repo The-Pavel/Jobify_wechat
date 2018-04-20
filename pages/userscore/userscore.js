@@ -29,60 +29,6 @@ Page({
       { name: 'perfectionist', value: 'perfectionist' }]
   },
 
-
-  // bindSubmit: function (e) {
-  //   //collect data from form
-  //   let page = this
-  //   let new_job = e.detail.value
-  //   let user = wx.getStorageSync('user')
-  //   //     debugger
-
-  //   console.log(new_job)
-  //   console.log(page.data.tag_list)
-  //   new_job.tag_list = page.data.tag_list
-  //   new_job.user_id = user.id
-
-
-  //   wx.request({
-  //     //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-  //     url: 'http://localhost:3000/api/v1/jobs/',
-  //     method: 'POST',
-  //     data: new_job,
-  //     success: function () {
-  //       wx.showToast({
-  //         title: 'Created!',
-  //         icon: 'success'
-  //       })
-  //       wx.reLaunch({
-  //         url: '/pages/index/index',
-  //       })
-  //     }
-  //   })
-
-    // relaunch at index
-    // wx.reLaunch({
-    //   url: '/pages/index/index'
-    // })
-
-
-  // },
-  // checkboxChange: function (e) {
-  //   const page = this
-  //   var checked = e.detail.value
-  //   // console.log(e)
-  //   var changed = {}
-  //   for (var i = 0; i < this.data.checkboxItems.length; i++) {
-  //     if (checked.indexOf(this.data.checkboxItems[i].name) !== -1) {
-  //       changed['checkboxItems[' + i + '].checked'] = true
-  //     } else {
-  //       changed['checkboxItems[' + i + '].checked'] = false
-  //     }
-  //   }
-  //   this.setData(changed)
-  //   page.setData({ tag_list: checked })
-  //   console.log(page.data.tag_list)
-  // },
-
   toprofile: function (e) {
     console.log(e)
     wx.reLaunch({
@@ -116,14 +62,15 @@ Page({
     })
   },
 
-
+  
   onReady: function () {
-
+    this.setData({userInfo: getApp().globalData.userInfo})
   },
 
 
   onShow: function () {
-
+    // this.setData({userInfo: })
+    
   },
 
 
