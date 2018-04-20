@@ -14,7 +14,7 @@ Page({
     wx.request({
       // url: "https://jobify.wogengapp.cn/api/v1/saved_jobs/",
       url: 'http://localhost:3000/api/v1/saved_jobs/',
-      method: 'PUT',
+      method: 'GET',
       data: data,
       success: function(res) {
         page.setData({saved_jobs: res.data})
@@ -100,8 +100,9 @@ Page({
     const data = {user_id: user.id, i: index}
     wx.request({
       // url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}/saved_jobs`,
-      url: `http://localhost:3000/api/v1/users/${user.id}/saved_jobs`,
-      method: 'PUT',
+        // url: `https://jobify.wogengapp.cn/api/v1/saved_jobs`,
+      url: `http://localhost:3000/api/v1/saved_jobs`,
+      method: 'POST',
       data: data,
       success: function (res) {
         console.log(res)
