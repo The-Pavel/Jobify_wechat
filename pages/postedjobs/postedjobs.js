@@ -42,6 +42,13 @@ Page({
    */
 
   },
+
+  createJob: function (e) {
+    wx.navigateTo({
+      url: '/pages/addjob/addjob',
+    })
+  },
+
   touchstart: function (e) {
     const page = this
     //开始触摸时 重置所有删除
