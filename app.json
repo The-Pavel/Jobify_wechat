@@ -8,7 +8,8 @@
     "pages/userscore/userscore",
     "pages/postedjobs/postedjobs",
     "pages/edit/edit",
-    "pages/singlejob/singlejob"
+    "pages/singlejob/singlejob",
+    "pages/loadingscreen/loadingscreen"
 
   ],
   "window": {

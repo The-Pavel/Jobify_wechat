@@ -1,4 +1,4 @@
-// pages/singlejob/singlejob.js
+// pages/loadingscreen/loadingscreen.js
 Page({
 
   /**
@@ -12,21 +12,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    setTimeout(this.stopLoad, 3000)
+  },
 
-    console.log(options)
-    let page = this;
-    page.setData({user_id: wx.getStorageSync('user').id})
-    // loading specific station data from api
-    const id = options.id
-
-    wx.request({
-            // url: `http://localhost:3000/api/v1/jobs/${id}`,
-            url: `http://jobify.wogengapp.cn/api/v1/jobs/${id}`,
-      success: function (res) {
-        console.log(res.data)
-        page.setData({job: res.data});
-      }
-    })
+  stopLoad: function(e) {
+    success: {
+      wx.reLaunch({
+        url: '/pages/userscore/userscore',
+      })
+    }
   },
 
   /**
@@ -48,14 +42,6 @@ Page({
    */
   onHide: function () {
   
-  },
-
-  editJob: function(e) {
-    let id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: `/pages/edit/edit?id=${id}`,
-    })
-
   },
 
   /**

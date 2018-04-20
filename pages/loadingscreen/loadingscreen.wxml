@@ -1,0 +1,6 @@
+<!--pages/loadingscreen/loadingscreen.wxml-->
+
+<view id="loading-wrapper">
+  <view id="loading-text">You are...</view>
+  <view id="loading-content"></view>
+</view>

@@ -12,7 +12,9 @@ Page({
     questions: '',
     answers: [],
     scrollTop: 0,
-    index: 0
+    index: 0,
+    count: 0,
+    sending: false
   },
 
   /**
@@ -67,6 +69,13 @@ Page({
     //     break
     //   }
     // }
+    page.data.count++
+    if (page.data.count == page.data.questions.length) {
+      wx.showToast({
+        title: 'Done!',
+        image: '../../image/newjobs_active.png'
+      })
+    }
   },
   switch2Change: function (e) {
 
@@ -99,9 +108,17 @@ Page({
     //     break
     //   }
     // }
+    page.data.count++
+    if (page.data.count == page.data.questions.length) {
+      wx.showToast({
+        title: 'Done!',
+        image: '../../image/newjobs_active.png'
+      })
+    }
   },
 
   sendAnswers: function(e) {
+    setTimeout(this.changeSending, 5000)
     this.data.answers.forEach(function (answer) {
       wx.request({
         url: "https://jobify.wogengapp.cn/api/v1/answers/",
@@ -110,12 +127,16 @@ Page({
         data: answer,
         success: function(res) {
           wx.navigateTo({
-            url: '/pages/userscore/userscore',
+            url: '/pages/loadingscreen/loadingscreen',
           })
         }
       })
     });
 
+  },
+
+  changeSending: function() {
+    this.setData({sending: true})
   },
 
   /**

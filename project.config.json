@@ -29,7 +29,9 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+
+			"current": 9,
+
 			"list": [
 				{
 					"id": -1,
@@ -77,15 +79,22 @@
 				{
 					"id": -1,
 
-					"name": "tag cloud",
-					"pathName": "pages/userscore/userscore",
+					"name": "loading tags",
+					"pathName": "pages/loadingscreen/loadingscreen",
+
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "singlejob",
+
+					"name": "single job",
 					"pathName": "pages/singlejob/singlejob",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my jobs",
+					"pathName": "pages/postedjobs/postedjobs"
 
 				}
 			]
