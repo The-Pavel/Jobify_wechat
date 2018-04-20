@@ -76,9 +76,17 @@
 				},
 				{
 					"id": -1,
-					"name": "user  cloud",
+
+					"name": "tag cloud",
 					"pathName": "pages/userscore/userscore",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "singlejob",
+					"pathName": "pages/singlejob/singlejob",
+					"query": ""
+
 				}
 			]
 		}
