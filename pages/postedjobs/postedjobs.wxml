@@ -1,7 +1,20 @@
 
+<view wx:if="{{items.length == 0}}">
+  <view bindtap="createJob" class="square">
+    <view class="line-top"></view>
+    <view class="line-right"></view>
+    <view class="line-bottom"></view>
+    <view class="line-left"></view>
+    <view class="black-mask"></view>
+    <view class="text">
+      <text class='h1'>Click here to start hiring!</text>
+    </view>
+  </view>
+
+</view>
 
 <view class="saved_card">
- <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" bindlongtap='click'> 
+ <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" data-id="{{item.job_id}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" bindlongtap='click'> 
 
     <image class="job_logo" src="{{item.image}}"/>
     <view class="job_info">
