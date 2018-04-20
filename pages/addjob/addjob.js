@@ -49,8 +49,8 @@ Page({
 
 
     wx.request({
-      //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-      url: 'http://localhost:3000/api/v1/jobs/',
+      url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
+      // url: 'http://localhost:3000/api/v1/jobs/',
       method: 'POST',
       data: new_job,
       success: function () {
@@ -176,13 +176,11 @@ Page({
         file.save()
           .then(savedFile => {
             const companyLogo = savedFile.attributes.url
-<<<<<<< HEAD
+
             console.log('hello ' + companyLogo)
-            that.setData({ image: companyLogo })
-=======
-            // console.log('hello ' + companyLogo)
+       
             that.setData({ attachment: companyLogo })
->>>>>>> 3780a82b145f4768496122c06a2cbf48998bee1b
+
           })
           .catch(err => {
             console.error(err)

@@ -91,8 +91,8 @@ Page({
 
 
     wx.request({
-      //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-      url: 'http://localhost:3000/api/v1/jobs/',
+      url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
+      // url: 'http://localhost:3000/api/v1/jobs/',
       method: 'POST',
       data: new_job,
       success: function () {
