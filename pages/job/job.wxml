@@ -29,9 +29,6 @@
           </checkbox-group>
 
 
-
-
-
           <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
             <view wx:if="{{job.salary !== null}}">
               <text class="h3">Salary: </text>
