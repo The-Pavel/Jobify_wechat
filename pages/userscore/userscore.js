@@ -11,9 +11,9 @@ Page({
       { name: 'distant', value: 'distant' },
       {name: 'talkative', value:'talkative'},
       { name: 'empathetic', value: 'empathetic' },
-  { name: 'light- hearted', value: 'light- hearted' },
+  { name: 'light- hearted', value: 'light-hearted' },
   { name: 'agreeable', value: 'agreeable' },
-  { name: 'warm- hearted', value: 'warm- hearted' },
+  { name: 'warm- hearted', value: 'warm-hearted' },
   { name: 'collaborative', value: 'collaborative' },
   { name: 'independent', value: 'independent' },
   { name: 'stubborn', value: 'stubborn' },
@@ -21,8 +21,8 @@ Page({
   { name: 'unemotional', value: 'unemotional' },
   { name: 'responsible', value: 'responsible' },
   { name: 'conscientious', value: 'conscientious' },
-  { name: 'structure- freak', value: 'structure- freak' },
-      { name: 'non- conflicting', value: 'non- conflicting' }]
+  { name: 'structure- freak', value: 'structure-freak' },
+      { name: 'non- conflicting', value: 'non-conflicting' }]
   },
    
 
