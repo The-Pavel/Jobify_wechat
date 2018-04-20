@@ -30,7 +30,9 @@
 		},
 		"miniprogram": {
 
+
 			"current": -1,
+
 
 			"list": [
 				{
@@ -74,7 +76,6 @@
 					"id": -1,
 					"name": "post",
 					"pathName": "pages/postedjobs/postedjobs",
-
 					"query": ""
 				}
 			]

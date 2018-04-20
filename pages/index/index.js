@@ -42,8 +42,13 @@ Page({
     console.log('onLoad')
     var that = this
     const app = getApp()
-    that.setData({ userInfo: app.globalData.userInfo})
+// conflict
+//     that.setData({ userInfo: app.globalData.userInfo})
     
+
+    // console.log(getApp().globalData.userInfo)
+    that.setData({userInfo: getApp().globalData.userInfo})
+
   }
 
 })
