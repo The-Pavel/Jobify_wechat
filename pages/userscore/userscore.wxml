@@ -6,11 +6,11 @@
   
   <checkbox-group class="group" bindchange="checkboxChange" >
       <view id = "container1">
-        <view class="label-1" wx:for="{{checkboxItems}}">
+        <view class="label-1" wx:for="{{tags}}" wx:for-item="tag">
           <label>
             <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
             <view class="label-1__icon">
-              <text class="label-1__text">{{item.value}}</text>
+              <text class="label-1__text">{{tag}}</text>
             </view>
           </label>
         </view>
@@ -19,12 +19,18 @@
 
 <!--need to insert profile underneath  -->
 
-   <!-- <view  bindtap="bindViewTap" class="userinfo">
+   <view class="container">
+   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    </view>
-</view> -->
+     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
 
-<image src="/image/profile.png" bindtap='toprofile'/>
+
+
+
+
+<!-- <image class="avatar" src="{{userInfo.avatarUrl}}" bindtap='toprofile'/>-->
+
 
 
 <!-- <view class="tag" wx:for="{{tags}}" wx:for-item="tag" wx:key="tag.id" data-tag="{{tag}}">
@@ -34,22 +40,23 @@
   </view>
 </view> -->
 
-<view class="row1container">
-  <view class="card" bindtap="newjobs"> 
-     <image src="/image/newjobs.png" style="width: 100rpx; height: 100rpx;" class="icon"/> 
-     <view class="number">  </view>
-    <view class="card-category"> JOBS </view>
-  
-    <!--NEED TO LINK THE ABOVE TO THE POST JOBS FORM  -->
-  </view>
+    <view class="row1container">
+    <view class="card" bindtap="newjobs"> 
+      <image src="/image/newjobs.png" style="width: 100rpx; height: 100rpx;" class="icon"/> 
+      <view class="number">  </view>
+      <view class="card-category"> Jobs </view>
+    
+      <!--NEED TO LINK THE ABOVE TO THE POST JOBS FORM  -->
+    </view>
 
 
  <!-- Share card  -->
 
-<view class="card" bindtap="backtoquiz">  
-    <image src="/image/quiz.png" style="width: 100rpx; height: 100rpx;" class="icon" />
-    <view class="card-category"> BACK TO QUIZ</view> 
-<!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
-  </view>  
+  <view class="card" bindtap="backtoquiz">  
+      <image src="/image/quiz.png" style="width: 100rpx; height: 100rpx;" class="icon" />
+      <view class="card-category"> Back To Quiz</view> 
+  <!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
+    </view>  
+  </view>
 </view>
 

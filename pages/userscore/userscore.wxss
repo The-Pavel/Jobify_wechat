@@ -1,10 +1,14 @@
 /* pages/userscore/userscore.wxss */
 
-image{
-  height:100rpx;
-  width:100rpx;
-  margin-left: 45%;
-  margin-right:50%;
+.avatar{
+  height:150rpx;
+  width:150rpx;
+  /* margin-left: 45%; */
+  /* margin-right:50%; */
+  border-radius: 50%;
+  /* margin-top: 100rpx; */
+  margin: 100rpx auto 0 auto;
+  margin-left: 40%;
 }
 
 .label-1__icon {
@@ -17,15 +21,30 @@ image{
     background: white;
     border: 2px solid #8FBAF3;
     border-radius: 12px;
+    animation: float 5s infinite;
 }
 
 
 #container1{  
   display: flex;  
-  flex-wrap: wrap; 
-  height: auto;
-  justify-content: center;
+
+  /*flex-wrap: wrap;  */
+
+  /*height: auto; */
+
+  /*justify-content: center; */
+
+  /*margin: 0 20rpx 20rpx 0; */
+
+
+  flex-wrap: wrap;
+  vertical-align: top;
+   height: auto; 
+   justify-content: center; 
   margin: 0 20rpx;
+  margin-bottom: 50rpx;
+  /* height: 600rpx; */
+
 }  
 
 .label-1__text{
@@ -61,10 +80,15 @@ image{
   width: 200px;
 }
 
-container {
-  width:100%;
-  height:100px;
-  padding: 0;
+.container {
+height:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+padding:50rpx;
+box-sizing:border-box;
+
 }
 
 .card {
@@ -82,13 +106,20 @@ container {
   margin-left:10px; 
   margin-right:20px;
   margin-bottom: 20px; 
-  margin-top:30px;
+  margin-top:130px; 
   opacity: 40%;
   padding: 0px 0px 0px 0px;
 }
 
 .row1container {
   display: flex;
+
+ 
+/* position:absolute; */
+
+
+  margin-top: 0rpx;
+
 }
 
 .icon{
@@ -98,13 +129,63 @@ container {
 
 .card-category {
   font-family: Roboto; 
-  font-weight:600;
-  font-size: 30rpx;
+  font-weight:500;
+  font-size: 25rpx;
   text-align: center;
   color: #024583;
   margin:10px;
 }
-
 .h1{
   margin-top:15px;
 }
+
+page{
+  background: linear-gradient(#F2FCFC, #BDF1F6, #F2FCFC);
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 50%;
+  font-family: Montserrat; 
+
+}
+
+.userinfo-nickname {
+  color:  #0245A3;
+  font-size: 30rpx;
+  font-family: Roboto;
+  
+
+
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(5rpx)
+  }
+  20% {
+    transform: translateY(10rpx)
+  }
+  40% {
+    transform: translateY(-10rpx)
+  }
+  60% {
+    transform: translateY(10rpx)
+  }
+  80% {
+    transform: translateY(-5rpx)
+  }
+  100% {
+    transform: translateY(5rpx)
+  } 
+}
+

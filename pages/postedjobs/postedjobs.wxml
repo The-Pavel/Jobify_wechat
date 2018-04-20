@@ -13,6 +13,8 @@
 
 </view>
 
+
+
 <view class="saved_card">
  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" data-id="{{item.job_id}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" bindtap='click'> 
 

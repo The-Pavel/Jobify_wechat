@@ -45,8 +45,10 @@ Page({
       duration: 1500
     });
     wx.request({
+
       // url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
       url: `http://localhost:3000/api/v1/jobs/${options.id}`,
+
       method: 'GET',
       success(res) {
         var job = res.data;
@@ -91,10 +93,12 @@ Page({
     updated_job.attachment = page.data.attachment
 
     wx.request({
+
       //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
       url: `http://localhost:3000/api/v1/jobs/${page.data.id}`,
       method: 'PUT',
       data: updated_job,
+
       success: function () {
         wx.showToast({
           title: 'Updated!',
