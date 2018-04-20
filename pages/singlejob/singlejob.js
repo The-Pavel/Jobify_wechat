@@ -12,8 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     console.log(options)
     let page = this;
+    page.setData({user_id: wx.getStorageSync('user').id})
     // loading specific station data from api
     const id = options.id
 
@@ -46,6 +48,14 @@ Page({
    */
   onHide: function () {
   
+  },
+
+  editJob: function(e) {
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/edit/edit?id=${id}`,
+    })
+
   },
 
   /**

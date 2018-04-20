@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -79,6 +79,17 @@
 					"name": "loading tags",
 					"pathName": "pages/loadingscreen/loadingscreen",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "single job",
+					"pathName": "pages/singlejob/singlejob",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my jobs",
+					"pathName": "pages/postedjobs/postedjobs"
 				}
 			]
 		}

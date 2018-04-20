@@ -1,1 +1,115 @@
 /* pages/edit/edit.wxss */
+
+.hd {
+  font-size: 30rpx;
+  text-align: center;
+  padding: 50rpx;
+  font-weight: lighter;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.form {
+  background-color: #F4F4F4;
+  padding:60rpx 40rpx;
+  
+}
+
+textarea {
+    padding: 25rpx 0;
+    font-weight: lighter;
+    font-size: 28rpx;
+    font-family: Roboto;
+    font-weight: lighter;
+    fill-opacity: 40rpx;
+}
+.textarea-wrp {
+    padding: 0 25rpx;
+    background-color: #fff;
+    font-weight: lighter;
+    color: #888888;
+    font-size: 28rpx;
+}
+
+.checkbox {
+  padding-left:30rpx;
+}
+
+ /* .page-section-details {
+  margin-top: 5rpx;
+  color: #888888;
+  font-size: 22rpx;
+  text-align: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;  
+}  */
+
+.group {
+  display: inline-flex;
+}
+
+
+/* #buttonstyle{
+ margin: 0 auto;
+ background-color: white;
+} */
+
+
+.label-1{
+  margin: 5rpx;
+  width: auto;
+}
+.label-1__text{
+  /* display: inline-block; */
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  font-size: 28rpx;
+  font-family: Roboto;
+  font-weight: lighter;
+  fill-opacity: 40rpx;
+}
+
+.label-1__shape {
+  padding:0px 10px;
+  vertical-align: middle;
+  height: 50rpx;
+  background: white;
+  border: 2px solid #8FBAF3;
+  border-radius: 12px;
+}
+
+#container1{  
+  display: flex;  
+  flex-wrap: wrap; 
+  height: 80%;
+  justify-content: center;
+  margin: 0 20rpx;
+}  
+
+.button2{
+  background: white;
+  border: none;
+  margin-top: 20rpx;
+  color: black;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  font-weight: lighter;
+  fill-opacity: 40rpx;
+}
+
+.button3{
+  background:#9CC1F1;
+  color: white; 
+}
+
+.desc2{
+  font-size: 28rpx;
+  font-family: Roboto;
+  font-weight: lighter;
+  fill-opacity: 40rpx;
+}
+

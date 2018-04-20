@@ -38,15 +38,15 @@ Page({
   // when onload, get load job
   onLoad: function (options) {
     let page = this;
-    const id = options.id
+    page.setData({id: options.id})
     wx.showToast({
       title: 'Loading...',
       icon: 'loading',
       duration: 1500
     });
     wx.request({
-      url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
-      // url: `http://localhost:3000/api/v1/jobs/${id}`,
+      // url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
+      url: `http://localhost:3000/api/v1/jobs/${options.id}`,
       method: 'GET',
       success(res) {
         var job = res.data;
@@ -78,30 +78,30 @@ Page({
     console.log(page.data.tag_list)
   },
 // after edit, upload the form back to the server 
-  bindFormSubmit: function (e) {
+  bindSubmit: function (e) {
     //collect data from form
     let page = this
-    let new_job = e.detail.value
+    let updated_job = e.detail.value
 
     //     debugger
 
-    console.log(new_job)
+    // console.log(new_job)
     console.log(page.data.tag_list)
-    new_job.tag_list = page.data.tag_list
-
+    updated_job.tag_list = page.data.tag_list
+    updated_job.attachment = page.data.attachment
 
     wx.request({
       //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-      url: 'http://localhost:3000/api/v1/jobs/',
-      method: 'POST',
-      data: new_job,
+      url: `http://localhost:3000/api/v1/jobs/${page.data.id}`,
+      method: 'PUT',
+      data: updated_job,
       success: function () {
         wx.showToast({
-          title: 'Created!',
+          title: 'Updated!',
           icon: 'success'
         })
         wx.reLaunch({
-          url: '/pages/index/index',
+          url: '/pages/postedjobs/postedjobs',
         })
       }
     })
@@ -119,6 +119,29 @@ Page({
    */
   onShow: function () {
   
+  },
+
+  uploadDesc: function () {
+    var that = this
+    wx.chooseImage({
+      success: function (data) {
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("company", {
+          blob: {
+            uri: tempFiles
+          }
+        })
+        file.save()
+          .then(savedFile => {
+            const companyLogo = savedFile.attributes.url
+            console.log('hello ' + companyLogo)
+            that.setData({ attachment: companyLogo })
+          })
+          .catch(err => {
+            console.error(err)
+          })
+      }
+    })
   },
 
   /**
