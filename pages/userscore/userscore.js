@@ -1,6 +1,7 @@
 Page({
 
   data: {
+    loading: true,
     companyLogo: null,
     checkboxItems: [
       { name: "outgoing", value: 'outgoing' },
@@ -9,20 +10,19 @@ Page({
       { name: 'sociable', value: 'sociable' },
       { name: 'extraverted', value: 'extraverted' },
       { name: 'distant', value: 'distant' },
-
       {name: 'talkative', value:'talkative'},
       { name: 'empathetic', value: 'empathetic' },
-  { name: 'light- hearted', value: 'light-hearted' },
-  { name: 'agreeable', value: 'agreeable' },
-  { name: 'warm- hearted', value: 'warm-hearted' },
-  { name: 'collaborative', value: 'collaborative' },
-  { name: 'independent', value: 'independent' },
-  { name: 'stubborn', value: 'stubborn' },
-  { name: 'direct', value: 'direct' },
-  { name: 'unemotional', value: 'unemotional' },
-  { name: 'responsible', value: 'responsible' },
-  { name: 'conscientious', value: 'conscientious' },
-  { name: 'structure- freak', value: 'structure-freak' },
+      { name: 'light- hearted', value: 'light-hearted' },
+      { name: 'agreeable', value: 'agreeable' },
+      { name: 'warm- hearted', value: 'warm-hearted' },
+      { name: 'collaborative', value: 'collaborative' },
+      { name: 'independent', value: 'independent' },
+      { name: 'stubborn', value: 'stubborn' },
+      { name: 'direct', value: 'direct' },
+      { name: 'unemotional', value: 'unemotional' },
+      { name: 'responsible', value: 'responsible' },
+      { name: 'conscientious', value: 'conscientious' },
+      { name: 'structure- freak', value: 'structure-freak' },
       { name: 'non- conflicting', value: 'non-conflicting' }]
 
   },
@@ -49,6 +49,7 @@ Page({
 
 
   onLoad: function (options) {
+    setTimeout(this.stopLoad, 3000)
     const page = this
     const user = wx.getStorageSync('user')
     wx.request({
@@ -59,6 +60,10 @@ Page({
         page.setData({tags: res.data.tag_list})
       }
     })
+  },
+
+  stopLoad: function(e) {
+    this.setData({loading: false})
   },
 
   
