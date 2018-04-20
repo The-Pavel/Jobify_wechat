@@ -25,22 +25,25 @@ App({
           })
 
         if (res.code) {
-          
+
           wx.request({
 
-             url: 'http://localhost:3000/api/v1/users/',
+            //  url: 'http://localhost:3000/api/v1/users/',
+
 
 
             //  url: 'http://e-charge.herokuapp.com/api/v1/users/',
             // method: "POST",
 
-            // url: 'http://jobify.wogengapp.cn/api/v1/users',
+
+            url: 'https://jobify.wogengapp.cn/api/v1/users',
             method: "POST",
+
               data: {
               code: res.code
             },
             success: function (res) {
-              console.log(res.data)
+              console.log(res)
               wx.setStorageSync('openid', res.data.openid)
               wx.setStorageSync('user_id', res.data.id)
               wx.setStorageSync('user', res.data)

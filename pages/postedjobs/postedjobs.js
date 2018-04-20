@@ -12,8 +12,8 @@ Page({
     let data = { id: user.id }
 
     wx.request({
-      // url: `http://jobify.wogengapp.cn/api/v1/users/${user.id}`,
-      url: `http://localhost:3000/api/v1/users/${user.id}`,
+      url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
+      // url: `http://localhost:3000/api/v1/users/${user.id}`,
       method: 'POST',
       data: data,
       success: function (res) {
@@ -114,8 +114,8 @@ Page({
 
     // const data = { user_id: user.id, i: index }
     wx.request({
-      // url: `http://jobify.wogengapp.cn/api/v1/jobs/${id}`,
-      url: `http://localhost:3000/api/v1/jobs/${id}`,
+      url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
+      // url: `http://localhost:3000/api/v1/jobs/${id}`,
       method: 'DELETE',
       // data: data,
 
