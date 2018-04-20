@@ -45,6 +45,7 @@ Page({
     new_job.tag_list = page.data.tag_list
     new_job.user_id = user.id
     new_job.image = page.data.image
+    new_job.attachment= page.data.attachment
 
 
     wx.request({
@@ -175,8 +176,13 @@ Page({
         file.save()
           .then(savedFile => {
             const companyLogo = savedFile.attributes.url
+<<<<<<< HEAD
             console.log('hello ' + companyLogo)
             that.setData({ image: companyLogo })
+=======
+            // console.log('hello ' + companyLogo)
+            that.setData({ attachment: companyLogo })
+>>>>>>> 3780a82b145f4768496122c06a2cbf48998bee1b
           })
           .catch(err => {
             console.error(err)

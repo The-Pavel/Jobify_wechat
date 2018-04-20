@@ -19,7 +19,7 @@ Page({
 
     wx.request({
             url: `http://localhost:3000/api/v1/jobs/${id}`,
-            // url: `http://jobify.wogengapp.cn/api/v1/stations/${id}`,
+            // url: `http://jobify.wogengapp.cn/api/v1/jobs/${id}`,
       success: function (res) {
         console.log(res.data)
         page.setData({job: res.data});

@@ -17,31 +17,36 @@ App({
       success: function (res) {
           wx.getUserInfo({
             success: res => {
-              console.log(res.userInfo)
+              // console.log(res.userInfo)
               // 可以将 res 发送给后台解码出 unionId
               getApp().globalData.userInfo = res.userInfo
+              console.log(getApp().globalData.userInfo)
             }
           })
 
         if (res.code) {
-          // console.log(res.code)
 
-          //发起网络请求
           wx.request({
 
-            url: 'http://localhost:3000/api/v1/users/',
+             url: 'http://localhost:3000/api/v1/users/',
+
 
 
             //  url: 'http://e-charge.herokuapp.com/api/v1/users/',
             // method: "POST",
 
+<<<<<<< HEAD
             // url: 'https://jobify.wogengapp.cn/api/v1/users/',
             method: 'POST',
+=======
+            // url: 'http://jobify.wogengapp.cn/api/v1/users',
+            method: "POST",
+>>>>>>> 3780a82b145f4768496122c06a2cbf48998bee1b
               data: {
               code: res.code
             },
             success: function (res) {
-              // console.log(res.data)
+              console.log(res.data)
               wx.setStorageSync('openid', res.data.openid)
               wx.setStorageSync('user_id', res.data.id)
               wx.setStorageSync('user', res.data)
