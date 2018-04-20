@@ -31,16 +31,16 @@
   
 </view> 
 
-<!-- Personality Card  -->
+<!-- New Job Card  -->
 <view class="row2container">
-  <view class="card2" bindtap="postjobs">  
+  <view class="card2" bindtap="postjob">  
     <image src="/image/postjob3.png" style="width: 130rpx; height: 130rpx;" />
       <view class="card-category1"> POST JOB </view>
     <!--NEED TO LINK THE ABOVE TO PERSONALITY CLOUD LIST -->
   </view>
 
 
-<!-- New Jobs Card  -->
+<!-- Posted Jobs Card  -->
 
   <view class="card" bindtap="postedjobs">  
     <view> X Jobs Posted </view>
