@@ -8,6 +8,7 @@ Page({
     left: false,
     right: false,
     activeIndex: 0,
+    jobCard: false,
     saveJobBtn: false
   },
 
@@ -51,9 +52,9 @@ Page({
 
     // let data = { user_id: user.id }
     wx.request({
-      //url: `https://jobify.wogengapp.cn/api/v1/jobs`,
-      url: `http://localhost:3000/api/v1/jobs`,
-      method: 'PUT',
+      url: `https://jobify.wogengapp.cn/api/v1/jobs`,
+      // url: `http://localhost:3000/api/v1/jobs`,
+      method: 'GET',
       data: {id: user.id},
       success: function (res) {
         console.log(res)
@@ -62,30 +63,46 @@ Page({
 
         // console.log(res.data)
         console.log(page.data.jobs)
-        page.setData(res.data)
+        let jobs = page.data.jobs
+        
+        jobs = jobs.map(j => {
+          j["saveJobBtn"] = false
+          return j
+        })
+
+        page.setData({ jobs: jobs})
       }
     })
   },
 
+
   saveJob: function(e) {
     console.log(e)
-    const job = e.currentTarget.dataset.id
+    const jobId = e.currentTarget.dataset.id
     console.log(e.currentTarget.dataset)
     const page = this
-    page.setData({saveJobBtn: !page.data.saveJobBtn})
-    console.log(page.data.saveJobBtn)
-    console.log(!page.data.saveJobBtn)
+    console.log(page)
+     
     const user = wx.getStorageSync('user')
-    let data = {job_id: job, user_id: user.id}
+    let data = { job_id: jobId, user_id: user.id}
+ 
     wx.request({
-      //url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
-      url: `http://localhost:3000/api/v1/users/${user.id}`,
-      method: 'PUT',
+      url: `https://jobify.wogengapp.cn/api/v1/saved_jobs`,
+      // url: `http://localhost:3000/api/v1/saved_jobs`,
+      method: 'POST',
       data: data,
       success: function (res) {
-        // wx.reLaunch({
-        //   url: '/pages/job/job',
-        // })
+        // find this job in the jobs array
+        let jobs = page.data.jobs
+        console.log(jobs)
+        let job = jobs.find(j => jobId === j.id)
+        console.log(job)
+        job.saveJobBtn = true
+
+        // change job's save job btn
+
+        page.setData({ jobs: jobs})
+        
       }
     })
   },
@@ -100,7 +117,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    saveJobBtn: false;
   },
 
   /**

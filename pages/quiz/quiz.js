@@ -23,9 +23,9 @@ Page({
     const user = wx.getStorageSync('user')
     let data = { user_id: user.id }
     wx.request({
-      // url: `https://jobify.wogengapp.cn/api/v1/question`,
-      url: `http://localhost:3000/api/v1/questions`,
-      method: 'PUT',
+       url: `https://jobify.wogengapp.cn/api/v1/questions`,
+      //  url: `http://localhost:3000/api/v1/questions`,
+      method: 'GET',
       data: data,
       success: function (res) {
         console.log(res)
@@ -104,8 +104,8 @@ Page({
   sendAnswers: function(e) {
     this.data.answers.forEach(function (answer) {
       wx.request({
-        // url: "https://jobify.wogengapp.cn/api/v1/answers",
-        url: 'http://localhost:3000/api/v1/answers/',
+        url: "https://jobify.wogengapp.cn/api/v1/answers/",
+        // url: 'http://localhost:3000/api/v1/answers/',
         method: 'POST',
         data: answer,
         success: function(res) {

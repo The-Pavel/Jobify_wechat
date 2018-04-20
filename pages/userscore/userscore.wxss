@@ -1,10 +1,14 @@
 /* pages/userscore/userscore.wxss */
 
-image{
-  height:100rpx;
-  width:100rpx;
-  margin-left: 45%;
-  margin-right:50%;
+.avatar{
+  height:150rpx;
+  width:150rpx;
+  /* margin-left: 45%; */
+  /* margin-right:50%; */
+  border-radius: 50%;
+  /* margin-top: 100rpx; */
+  margin: 100rpx auto 0 auto;
+  margin-left: 40%;
 }
 
 .label-1__icon {
@@ -17,15 +21,30 @@ image{
     background: white;
     border: 2px solid #8FBAF3;
     border-radius: 12px;
+    animation: float 5s infinite;
 }
 
 
 #container1{  
   display: flex;  
-  flex-wrap: wrap; 
-  height: auto;
-  justify-content: center;
-  margin: 0 20rpx 20rpx 0;
+
+  /*flex-wrap: wrap;  */
+
+  /*height: auto; */
+
+  /*justify-content: center; */
+
+  /*margin: 0 20rpx 20rpx 0; */
+
+
+  flex-wrap: wrap;
+  vertical-align: top;
+   height: auto; 
+   justify-content: center; 
+  margin: 0 20rpx;
+  margin-bottom: 50rpx;
+  /* height: 600rpx; */
+
 }  
 
 .label-1__text{
@@ -94,7 +113,13 @@ box-sizing:border-box;
 
 .row1container {
   display: flex;
-  position:absolute;
+
+ 
+/* position:absolute; */
+
+
+  margin-top: 0rpx;
+
 }
 
 .icon{
@@ -142,3 +167,25 @@ page{
 
 
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(5rpx)
+  }
+  20% {
+    transform: translateY(10rpx)
+  }
+  40% {
+    transform: translateY(-10rpx)
+  }
+  60% {
+    transform: translateY(10rpx)
+  }
+  80% {
+    transform: translateY(-5rpx)
+  }
+  100% {
+    transform: translateY(5rpx)
+  } 
+}
+
