@@ -127,7 +127,7 @@ Page({
         data: answer,
         success: function(res) {
           wx.navigateTo({
-            url: '/pages/loadingscreen/loadingscreen',
+            url: '/pages/userscore/userscore',
           })
         }
       })
