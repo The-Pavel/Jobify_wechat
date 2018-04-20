@@ -17,9 +17,10 @@ App({
       success: function (res) {
           wx.getUserInfo({
             success: res => {
-              console.log(res.userInfo)
+              // console.log(res.userInfo)
               // 可以将 res 发送给后台解码出 unionId
               getApp().globalData.userInfo = res.userInfo
+              console.log(getApp().globalData.userInfo)
             }
           })
 
