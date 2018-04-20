@@ -45,6 +45,7 @@ Page({
     new_job.tag_list = page.data.tag_list
     new_job.user_id = user.id
     new_job.image = page.data.image
+    new_job.attachment= page.data.attachment
 
 
     wx.request({
@@ -160,16 +161,23 @@ Page({
 
   uploadDesc: function() {
     var that = this
-    wx.uploadFile({
-      success: function(res){
-        res.tempFilePaths.map(tempFilePath => () => new AV.File('filename', {
+    wx.chooseImage({
+      success: function (data) {
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("company", {
           blob: {
-            uri: tempFilePath,
-          },
-        }).save()).reduce(
-          (m, p) => m.then(v => AV.Promise.all([...v, p()])),
-          AV.Promise.resolve([])
-          ).then(files => console.log(files.map(file => file.url()))).catch(console.error);
+            uri: tempFiles
+          }
+        })
+        file.save()
+          .then(savedFile => {
+            const companyLogo = savedFile.attributes.url
+            // console.log('hello ' + companyLogo)
+            that.setData({ attachment: companyLogo })
+          })
+          .catch(err => {
+            console.error(err)
+          })
       }
     })
   }
