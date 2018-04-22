@@ -1,11 +1,16 @@
-<!--pages/savedjob/savedjob.wxml-->
-<!-- <view class="saved_job_card">
-  <view class="job_info">
-    <view class="h1 job_title">Job Title</view>
-    <view class="h1 company_name">Company Name</view>
+<view wx:if="{{items.length == 0}}">
+  <view bindtap="newJobs" class="square">
+    <view class="line-top"></view>
+    <view class="line-right"></view>
+    <view class="line-bottom"></view>
+    <view class="line-left"></view>
+    <view class="black-mask"></view>
+    <view class="text">
+      <text class='h1'>Let's look at some opportunities!</text>
+    </view>
   </view>
-  <image class="job_logo" src="/image/logo.png"/>
-</view> -->
+
+</view>
 
 <!-- swipe left delete -->
 

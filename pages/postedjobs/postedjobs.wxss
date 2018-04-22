@@ -62,9 +62,9 @@
 
 .h1 {
   font-style: Roboto, sans-serif;
-  font-size: 70rpx;
-  padding: 10rpx;
-  color: #0245AC;
+  font-size: 60rpx;
+  /* padding: 10rpx; */
+  color: #8FBAF3;
 }
 
 .square {
@@ -79,10 +79,10 @@
 }
 .square view {
   position: absolute;
-   background: #0245AC; 
+   background: #8FBAF3; 
 }
 .square .line-top {
-  background: #0245AC;
+  background: #8FBAF3;
   height: 20px;
   width: 100%;
   top: 0;
@@ -90,7 +90,7 @@
   animation: lineTop 0.8s cubic-bezier(0.05, 0.79, 0.82, 0.31);
 }
 .square .line-right {
-  background: #0245AC;
+  background: #8FBAF3;
   height: 100%;
   width: 20px;
   top: 0;
@@ -98,7 +98,7 @@
   animation: lineRight 0.8s cubic-bezier(0.05, 0.79, 0.82, 0.31);
 }
 .square .line-bottom {
-  background: #0245AC;
+  background: #8FBAF3;
   height: 20px;
   width: 100%;
   bottom: 0;
@@ -106,7 +106,7 @@
   animation: lineBottom 0.8s cubic-bezier(0.05, 0.79, 0.82, 0.31);
 }
 .square .line-left {
-  background: #0245AC;
+  background: #8FBAF3;
   height: 100%;
   width: 20px;
   top: 0;
@@ -121,7 +121,7 @@
   animation: blackMask 1s 0.9s cubic-bezier(0.35, 1.1, 0.57, 0.76);
 }
 .square .text {
-  color: #0245AC;
+  color: #8FBAF3;
   margin-top:42rpx;
   background: none;
   font-size: 2.5em;
