@@ -46,11 +46,12 @@ Page({
     });
     wx.request({
 
-      // url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
-      url: `http://localhost:3000/api/v1/jobs/${options.id}`,
+      url: `https://jobify.wogengapp.cn/api/v1/jobs/${page.data.id}`,
+      // url: `http://localhost:3000/api/v1/jobs/${options.id}`,
 
       method: 'GET',
       success(res) {
+        console.log(res)
         var job = res.data;
 
         // Update local data
@@ -138,7 +139,7 @@ Page({
         file.save()
           .then(savedFile => {
             const companyLogo = savedFile.attributes.url
-            console.log('hello ' + companyLogo)
+            // console.log('hello ' + companyLogo)
             that.setData({ attachment: companyLogo })
           })
           .catch(err => {
