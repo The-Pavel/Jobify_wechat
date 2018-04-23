@@ -55,7 +55,7 @@ Page({
 
 
   onLoad: function (options) {
-    setTimeout(this.stopLoad, 3000)
+    setTimeout(this.stopLoad, 6000)
     const page = this
     const user = wx.getStorageSync('user')
     wx.request({
