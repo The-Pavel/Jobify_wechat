@@ -1,8 +1,8 @@
 /* pages/userscore/userscore.wxss */
 
 .avatar{
-  height:150rpx;
-  width:150rpx;
+  height:80rpx;
+  width:80rpx;
   /* margin-left: 45%; */
   /* margin-right:50%; */
   border-radius: 50%;
@@ -54,6 +54,7 @@
     font-family: Roboto;
     fill-opacity: 40rpx;
     padding:10px;
+    color: #8FBAF3;
 }
 
 .group {
@@ -98,25 +99,25 @@ box-sizing:border-box;
   margin-left:10px; 
   margin-right:20px;
   margin-bottom: 20px; 
-  margin-top:100px; 
+  margin-top:30px; 
   opacity: 40%;
   padding: 0px 0px 0px 0px;
 }
 
 .row1container {
   display: flex;
-
+  margin-top: 100rpx;
  
 /* position:absolute; */
 
-
-  margin-top: 0rpx;
 
 }
 
 .icon{
   margin-left: 10rpx;
   margin-right: 10rpx;
+  width:60rpx !important;
+  height: 60rpx !important;
 }
 
 .card-category {
@@ -143,8 +144,8 @@ page{
 }
 
 .userinfo-avatar {
-  width: 200rpx;
-  height: 200rpx;
+  width: 150rpx;
+  height: 150rpx;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
   border-radius: 50%;
@@ -154,7 +155,7 @@ page{
 
 .userinfo-nickname {
   color:  #0245A3;
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-family: Roboto;
   
 
