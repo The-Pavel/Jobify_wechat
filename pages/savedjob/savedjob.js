@@ -96,8 +96,9 @@ Page({
     page.setData({
       items: page.data.items
     })
-    
-    const data = {user_id: user.id, i: index}
+    const item = page.data.items[index];
+    const data = {user_id: user.id, job_id: item.job_id};
+    console.log(data);
     wx.request({
       // url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}/saved_jobs`,
         url: `https://jobify.wogengapp.cn/api/v1/saved_jobs`,
