@@ -6,6 +6,21 @@
   border-radius: 10rpx;
   box-shadow: 3px 3px 1px 1px #BDBDBD;
 }
+
+.edit-btn {
+  width: 150rpx;
+  background:#8FBAF3;
+  padding: 20rpx 0;
+}
+
+.fav_count {
+  text-align: center;
+  line-height: 15rpx;
+  font-size: 30rpx;
+  font-family: Roboto;
+  font-weight: lighter;
+  padding-bottom: 10rpx;
+}
 .company_info {
   text-align: center;
   padding: 50rpx 50rpx 0rpx 50rpx;
