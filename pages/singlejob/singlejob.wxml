@@ -9,7 +9,7 @@
         </view>
         <view class="job_info">
           <view class="h1">{{job.title}}</view>
-          <button class="job_type">Matched by: {{job.tag_list}}</button>
+          <view class="job_type">Matched by:</view>
 
            <checkbox-group class="group" >
             <view id = "container1">

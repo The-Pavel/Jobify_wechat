@@ -11,6 +11,7 @@ Page({
     jobCard: false,
     saveJobBtn: false
   },
+  
 
   // SWIPER
 
@@ -71,6 +72,7 @@ Page({
         })
 
         page.setData({ jobs: jobs})
+        
       }
     })
   },
@@ -109,15 +111,28 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  // arrayMatch: function (arr1, arr2) {
+  //   let ret = [];
+  //   arr1.sort();
+  //   arr2.sort();
+  //   for (var i = 0; i < arr1.length; i += 1) {
+  //     if (arr2.indexOf(arr1[i]) > -1) {
+  //       ret.push(arr1[i]);
+  //     }
+  //   }
+  //   console.log(ret);
+  // },
+
   onReady: function () {
-  
+    // tag list comparison
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    saveJobBtn: false;
+      saveJobBtn: false;
   },
 
   /**
@@ -153,5 +168,7 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  
 })
