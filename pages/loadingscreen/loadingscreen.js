@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    setTimeout(this.stopLoad, 3000)
+    setTimeout(this.stopLoad, 5000)
   },
 
   stopLoad: function(e) {

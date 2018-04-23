@@ -41,7 +41,6 @@ page {
   color: #888888;
   font-size: 28rpx;
   font-family: Roboto; 
-  font-weight: lighter;
 }
 
 .page-section-title{

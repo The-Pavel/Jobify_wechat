@@ -25,7 +25,7 @@
       <view class="job_card">
         <view class="company_info">
           <image class="job_logo" src="{{job.image}}"/>
-          <text class="h1">
+          <text class="h1 title">
           {{job.company}}</text>
           <!-- <view class="desc">company description</view> -->
         </view>
@@ -38,7 +38,7 @@
                 <label>
                   <checkbox hidden value="{{tag.name}}" checked="{{tag.checked}}"></checkbox>
                   <view class="label-1__icon">
-                    <text class="label-1__text">{{tag}}</text>
+                    <view class="label-1__text">{{tag}}</view>
                   </view>
                 </label>
               </view>
