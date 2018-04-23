@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -91,6 +91,11 @@
 					"name": "my jobs",
 					"pathName": "pages/postedjobs/postedjobs",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "userscore",
+					"pathName": "pages/userscore/userscore"
 				}
 			]
 		}

@@ -41,6 +41,12 @@ Page({
     })
   },
 
+  backtohome: function (e) {
+    wx.reLaunch({
+      url: `/pages/index/index`,
+    })
+  },
+
   newjobs: function (e) {
     wx.reLaunch({
       url: `/pages/job/job`,
