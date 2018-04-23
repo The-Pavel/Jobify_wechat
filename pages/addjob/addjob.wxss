@@ -19,7 +19,6 @@
 
 textarea {
     padding: 25rpx 0;
-    font-weight: lighter;
     font-size: 28rpx;
     font-family: Roboto;
     font-weight: lighter;

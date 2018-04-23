@@ -1,4 +1,7 @@
 /* pages/quiz/quiz.wxss */
+page {
+  background: #F4F4F4;
+}
 scroll-view {
   height: 100vh;
   /* background-color: #629FF0;  */
@@ -13,6 +16,7 @@ scroll-view {
   border: 3rpx solid #024583;
   border-radius: 10rpx;
   text-align: center;
+  background-color: white;
   /* background: linear-gradient(#F2FCFC, #BDF1F6); */
 }
 .quiz-outer1{
@@ -20,11 +24,12 @@ scroll-view {
   margin-top: 120rpx;
   margin-left: 120rpx;
   margin-right: 120rpx;
-   border-top: 3rpx solid #024583;
+  border-top: 3rpx solid #024583;
   border-right: 3rpx solid #024583;
   border-left: 3rpx solid #024583; 
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
+  background-color: white;
   /* background-color:#3771C1; */
 }
 .quiz-outer2 {
@@ -36,6 +41,7 @@ scroll-view {
   border-left: 3rpx solid #024583; 
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
+  background-color: white;
   /* background-color: #8FBAF3; */
 }
 .question{
@@ -70,7 +76,7 @@ scroll-view {
 #face {
   height: 100rpx;
   width: 100rpx;
-  /* margin: auto 230rpx;  */
+  margin: auto 230rpx;  
   
 }
 .submit-btn {

@@ -11,7 +11,7 @@
 <!-- Logo -->
  <view class="container">
    <view class="userinfo">
-    <image class="userinfo-avatar" src="/image/jobify.png" background-size="cover"></image>
+    <image class="userinfo-avatar" src="/image/Jobify.png" background-size="cover"></image>
   </view>
 </view> 
 
