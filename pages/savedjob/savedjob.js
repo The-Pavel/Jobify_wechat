@@ -102,10 +102,10 @@ Page({
     const data = {user_id: user.id, job_id: item.job_id};
     console.log(data);
     wx.request({
-      // url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}/saved_jobs`,
-        url: `https://jobify.wogengapp.cn/api/v1/saved_jobs`,
+      url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}/saved_jobs`,
+        // url: `https://jobify.wogengapp.cn/api/v1/saved_jobs`,
       // url: `http://localhost:3000/api/v1/saved_jobs`,
-      method: 'POST',
+      method: 'PUT',
       data: data,
       success: function (res) {
         console.log(res)
