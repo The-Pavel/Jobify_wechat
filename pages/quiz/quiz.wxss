@@ -10,33 +10,33 @@ scroll-view {
   margin-left: 80rpx;
   margin-right: 80rpx;
   margin-bottom: 80rpx;
-  /* border: 2rpx solid #BDBDBD; */
+  border: 3rpx solid #024583;
   border-radius: 10rpx;
   text-align: center;
-  background: linear-gradient(#F2FCFC, #BDF1F6);
+  /* background: linear-gradient(#F2FCFC, #BDF1F6); */
 }
 .quiz-outer1{
   height: 30rpx;
   margin-top: 120rpx;
   margin-left: 120rpx;
   margin-right: 120rpx;
-  /* border-top: 2rpx solid #BDBDBD;
-  border-right: 2rpx solid #BDBDBD;
-  border-left: 2rpx solid #BDBDBD; */
+   border-top: 3rpx solid #024583;
+  border-right: 3rpx solid #024583;
+  border-left: 3rpx solid #024583; 
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
-  background-color:#3771C1;
+  /* background-color:#3771C1; */
 }
 .quiz-outer2 {
   height: 30rpx;
   margin-left: 100rpx;
   margin-right: 100rpx;
-  /* border-top: 2rpx solid #BDBDBD;
-  border-right: 2rpx solid #BDBDBD;
-  border-left: 2rpx solid #BDBDBD; */
+  border-top: 3rpx solid #024583;
+  border-right: 3rpx solid #024583;
+  border-left: 3rpx solid #024583; 
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
-  background-color: #8FBAF3;
+  /* background-color: #8FBAF3; */
 }
 .question{
   height: 250rpx;
@@ -68,9 +68,9 @@ scroll-view {
   
 }
 #face {
-  height: 110rpx;
+  height: 100rpx;
   width: 100rpx;
-  margin: auto 230rpx;
+  /* margin: auto 230rpx;  */
   
 }
 .submit-btn {
