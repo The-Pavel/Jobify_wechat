@@ -65,11 +65,11 @@ textarea {
   /* display: inline-block; */
   text-align: center;
   line-height: 30rpx;
-  font-size: 30rpx;
   font-size: 28rpx;
   font-family: Roboto;
-  font-weight: lighter;
-  fill-opacity: 40rpx;
+  color: #8FBAF3;
+  /* font-weight: lighter; */
+  /* fill-opacity: 40rpx; */
 }
 
 .label-1__shape {
@@ -77,8 +77,8 @@ textarea {
   vertical-align: middle;
   height: 50rpx;
   background: white;
-  border: 2px solid #8FBAF3;
-  border-radius: 12px;
+  border: 1px solid #8FBAF3;
+  border-radius: 50rpx;
 }
 
 #container1{  

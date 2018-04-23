@@ -32,7 +32,7 @@
 
 <view class="card2" bindtap="personality">  
     <image src="/image/personality.png" style="width: 100rpx; height: 100rpx;" />
-    <view class="card-category2"> <view class="h2"> My Personality</view> </view>
+    <view class="card-category1"> <view class="h2"> My Personality</view> </view>
 <!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
   </view>  
   
@@ -51,7 +51,7 @@
 
   <view class="card4" bindtap="postedjobs">  
     <image src="/image/postjob3.png" style="width: 100rpx; height: 100rpx;" />
-      <view class="card-category2">Posted Jobs </view>
+      <view class="card-category1">Posted Jobs </view>
     <!--NEED TO LINK THE ABOVE TO POSTED JOBS LIST -->
   </view>
 </view>
