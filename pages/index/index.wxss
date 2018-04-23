@@ -1,4 +1,5 @@
 /**index.wxss**/
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -6,9 +7,9 @@
 }
 
 .userinfo-avatar {
-  width: 250rpx;
-  height: 260rpx;
-  margin-top: 60rpx;
+  width: 190rpx;
+  height: 200rpx;
+  margin-top: 90rpx;
   margin-bottom: 5rpx;
 }
 
@@ -40,10 +41,11 @@
   background-position: center;
   color: #0245A3;
   position: relative;
-  background: linear-gradient(to bottom right,#8FBAF3,#BDF1F6);
-  margin-top:20px;
-  margin-left:20px;
-  margin-bottom: 20px;
+  border: 5rpx solid #024583; 
+  border-radius: 20rpx;
+  /* background: #8FBAF3; */
+  /* background: linear-gradient(to bottom right,#8FBAF3,#BDF1F6); */
+  margin: 30rpx 0rpx 30rpx 40rpx;
   opacity: 40%;
   padding: 0px 0px 0px 0px;
 }
@@ -60,12 +62,12 @@
   background-position: center;
   color: #0245A3;
   position: relative;
-  background: linear-gradient(to bottom left, #BDF1F6, #F2FCFC);
-  margin-top:20px;
-  margin-left:20px;
-  margin-bottom: 20px;
+  border: 5rpx solid #024583; 
+  border-radius: 20rpx;
+  /* background: #8FBAF3; */
+  /* background: linear-gradient(to bottom left, #8FBAF3,#BDF1F6); */
+  margin: 30rpx 30rpx 0rpx 40rpx;
   opacity: 40%;
-  padding: 0px 0px 0px 0px;
 }
 
 .row1container {
@@ -83,15 +85,16 @@
   text-align: center;
   line-height: 16px;
   font-family: Roboto;
-  font-style: Bold;background-size: cover !important;
+  font-style: Bold;
+  background-size: cover !important;
   background-position: center;
   color: #0245A3;
   position: relative;
-  background: linear-gradient(to top right, #BDF1F6, #F2FCFC);
-  
-  margin-left:20px;
-  margin-bottom: 20px;
-  padding: 0px 0px 0px 0px;
+  /* background: #8FBAF3;  */
+  /* background: linear-gradient(to top right,#8FBAF3,#BDF1F6); */
+  border: 5rpx solid #024583; 
+  border-radius: 20rpx; 
+  margin: 0rpx 0rpx 30rpx 40rpx;
 }
 
 .card4 {
@@ -106,10 +109,12 @@
   background-position: center;
   color: #0245A3;
   position: relative;
-  background: linear-gradient(to top left,#8FBAF3,#BDF1F6);
+  border: 5rpx solid #024583; 
+  border-radius: 20rpx;
+  /* background: white;  */
+  /* background: linear-gradient(to bottom right, #BDF1F6, #8FBAF3); */
  
-  margin-left:20px;
-  margin-bottom: 20px;
+  margin: 0rpx 30rpx 0rpx 40rpx;
   opacity: 40%;
   padding: 0px 0px 0px 0px;
 }

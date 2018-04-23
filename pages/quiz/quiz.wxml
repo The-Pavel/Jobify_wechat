@@ -25,7 +25,7 @@
   </view> 
 </scroll-view>
 <view class="submit-btn" bindtap='sendAnswers'>
-  <image id="submit-img" src="/image/submit.png"></image>
+  <!-- <image id="submit-img" src="/image/submit.png"></image> -->
   <text id="submit-text">submit</text>
 </view>
 
