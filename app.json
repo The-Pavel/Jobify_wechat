@@ -34,9 +34,9 @@
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/profile.png",
-        "selectedIconPath": "image/profile_active.png",
-        "text": "Profile"
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_active.png",
+        "text": "Home"
       },
       {
         "pagePath": "pages/job/job",

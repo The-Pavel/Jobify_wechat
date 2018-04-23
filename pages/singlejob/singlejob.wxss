@@ -6,6 +6,21 @@
   border-radius: 10rpx;
   box-shadow: 3px 3px 1px 1px #BDBDBD;
 }
+
+.edit-btn {
+  width: 150rpx;
+  background:#8FBAF3;
+  padding: 20rpx 0;
+}
+
+.fav_count {
+  text-align: center;
+  line-height: 15rpx;
+  font-size: 30rpx;
+  font-family: Roboto;
+  font-weight: lighter;
+  padding-bottom: 10rpx;
+}
 .company_info {
   text-align: center;
   padding: 50rpx 50rpx 0rpx 50rpx;
@@ -23,9 +38,11 @@
 }
 .job_type {
   width: 250rpx;
-  height: 70rpx;
+  height: 40rpx;
   font-size: 30rpx;
-  background-color: #F2F2F2;
+  /* background-color: #F2F2F2; */
+  transform: translateX(190rpx);
+  margin-top: 10rpx;
 }
 .job_post_time {
   margin: 50rpx 50rpx 50rpx 50rpx;
@@ -61,8 +78,10 @@
   display: inline-flex;  
   flex-wrap: wrap; 
   height: auto;
+  width: 600rpx;
   justify-content: center;
   margin: 20rpx 20rpx;
+  transform: translateX(-50rpx);
 }  
 
 .label-1__text{
@@ -72,7 +91,7 @@
     font-family: Roboto;
     font-weight: lighter;
     fill-opacity: 40rpx;
-     padding: 5rpx; 
+     padding: 13rpx; 
     /* vertical-align: middle; */
 }
 

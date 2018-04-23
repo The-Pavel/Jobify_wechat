@@ -41,6 +41,12 @@ Page({
     })
   },
 
+  backtohome: function (e) {
+    wx.reLaunch({
+      url: `/pages/index/index`,
+    })
+  },
+
   newjobs: function (e) {
     wx.reLaunch({
       url: `/pages/job/job`,
@@ -49,7 +55,7 @@ Page({
 
 
   onLoad: function (options) {
-    setTimeout(this.stopLoad, 3000)
+    setTimeout(this.stopLoad, 6000)
     const page = this
     const user = wx.getStorageSync('user')
     wx.request({
@@ -58,6 +64,7 @@ Page({
       success: function(res) {
         console.log(res)
         page.setData({tags: res.data.tag_list})
+        wx.setStorageSync('user_tags', res.data.tag_list)
       }
     })
   },
@@ -100,15 +107,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-  // listenerPickerSelected: function (e) {
-  //   //改变index值，通过setData()方法重绘界面
-  //   this.setData({
-  //     index: e.detail.value
-  //   });
-  // }
 
-  click: function (e) {
-    console.log(e)
-  },
+  // click: function (e) {
+  //   console.log(e)
+  // },
 
 })

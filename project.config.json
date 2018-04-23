@@ -94,7 +94,7 @@
 				},
 				{
 					"id": -1,
-					"name": "user score",
+					"name": "userscore",
 					"pathName": "pages/userscore/userscore",
 					"query": ""
 				}

@@ -9,7 +9,7 @@
         </view>
         <view class="job_info">
           <view class="h1">{{job.title}}</view>
-          <button class="job_type">Matched by: {{job.tag_list}}</button>
+          <view class="job_type">Looking for:</view>
 
            <checkbox-group class="group" >
             <view id = "container1">
@@ -37,6 +37,9 @@
             </view>
             <view wx:if="{{job.email !== null}}" class="desc">{{job.email}}</view>
             <text wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</text> | <text wx:if="{{job.wechat !== null}}" class="desc">WeChat: @{{job.wechat}}</text>
+        </view>
+        <view wx:if="{{job.user_id === user_id}}">
+          <view class='fav_count'>Favorited by {{job.fav_count}} people</view>
         </view>
         <view wx:if="{{job.user_id === user_id}}">
           <button bindtap="editJob" class="edit_btn" data-id = "{{job.id}}">Edit</button>

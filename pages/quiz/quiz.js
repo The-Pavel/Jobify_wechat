@@ -6,8 +6,6 @@ Page({
    */
   data: {
     phrases: ["Got it!", "Cool!", "Gotcha!", "I see!", "Alright!"],
-    showYesButton: [false, false, false, false, false],
-    showNoButton: [false, false, false, false, false],
     toView:'',
     questions: '',
     answers: [],
@@ -32,15 +30,30 @@ Page({
       success: function (res) {
         console.log(res)
         page.setData(res.data) 
+
+        console.log(res.data)
+       
+        let questions = page.data.questions
+        console.log(page.data.questions)
+
+        questions = questions.map(j => {
+          j["showNoBtn"] = false
+          j["showYesBtn"] = false
+          return j
+        })
+
+        page.setData({ questions: questions })
+
+
       }
     })
   },
 
   switch1Change: function (e) {
 
-    let question = e.currentTarget.dataset.id
-    let index = this.data.questions.indexOf(question)
-    console.log(question)
+    let questionId = e.currentTarget.dataset.id
+    let index = this.data.questions.indexOf(questionId)
+    console.log(questionId)
     console.log(index, e)
     let page = this
 
@@ -51,24 +64,23 @@ Page({
     answer.swiped_yes = false
     this.data.answers.push(answer)
 
+    // find this question in the questions array
+    let questions = page.data.questions
+    console.log(questions)
+    let question = questions.find(j => questionId === j.id)
+    console.log(question)
+    question.showNoBtn = true
 
+    // change question's save question btn
+
+    page.setData({ questions: questions })
+
+    console.log(page.data)
 
     this.setData({
-      // showNoButton: this.data.showNoButton.splice(index, 1, true),
       scrollTop: this.data.scrollTop + 480
     })
-    // this.data.index++
-    // console.log(this.data.showNoButton)
-    // const questions = this.data.questions
-    
-    // for (var i = 0; i < questions.length; ++i) {
-    //   if (questions[i] === this.data.toView) {
-    //     this.setData({
-    //       toView: questions[i + 1]
-    //     })
-    //     break
-    //   }
-    // }
+ 
     page.data.count++
     if (page.data.count == page.data.questions.length) {
       wx.showToast({
@@ -79,8 +91,12 @@ Page({
   },
   switch2Change: function (e) {
 
+    let questionId = e.currentTarget.dataset.id
+    let index = this.data.questions.indexOf(questionId)
+    console.log(questionId)
+    console.log(index, e)
     let page = this
-    
+
     console.log('switch2', e)
 
     let answer = {}
@@ -90,10 +106,22 @@ Page({
     answer.swiped_yes = true
     this.data.answers.push(answer)
 
+    // find this question in the questions array
+    let questions = page.data.questions
+    console.log(questions)
+    let question = questions.find(j => questionId === j.id)
+    console.log(question)
+    question.showYesBtn = true
+
+    // change question's save question btn
+
+    page.setData({ questions: questions })
+
+    console.log(page.data)
+
 
 
     this.setData({
-      // showNoButton: this.data.showNoButton.splice(index, 1, true),
       scrollTop: this.data.scrollTop + 480
     })
     // this.data.index++

@@ -1,4 +1,20 @@
 <!--pages/job/job.wxml-->
+
+<view wx:if="{{jobs.length == 0}}">
+  <view class="square">
+    <view class="line-top"></view>
+    <view class="line-right"></view>
+    <view class="line-bottom"></view>
+    <view class="line-left"></view>
+    <view class="black-mask"></view>
+    <view class="text">
+      <text class='h1'>Still looking for that
+      perfect match!</text>
+    </view>
+  </view>
+
+</view>
+
   <swiper bindchange="changeswiper">
   <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}"> 
     <swiper-item class="swipe"> 
@@ -9,11 +25,12 @@
       <view class="job_card">
         <view class="company_info">
           <image class="job_logo" src="{{job.image}}"/>
-          <view class="h1">{{job.company}}</view>
+          <text class="h1 title">
+          {{job.company}}</text>
           <!-- <view class="desc">company description</view> -->
         </view>
           <view class="job_info">
-          <view class="h1">{{job.title}}</view>
+          <view class="h1 title">{{job.title}}</view>
 
           <checkbox-group class="group" >
             <view id = "container1">
@@ -21,7 +38,7 @@
                 <label>
                   <checkbox hidden value="{{tag.name}}" checked="{{tag.checked}}"></checkbox>
                   <view class="label-1__icon">
-                    <text class="label-1__text">{{tag}}</text>
+                    <view class="label-1__text">{{tag}}</view>
                   </view>
                 </label>
               </view>
