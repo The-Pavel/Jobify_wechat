@@ -1,5 +1,13 @@
 // pages/job/job.js
+var arrayMatch = function(arr2) {
+  return this.filter(function (n) {
+    return arr2.indexOf(n) !== -1
+  })
+};
+
 Page({
+
+  
 
   /**
    * 页面的初始数据
@@ -9,8 +17,11 @@ Page({
     right: false,
     activeIndex: 0,
     jobCard: false,
-    saveJobBtn: false
+    saveJobBtn: false,
+    
   },
+
+  
   
 
   // SWIPER
@@ -43,14 +54,6 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
 
-    // wx.request({
-    //   url: `http://localhost:3000/api/v1/users/${user.id}`,
-    //   success: function (res) {
-    //     console.log(res.data.tag_list)
-    //     page.setData({ user_tags: res.data.tag_list })
-    //   }
-    // })
-
     // let data = { user_id: user.id }
     wx.request({
       url: `https://jobify.wogengapp.cn/api/v1/jobs`,
@@ -60,7 +63,8 @@ Page({
       success: function (res) {
         console.log(res)
 
-        page.setData(res.data);
+        page.setData(res.data)
+        wx.setStorageSync('jobs', res.data)
 
         // console.log(res.data)
         console.log(page.data.jobs)
@@ -72,7 +76,12 @@ Page({
         })
 
         page.setData({ jobs: jobs})
-        
+        let tags = wx.getStorageSync('user_tags')
+        let arr = []
+        tags.forEach(function(tag) {
+          arr.push(tag)
+        })
+        console.log(typeof(arr))
       }
     })
   },
@@ -111,17 +120,8 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  // arrayMatch: function (arr1, arr2) {
-  //   let ret = [];
-  //   arr1.sort();
-  //   arr2.sort();
-  //   for (var i = 0; i < arr1.length; i += 1) {
-  //     if (arr2.indexOf(arr1[i]) > -1) {
-  //       ret.push(arr1[i]);
-  //     }
-  //   }
-  //   console.log(ret);
-  // },
+  
+  
 
   onReady: function () {
     // tag list comparison
