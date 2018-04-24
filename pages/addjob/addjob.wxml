@@ -21,7 +21,7 @@
               type="text"
               class="desc"
               class="info"
-              placeholder="Company Name"
+              placeholder="Company Name (required)"
               name="company" auto-height />
 
 
@@ -32,7 +32,7 @@
         <textarea class="desc2" placeholder="location" name="location" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder="email@email.com" name="email" auto-height />
+        <textarea class="desc2" placeholder="email@email.com (required)" name="email" auto-height />
       </view>
       <view class="textarea-wrp">
         <textarea class="desc2" placeholder="+86 185******" name="phone" auto-height />
@@ -53,13 +53,13 @@
       <view class="page-section-title">2. Your offer</view>
 
         <view class="textarea-wrp">
-          <textarea placeholder="Job title" class="desc2" name="title" auto-height />
+          <textarea placeholder="Job Title (required)" class="desc2" name="title" auto-height />
         </view>
         <view class="textarea-wrp">
           <textarea placeholder="Salary" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea style="height: 12em" class="desc2" placeholder="Job Description" name="description" maxlength="-1" />
+        <textarea style="height: 12em" class="desc2" placeholder="Job Description (min 20 characters)" name="description" maxlength="-1" />
       </view>
 
       
