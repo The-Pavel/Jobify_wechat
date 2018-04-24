@@ -62,7 +62,7 @@ Page({
       url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
       // url: `http://localhost:3000/api/v1/users/${user.id}`,
       success: function(res) {
-        console.log(res)
+        console.log(res.data.tag_list)
         page.setData({tags: res.data.tag_list})
         wx.setStorageSync('user_tags', res.data.tag_list)
       }

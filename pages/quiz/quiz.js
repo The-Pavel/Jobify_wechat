@@ -22,7 +22,9 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     let data = { user_id: user.id }
-    console.log(data)
+
+    console.log(data);
+
     wx.request({
        url: `https://jobify.wogengapp.cn/api/v1/questions`,
       //  url: `http://localhost:3000/api/v1/questions`,
@@ -32,10 +34,10 @@ Page({
         console.log(res)
         page.setData(res.data) 
 
-        console.log(res.data)
+        // console.log(res.data)
        
         let questions = page.data.questions
-        console.log(page.data.questions)
+        // console.log(page.data.questions)
 
         questions = questions.map(j => {
           j["showNoBtn"] = false
@@ -215,5 +217,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  redirection: function(){
+    wx.reLaunch({
+      url: '/pages/index/index',
+
+    })
   }
 })
