@@ -51,14 +51,14 @@ Page({
 
       method: 'GET',
       success(res) {
-        console.log(res)
+        // console.log(res)
         var job = res.data;
 
         // Update local data
         page.setData(
           job
         );
-
+        console.log(job)
         wx.hideToast();
       }
     });
@@ -84,32 +84,33 @@ Page({
   bindSubmit: function (e) {
     //collect data from form
     let page = this
-    let updated_job = e.detail.value
+    let new_job = e.detail.value
+    let user = wx.getStorageSync('user')
+  
+  
+    // new_job.id = page.job.id
+    new_job.tag_list = page.data.tag_list
+    new_job.user_id = user.id
+    new_job.image = page.data.image
+    new_job.attachment = page.data.attachment
 
-    //     debugger
-
-    // console.log(new_job)
-    console.log(page.data.tag_list)
-    updated_job.tag_list = page.data.tag_list
-    updated_job.attachment = page.data.attachment
 
     wx.request({
-
-      //url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-      url: `http://localhost:3000/api/v1/jobs/${page.data.id}`,
+      url: `https://jobify.wogengapp.cn/api/v1/jobs/${page.data.id}`,
+      // url: 'http://localhost:3000/api/v1/jobs/?={{new_job.id}}',
       method: 'PUT',
-      data: updated_job,
-
+      data: new_job,
       success: function () {
-        wx.showToast({
-          title: 'Updated!',
+        wx.showToast({    
+          title: 'Created!',
           icon: 'success'
         })
         wx.reLaunch({
-          url: '/pages/postedjobs/postedjobs',
+          url: '/pages/index/index',
         })
       }
     })
+
   },
 
   /**
