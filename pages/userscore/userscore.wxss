@@ -32,7 +32,7 @@ page{
     background: white;
     border: 2px solid #8FBAF3;
     border-radius: 20px;
-    animation: float 5s infinite;
+    /* animation: float 5s infinite; */
 }
 
 
