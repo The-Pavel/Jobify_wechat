@@ -102,11 +102,11 @@ Page({
       data: new_job,
       success: function () {
         wx.showToast({    
-          title: 'Created!',
+          title: 'Updated!',
           icon: 'success'
         })
         wx.reLaunch({
-          url: '/pages/index/index',
+          url: '/pages/postedjobs/postedjobs',
         })
       }
     })
