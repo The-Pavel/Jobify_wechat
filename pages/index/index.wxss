@@ -1,5 +1,7 @@
 /**index.wxss**/
-
+/* page {
+  background-color: #F2FCFC;
+} */
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -30,8 +32,8 @@
 }  
 
 .card {
-  width: 320rpx;
-  height: 320rpx;
+  width: 300rpx;
+  height: 300rpx;
   font-size: 14px;
   text-align: center;
   line-height: 16px;
@@ -39,20 +41,20 @@
   font-style: Bold;
   background-size: cover !important;
   background-position: center;
-  color: #0245A3;
+  color: #024583;
   position: relative;
   border: 5rpx solid #024583; 
-  border-radius: 20rpx;
-  /* background: #8FBAF3; */
+  /* border-radius: 20rpx;  */
+   /* background: #8FBAF3;  */
   /* background: linear-gradient(to bottom right,#8FBAF3,#BDF1F6); */
   margin: 30rpx 0rpx 30rpx 40rpx;
   opacity: 40%;
-  padding: 0px 0px 0px 0px;
+  box-shadow: 2rpx 2rpx 1rpx 1rpx #BDBDBD; 
 }
 
 .card2 {
-  width: 320rpx;
-  height: 320rpx;
+  width: 300rpx;
+  height: 300rpx;
   font-size: 14px;
   text-align: center;
   line-height: 16px;
@@ -63,15 +65,17 @@
   color: #0245A3;
   position: relative;
   border: 5rpx solid #024583; 
-  border-radius: 20rpx;
+  /* border-radius: 20rpx; */
   /* background: #8FBAF3; */
   /* background: linear-gradient(to bottom left, #8FBAF3,#BDF1F6); */
   margin: 30rpx 30rpx 0rpx 40rpx;
   opacity: 40%;
+  box-shadow: 2rpx 2rpx 1rpx 1rpx #BDBDBD; 
 }
 
 .row1container {
   display: flex;
+  margin-bottom: 10rpx;
 }
 
 .row2container {
@@ -79,8 +83,8 @@
 }
 
 .card3 {
-  width: 320rpx;
-  height: 320rpx;
+  width: 300rpx;
+  height: 300rpx;
   font-size: 14px;
   text-align: center;
   line-height: 16px;
@@ -93,13 +97,14 @@
   /* background: #8FBAF3;  */
   /* background: linear-gradient(to top right,#8FBAF3,#BDF1F6); */
   border: 5rpx solid #024583; 
-  border-radius: 20rpx; 
+  /* border-radius: 20rpx;  */
   margin: 0rpx 0rpx 30rpx 40rpx;
+  box-shadow: 2rpx 2rpx 1rpx 1rpx #BDBDBD; 
 }
 
 .card4 {
-  width: 320rpx;
-  height: 320rpx;
+  width: 300rpx;
+  height: 300rpx;
   font-size: 14px;
   text-align: center;
   line-height: 16px;
@@ -110,10 +115,10 @@
   color: #0245A3;
   position: relative;
   border: 5rpx solid #024583; 
-  border-radius: 20rpx;
+  /* border-radius: 20rpx; */
   /* background: white;  */
   /* background: linear-gradient(to bottom right, #BDF1F6, #8FBAF3); */
- 
+  box-shadow: 2rpx 2rpx 1rpx 1rpx #BDBDBD; 
   margin: 0rpx 30rpx 0rpx 40rpx;
   opacity: 40%;
   padding: 0px 0px 0px 0px;
