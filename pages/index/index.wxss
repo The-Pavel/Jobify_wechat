@@ -1,7 +1,7 @@
 /**index.wxss**/
-/* page {
-  background-color: #F2FCFC;
-} */
+page {
+  background: #F4F4F4;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@
   position: relative;
   border: 5rpx solid #024583; 
   /* border-radius: 20rpx;  */
-   /* background: #8FBAF3;  */
+  background: white;  
   /* background: linear-gradient(to bottom right,#8FBAF3,#BDF1F6); */
   margin: 30rpx 0rpx 30rpx 40rpx;
   opacity: 40%;
@@ -66,7 +66,7 @@
   position: relative;
   border: 5rpx solid #024583; 
   /* border-radius: 20rpx; */
-  /* background: #8FBAF3; */
+  background: white;  
   /* background: linear-gradient(to bottom left, #8FBAF3,#BDF1F6); */
   margin: 30rpx 30rpx 0rpx 40rpx;
   opacity: 40%;
@@ -94,7 +94,7 @@
   background-position: center;
   color: #0245A3;
   position: relative;
-  /* background: #8FBAF3;  */
+  background: white;  
   /* background: linear-gradient(to top right,#8FBAF3,#BDF1F6); */
   border: 5rpx solid #024583; 
   /* border-radius: 20rpx;  */
@@ -116,7 +116,7 @@
   position: relative;
   border: 5rpx solid #024583; 
   /* border-radius: 20rpx; */
-  /* background: white;  */
+  background: white;  
   /* background: linear-gradient(to bottom right, #BDF1F6, #8FBAF3); */
   box-shadow: 2rpx 2rpx 1rpx 1rpx #BDBDBD; 
   margin: 0rpx 30rpx 0rpx 40rpx;
