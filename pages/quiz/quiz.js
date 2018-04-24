@@ -215,5 +215,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  redirection: function(){
+    wx.reLaunch({
+      url: '/pages/index/index',
+
+    })
   }
 })
