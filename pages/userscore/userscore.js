@@ -59,7 +59,7 @@ Page({
     const page = this
     const user = wx.getStorageSync('user')
     wx.request({
-      url: `http://jobify.wogengapp.cn/api/v1/users/${user.id}`,
+      url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
       // url: `http://localhost:3000/api/v1/users/${user.id}`,
       success: function(res) {
         console.log(res)
