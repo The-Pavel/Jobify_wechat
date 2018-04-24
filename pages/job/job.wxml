@@ -60,9 +60,19 @@
               <text class="h3">Location: </text>
               <text class="desc">{{job.location}}</text>    
             </view>
+
             <view wx:if="{{job.email !== null}}" class="desc">{{job.email}}</view>
-            <text wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</text> | <text wx:if="{{job.wechat !== null}}" class="desc">WeChat: @{{job.wechat}}</text>
-        </view>
+              <view wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</view>  
+              <view class="location" wx:if="{{job.wechat !== null}}">
+                <text class="h3">WeChat: </text>
+                <text class="desc">@{{job.wechat}}</text>    
+              </view>
+
+            </view> 
+
+
+              
+            
         <view class="job_post_time">
           <view class="h3">Job posted on: {{job.created_at}}</view>
           <view class="notice">Jobs appear up to 30 days from date of posting</view>

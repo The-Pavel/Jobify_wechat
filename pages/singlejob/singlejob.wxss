@@ -7,20 +7,27 @@
   box-shadow: 3px 3px 1px 1px #BDBDBD;
 }
 
-.edit-btn {
+#edit_btn {
   width: 150rpx;
   background:#8FBAF3;
-  padding: 20rpx 0;
+  color: white;
+  margin: 20rpx 250rpx;
 }
 
 .fav_count {
   text-align: center;
-  line-height: 15rpx;
+  /* line-height: 15rpx; */
   font-size: 30rpx;
   font-family: Roboto;
-  font-weight: lighter;
-  padding-bottom: 10rpx;
+  font-weight: bold;
+  color: #024583;
+  padding: 0rpx 10rpx 0rpx 10rpx;
 }
+
+.h3 {
+  color: #024583;
+}
+
 .company_info {
   text-align: center;
   padding: 50rpx 50rpx 0rpx 50rpx;
@@ -70,9 +77,8 @@
     height: auto;
     background: white;
     border: 1px solid #8FBAF3;
-    border-radius: 12px;
+    border-radius: 18px;
 }
-
 
 #container1{  
   display: inline-flex;  
@@ -86,13 +92,13 @@
 
 .label-1__text{
     text-align: center;
-    line-height: 15rpx;
-    font-size: 20rpx;
+    font-size: 28rpx;
     font-family: Roboto;
-    font-weight: lighter;
-    fill-opacity: 40rpx;
-     padding: 13rpx; 
-    /* vertical-align: middle; */
+    font-weight: bolder; 
+    padding: 10rpx; 
+    width: auto;
+    height: auto;
+    color: #8FBAF3;
 }
 
 .group {
