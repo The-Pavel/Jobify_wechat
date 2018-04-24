@@ -82,7 +82,7 @@
           <label>
             <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
             <view class="label-1__shape" style="background:{{item.checked ? '#8FBAF3': 'white'}}">
-              <text class="label-1__text">{{item.value}}</text>
+              <text style="color: {{item.checked ? 'white': '#8FBAF3'}}" class="label-1__text">{{item.value}}</text>
             </view>
           </label>
         </view>
