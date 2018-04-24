@@ -112,4 +112,11 @@ Page({
   //   console.log(e)
   // },
 
+  redirection: function () {
+    wx.reLaunch({
+      url: '/pages/quiz/quiz',
+
+    })
+  }
+
 })
