@@ -1,5 +1,10 @@
 <!--pages/userscore/userscore.wxml-->
 
+<view class="container">
+   <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap='toprofile'></image>
+     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
 
 <!--NEED TO LINK BACKEND TO QUIZ  -->
   <view class="h1">My Personality Type</view>
@@ -26,11 +31,7 @@
 
 <!--need to insert profile underneath  -->
 
-   <view class="container">
-   <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap='toprofile'></image>
-     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
+   
 
 
 <!-- <image class="avatar" src="{{userInfo.avatarUrl}}" bindtap='toprofile'/>-->

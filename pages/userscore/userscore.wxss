@@ -1,8 +1,8 @@
 /* pages/userscore/userscore.wxss */
 
 .avatar{
-  height:150rpx;
-  width:150rpx;
+  height:80rpx;
+  width:80rpx;
   /* margin-left: 45%; */
   /* margin-right:50%; */
   border-radius: 50%;
@@ -25,8 +25,8 @@
 }
 
 
-#container1{  
-  display: flex;  
+#container1{
+  display: flex;
 
   /*flex-wrap: wrap;  */
 
@@ -39,13 +39,13 @@
 
   flex-wrap: wrap;
   vertical-align: top;
-   height: auto; 
-   justify-content: center; 
+   height: auto;
+   justify-content: center;
   margin: 0 20rpx;
   margin-bottom: 50rpx;
   /* height: 600rpx; */
 
-}  
+}
 
 .label-1__text{
     text-align: center;
@@ -54,6 +54,7 @@
     font-family: Roboto;
     fill-opacity: 40rpx;
     padding:10px;
+    color: #8FBAF3;
 }
 
 .group {
@@ -68,7 +69,7 @@
 
 .button3{
   background: linear-gradient(#8FBAF3, #F2FCFC);
-  color: #024583; 
+  color: #024583;
   width: 200px;
 }
 
@@ -96,29 +97,34 @@ box-sizing:border-box;
   color: #0245A3;
   position: relative;
   margin: 0rpx 60rpx 0rpx 60rpx;
+
   opacity: 40%;
   padding: 0px 0px 0px 0px;
 }
 
 .row1container {
+
 display: flex;
-position:absolute; 
+position:absolute;
 justify-content: space-between;
 bottom: 5rpx;
 width: 100%;
+
 
 }
 
 .icon{
   margin-left: 10rpx;
   margin-right: 10rpx;
-  height: 60rpx;
-  width: 60rpx;
+
+  width:60rpx !important;
+  height: 60rpx !important;
+
 }
 
 .card-category {
-  font-family: Roboto; 
-  font-weight:500; 
+  font-family: Roboto;
+  font-weight:500;
   font-size: 20rpx;
   text-align: center;
   color: #024583;
@@ -140,20 +146,20 @@ page{
 }
 
 .userinfo-avatar {
-  width: 200rpx;
-  height: 200rpx;
+  width: 150rpx;
+  height: 150rpx;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
   border-radius: 50%;
-  font-family: Montserrat; 
+  font-family: Montserrat;
 
 }
 
 .userinfo-nickname {
   color:  #0245A3;
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-family: Roboto;
-  
+
 
 
 }
@@ -176,7 +182,7 @@ page{
   }
   100% {
     transform: translateY(5rpx)
-  } 
+  }
 }
 
 /* pages/loadingscreen/loadingscreen.wxss */
@@ -208,7 +214,9 @@ body {
   text-align: center;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 20px;
+
   animation: fadein 6s ease-in;
+
 }
 
 @keyframes fadein {
