@@ -56,7 +56,8 @@ Page({
       success: function () {
         wx.showToast({
           title: 'Created!',
-          icon: 'success'
+          icon: 'success',
+          duration: 2000
         })
         wx.reLaunch({
           url: '/pages/index/index',
