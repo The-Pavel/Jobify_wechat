@@ -16,16 +16,20 @@
 
 </view>
 
-  <swiper bindchange="changeswiper">
+  <swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}" indicator-color="#8FBAF3" indicator-active-color="#024583">
   <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}"> 
-    <swiper-item class="swipe"> 
+    <swiper-item class="swipe" bindchange="changeIndicatorDots" > 
 
-    <image id="right-arrow" src="/image/rightarrow.png"/>
-    <image id="left-arrow" src="/image/leftarrow.png"/>
+    <!-- <image id="right-arrow" src="/image/rightarrow.png"/>
+    <view id="arrow-label">swipe</view> -->
+
+    <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/> 
+        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>  
 
       <view class="job_card">
         <view class="company_info">
-          <image class="job_logo" src="{{job.image}}"/>
+          <image class="job_logo" wx:if="{{job.image !== null}}" src="{{job.image}}"/>
+          <image wx:else class="job_logo" src="/image/jobify.png"/>
           <text class="h1 title">
           {{job.company}}</text>
           <!-- <view class="desc">company description</view> -->
@@ -33,7 +37,7 @@
           <view class="job_info">
           <view class="h1 title">{{job.title}}</view>
 
-          <checkbox-group class="group" >
+          
             <view id = "container1">
               <view class="label-1" wx:for="{{job.tag_list}}" wx:for-item="tag">
                 <label>
@@ -44,7 +48,7 @@
                 </label>
               </view>
             </view>
-          </checkbox-group>
+        
 
 
           <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
@@ -63,8 +67,7 @@
           <view class="h3">Job posted on: {{job.created_at}}</view>
           <view class="notice">Jobs appear up to 30 days from date of posting</view>
         </view>
-        <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/> 
-        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>  
+        
       </view>
      </swiper-item>
   </block>

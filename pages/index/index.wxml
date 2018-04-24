@@ -41,7 +41,7 @@
 <!-- New Job Card  -->
 <view class="row2container">
   <view class="card3" bindtap="postjob">  
-    <image src="/image/jobpost.png" style="width: 100rpx; height: 100rpx;" />
+    <image src="/image/jobpost.png" style="width: 110rpx; height: 100rpx;" />
       <view class="card-category1"> Post Job </view>
     <!--NEED TO LINK THE ABOVE TO PERSONALITY CLOUD LIST -->
   </view>
@@ -50,7 +50,7 @@
 <!-- Posted Jobs Card  -->
 
   <view class="card4" bindtap="postedjobs">  
-    <image src="/image/postjob3.png" style="width: 100rpx; height: 100rpx;" />
+    <image src="/image/postjob3.png" style="width: 100rpx; height: 110rpx;" />
       <view class="card-category1">Posted Jobs </view>
     <!--NEED TO LINK THE ABOVE TO POSTED JOBS LIST -->
   </view>

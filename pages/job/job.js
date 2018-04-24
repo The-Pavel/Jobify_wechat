@@ -9,11 +9,18 @@ Page({
     right: false,
     activeIndex: 0,
     jobCard: false,
-    saveJobBtn: false
+    saveJobBtn: false,
+    indicatorDots: true
   },
   
 
   // SWIPER
+
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
 
   changeswiper: function (e) {
     var index = e.detail.current;//当前所在页面的 index
