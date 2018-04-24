@@ -1,12 +1,20 @@
 /* pages/job/job.wxss */
+page {
+  background: #F4F4F4;
+}
 swiper {
-   height: 2000rpx !important; 
+   height: 2200rpx !important; 
+}
+.h3 {
+  color: #024583;
 }
 .job_card {
-  margin: 50rpx 50rpx 50rpx 50rpx;
-  border: 2rpx solid #BDBDBD;
-  border-radius: 10rpx;
-  box-shadow: 3px 3px 1px 1px #BDBDBD;
+  margin: 50rpx 15rpx 50rpx 15rpx;
+  /* border: 2rpx solid #BDBDBD; */
+  border-radius: 25rpx;
+  background: white;
+  box-shadow: 3px 3px 1px 1px rgba(0,0,0,0.1);
+  padding-bottom: 30rpx;
 }
 
 .h1.title {
@@ -44,38 +52,40 @@ swiper {
   padding: 30rpx 0rpx 0rpx 0rpx;
   border-top: 0.5px solid #BDBDBD;
 }
-.save {
-  height: 80rpx;
-  width: 60rpx;
-  margin: 0rpx 300rpx 30rpx 300rpx;
-}
+
 .notice{
-  margin-top: 20rpx;
+  margin: 20rpx 0;
   color: #888888;
   font-size: 25rpx;
   font-family: Roboto; 
   font-weight: lighter;
 }
 #right-arrow {
-  height: 50rpx;
+  height: 30rpx;
   width: 50rpx;
   position:absolute;
-  left:650rpx;
-  top:280rpx;
+  left:600rpx;
+  top:80rpx;
   z-index:1; 
 }
-#left-arrow {
-  height: 50rpx;
+#arrow-label {
+  height: 30rpx;
   width: 50rpx;
   position:absolute;
-  right:650rpx;
-  top:280rpx;
-  z-index:1; 
-
-  animation: assetAnim 2s 1;
-  animation-delay: 2s;
+  left:600rpx;
+  top:110rpx;
+  z-index:1;
+  font-size: 20rpx;
+  color:#888888;
 }
-
+.save {
+  height: 60rpx;
+  width: 40rpx;
+  /* margin: 0rpx 300rpx 30rpx 300rpx; */
+  position:absolute;
+  left:600rpx;
+  top:50rpx;
+}
 .label-1__icon {
     position: relative;
     margin: 0rpx 10rpx;
@@ -93,9 +103,9 @@ swiper {
   display: inline-flex;  
   flex-wrap: wrap; 
   height: auto;
-  width: 600rpx;
+  width: 660rpx;
   justify-content: center;
-  margin: 20rpx 20rpx;
+  margin: 20rpx 30rpx;
   transform: translateX(-50rpx);
 }  
 
@@ -107,12 +117,9 @@ swiper {
     padding: 10rpx; 
     width: auto;
     height: auto;
+    color: #8FBAF3;
 }
 
-.group {
-  display: inline-flex;
-  margin-top: 10rpx;
-}
 
 .label-1{
     margin-top: 15rpx;
@@ -122,6 +129,7 @@ swiper {
 #job-desc {
   text-align:justify;
   text-justify:inter-word;
+  font-size: 25rpx;
 }
 
 .h1 {

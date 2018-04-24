@@ -17,6 +17,7 @@
 <view class="saved_card">
 <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" data-id="{{item.job_id}}" bindtap='tojobcard' bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
 
+    
     <image class="job_logo" src="{{item.image}}"/>
     <view class="job_info">
       <view class="job_title">{{item.job_title}}</view>
