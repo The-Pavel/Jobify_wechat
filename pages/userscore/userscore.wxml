@@ -47,7 +47,7 @@
 
     <view class="row1container">
     <view class="card" bindtap="newjobs"> 
-      <image src="/image/newjobs.png" style="width: 100rpx; height: 100rpx;" class="icon"/> 
+      <image src="/image/newjobs.png" class="icon"/> 
       <view class="number">  </view>
       <view class="card-category"> Jobs </view>
     
@@ -58,14 +58,14 @@
  <!-- Share card  -->
 
   <view class="card" bindtap="backtohome">  
-      <image src="/image/home.png" style="width: 100rpx; height: 100rpx;" class="icon" />
+      <image src="/image/home.png" class="icon" />
       <view class="card-category"> Home</view> 
   <!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
     </view>  
 
 
     <view class="card" bindtap="backtoquiz">  
-      <image src="/image/quiz.png" style="width: 100rpx; height: 100rpx;" class="icon" />
+      <image src="/image/quiz.png" class="icon" />
       <view class="card-category"> Quiz</view> 
   <!-- IMAGE SHOULD ONLY SHOW IF FIRST TIME. OTHERWISE SHOW % COMPLETED  -->
     </view>
