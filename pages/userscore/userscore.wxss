@@ -25,8 +25,8 @@
 }
 
 
-#container1{  
-  display: flex;  
+#container1{
+  display: flex;
 
   /*flex-wrap: wrap;  */
 
@@ -39,13 +39,13 @@
 
   flex-wrap: wrap;
   vertical-align: top;
-   height: auto; 
-   justify-content: center; 
+   height: auto;
+   justify-content: center;
   margin: 0 20rpx;
   margin-bottom: 50rpx;
   /* height: 600rpx; */
 
-}  
+}
 
 .label-1__text{
     text-align: center;
@@ -69,7 +69,7 @@
 
 .button3{
   background: linear-gradient(#8FBAF3, #F2FCFC);
-  color: #024583; 
+  color: #024583;
   width: 200px;
 }
 
@@ -85,30 +85,30 @@ box-sizing:border-box;
 }
 
 .card {
-  width: 150rpx;
-  height: 150rpx;
+  width: 100rpx;
+  height: 100rpx;
   font-size: 14px;
   text-align: center;
   line-height: 16px;
   font-family: Roboto;
-  font-style: Bold;background-size: cover !important;
+  font-style: Bold;
+  background-size: cover !important;
   background-position: center;
   color: #0245A3;
   position: relative;
-  /* background-color: #8FBAF3; */
-  margin-left:10px; 
-  margin-right:20px;
-  margin-bottom: 20px; 
-  margin-top:30px; 
+  margin: 0rpx 60rpx 0rpx 60rpx;
+
   opacity: 40%;
   padding: 0px 0px 0px 0px;
 }
 
 .row1container {
-  display: flex;
-  margin-top: 100rpx;
- 
-/* position:absolute; */
+
+display: flex;
+position:absolute;
+justify-content: space-between;
+bottom: 5rpx;
+width: 100%;
 
 
 }
@@ -116,17 +116,19 @@ box-sizing:border-box;
 .icon{
   margin-left: 10rpx;
   margin-right: 10rpx;
+
   width:60rpx !important;
   height: 60rpx !important;
+
 }
 
 .card-category {
-  font-family: Roboto; 
+  font-family: Roboto;
   font-weight:500;
-  font-size: 25rpx;
+  font-size: 20rpx;
   text-align: center;
   color: #024583;
-  margin:10rpx;
+  margin: 0rpx 10rpx 0rpx 10rpx;
 }
 .h1{
   margin-top:15px;
@@ -149,7 +151,7 @@ page{
   margin-top: 10rpx;
   margin-bottom: 10rpx;
   border-radius: 50%;
-  font-family: Montserrat; 
+  font-family: Montserrat;
 
 }
 
@@ -157,7 +159,7 @@ page{
   color:  #0245A3;
   font-size: 28rpx;
   font-family: Roboto;
-  
+
 
 
 }
@@ -180,7 +182,7 @@ page{
   }
   100% {
     transform: translateY(5rpx)
-  } 
+  }
 }
 
 /* pages/loadingscreen/loadingscreen.wxss */
@@ -212,7 +214,9 @@ body {
   text-align: center;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 20px;
-  animation: fadein 5s ease-in;
+
+  animation: fadein 6s ease-in;
+
 }
 
 @keyframes fadein {

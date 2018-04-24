@@ -14,14 +14,14 @@
   ],
   "window": {
     "navigationBarBackgroundColor": "#8FBAF3",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "#FFFEFE",
     "navigationBarTitleText": "Jobify",
     "backgroundColor": "#8FBAF3",
     "selectedColor": "#8FBAF3",
     "backgroundTextStyle": "light"
   },
   "tabBar": {
-    "backgroundColor": "white",
+    "backgroundColor": "#FFFEFE",
     "selectedColor": "#8FBAF3",
     "borderStyle": "gray",
     "color": "#0245A3",
