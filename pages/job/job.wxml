@@ -16,7 +16,7 @@
 
 </view>
 
-  <swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}">
+  <swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}" indicator-color="#8FBAF3" indicator-active-color="#024583">
   <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}"> 
     <swiper-item class="swipe" bindchange="changeIndicatorDots" > 
 

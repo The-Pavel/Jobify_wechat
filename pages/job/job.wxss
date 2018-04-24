@@ -2,6 +2,12 @@
 page {
   background: #F4F4F4;
 }
+
+.wx-swiper-dot {
+  display: inline-flex;
+  height: 18rpx;
+  margin-bottom: 2150rpx;
+}
 swiper {
    height: 2200rpx !important; 
 }
@@ -79,8 +85,8 @@ swiper {
   color:#888888;
 }
 .save {
-  height: 60rpx;
-  width: 40rpx;
+  height: 80rpx;
+  width: 60rpx;
   /* margin: 0rpx 300rpx 30rpx 300rpx; */
   position:absolute;
   left:600rpx;
@@ -95,7 +101,7 @@ swiper {
     height: auto;
     background: white;
     border: 1px solid #8FBAF3;
-    border-radius: 12px;
+    border-radius: 18px;
 }
 
 
@@ -111,9 +117,9 @@ swiper {
 
 .label-1__text{
     text-align: center;
-    font-size: 23rpx;
+    font-size: 28rpx;
     font-family: Roboto;
-    fill-opacity: 40rpx;
+    font-weight: bolder; 
     padding: 10rpx; 
     width: auto;
     height: auto;
@@ -129,7 +135,7 @@ swiper {
 #job-desc {
   text-align:justify;
   text-justify:inter-word;
-  font-size: 25rpx;
+  font-size: 28rpx;
 }
 
 .h1 {
