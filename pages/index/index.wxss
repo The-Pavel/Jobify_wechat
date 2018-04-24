@@ -124,9 +124,8 @@ page {
   padding: 0px 0px 0px 0px;
 }
 
-.card-category{
+.card-category {
   padding: 10px 0px 0px 20px;
-  font-family: Roboto;
   font-style: Bold;
   font-family: Roboto; 
   font-weight:400;
@@ -142,3 +141,6 @@ page {
   font-size: 30rpx;
 }
 
+.card-category1 {
+  color: #024583;
+}
