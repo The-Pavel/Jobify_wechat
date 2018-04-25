@@ -87,7 +87,7 @@ page {
   display: inline-flex;  
   flex-wrap: wrap; 
   height: auto;
-  width: 760rpx;
+  width: 620rpx;
   justify-content: center;
   margin: 20rpx 50rpx;
   transform: translateX(-50rpx);

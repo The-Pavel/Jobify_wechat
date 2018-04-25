@@ -123,7 +123,7 @@ swiper {
   display: inline-flex;  
   flex-wrap: wrap; 
   height: auto;
-  width: 610rpx;
+  width: 623rpx;
   justify-content: center;
   margin: 20rpx 50rpx 20rpx 50rpx;
   transform: translateX(-50rpx);
