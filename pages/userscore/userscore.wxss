@@ -7,7 +7,7 @@ page{
 
 .h1 {
   color: #024583;  
-  margin-bottom: 20rpx;
+  margin: 20rpx 0;
 }
 
 .avatar{
@@ -20,21 +20,6 @@ page{
   margin: 100rpx auto 0 auto;
   margin-left: 40%;
 }
-
-.label-1__icon {
-    position: relative;
-    margin: 10rpx 0 0 30rpx;
-
-     /* display: inline-block;  */
-    vertical-align: middle;
-    width: auto;
-    height: 70rpx;
-    background: white;
-    border: 2px solid #8FBAF3;
-    border-radius: 20px;
-    /* animation: float 5s infinite; */
-}
-
 
 #container1{
   display: flex;
@@ -50,10 +35,10 @@ page{
 
   flex-wrap: wrap;
   vertical-align: top;
-   height: auto;
-   justify-content: center;
-  margin: 0 20rpx;
-  margin-bottom: 50rpx;
+  height: auto;
+  justify-content: center;
+  margin:20rpx;
+
   /* height: 600rpx; */
 
 }
@@ -66,6 +51,20 @@ page{
     fill-opacity: 40rpx;
     padding:10px;
     color: #8FBAF3;
+}
+
+.label-1__icon {
+    position: relative;
+    margin: 10rpx 0 0 10rpx;
+
+     /* display: inline-block;  */
+    vertical-align: middle;
+    width: auto;
+    height: 70rpx;
+    background: white;
+    border: 2px solid #8FBAF3;
+    border-radius: 20px;
+    /* animation: float 5s infinite; */
 }
 
 .group {
@@ -145,13 +144,18 @@ box-sizing:border-box;
   margin-top:15px;
 }
 
-
+#job-btn {
+  background: #8FBAF3;
+  color: white;
+  margin: 15rpx;
+  border: none;
+}
 
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50rpx;
+  margin-top: 30rpx;
 }
 
 .userinfo-avatar {
