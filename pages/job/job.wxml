@@ -53,6 +53,11 @@
           <view class="h3 match">{{job.match_percent}}% Match</view>
 
           <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
+          <view wx:if="{{job.attachment !== null}}">
+            <button bindtap="showJd" id="button2" data-id="{{job.attachment}}">Save Attachment</button>
+          </view>
+        
+    
             <view class="heading" wx:if="{{job.salary !== null}}">
               <text class="h3">Salary: </text>
               <text class="desc">{{job.salary}}</text>    
