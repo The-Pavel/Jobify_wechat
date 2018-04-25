@@ -91,12 +91,20 @@ swiper {
   color:#888888;
 }
 .save {
-  height: 80rpx;
-  width: 60rpx;
+  height: 100rpx;
+  width: 80rpx;
   /* margin: 0rpx 300rpx 30rpx 300rpx; */
   position:absolute;
   left:600rpx;
   top:50rpx;
+  font-size: 30rpx;
+}
+.save1 {
+  color:#024583;
+  position:absolute;
+  left:615rpx;
+  top:50rpx;
+  font-size: 25rpx;
 }
 .label-1__icon {
     position: relative;

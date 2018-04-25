@@ -24,7 +24,8 @@
     <view id="arrow-label">swipe</view> -->
 
     <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/> 
-        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>  
+        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>
+        <text class="save1">save</text>  
 
       <view class="job_card">
         <view class="company_info">
