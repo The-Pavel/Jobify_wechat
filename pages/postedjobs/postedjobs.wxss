@@ -9,11 +9,11 @@
 .job_info {
   text-align: left;
   width: 800rpx;
-  padding: 25rpx 25rpx 25rpx 25rpx;
+  padding: 25rpx 25rpx 25rpx 0rpx;
 }
 .job_logo {
-  width: 150rpx;
-  height: 100rpx;
+  width: 200rpx;
+  height: auto;
   justify-content: center;
   padding: 15rpx 15rpx 15rpx 15rpx;
 }

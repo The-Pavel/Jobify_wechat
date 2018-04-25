@@ -24,28 +24,22 @@ page{
 #container1{
   display: flex;
 
-  /*flex-wrap: wrap;  */
-
-  /*height: auto; */
-
-  /*justify-content: center; */
-
-  /*margin: 0 20rpx 20rpx 0; */
-
-
   flex-wrap: wrap;
   vertical-align: top;
-  height: auto;
+  height: 500rpx;
   justify-content: center;
   margin:20rpx;
 
   /* height: 600rpx; */
 
 }
-
+.label-1{
+    margin: 8rpx 5rpx;  
+    width: auto;
+}
 .label-1__text{
     text-align: center;
-    line-height: 70rpx;
+    line-height: 50rpx;
     font-size: 28rpx;
     font-family: Roboto;
     fill-opacity: 40rpx;
@@ -55,16 +49,12 @@ page{
 
 .label-1__icon {
     position: relative;
-    margin: 10rpx 0 0 10rpx;
-
-     /* display: inline-block;  */
     vertical-align: middle;
     width: auto;
-    height: 70rpx;
+    height: 50rpx;
     background: white;
     border: 2px solid #8FBAF3;
     border-radius: 20px;
-    /* animation: float 5s infinite; */
 }
 
 .group {
@@ -72,10 +62,7 @@ page{
   margin-top: 20px;
 }
 
-.label-1{
-    margin: 5rpx 5rpx;
-    width: auto;
-}
+
 
 .button3{
   background: linear-gradient(#8FBAF3, #F2FCFC);
@@ -84,7 +71,7 @@ page{
 }
 
 .container {
-height:100%;
+height: 1100rpx;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -155,7 +142,7 @@ box-sizing:border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30rpx;
+
 }
 
 .userinfo-avatar {

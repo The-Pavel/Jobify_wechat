@@ -37,17 +37,12 @@
   <!-- <checkbox-group class="group" bindchange="checkboxChange" > -->
       <view id = "container1">
         <view class="label-1" wx:key="{{tag}}" wx:for="{{tags}}" wx:for-item="tag">
-          <!-- <label> -->
-            <!-- <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox> -->
-            <view class="label-1__icon">
-              <text class="label-1__text">{{tag}}</text>
-            </view>
-          <!-- </label> -->
+          <view class="label-1__icon">
+            <text class="label-1__text">{{tag}}</text>
+          </view>
         </view>
       </view>
     <!-- </checkbox-group> -->
-
-<!--need to insert profile underneath  -->
 
     <button id="job-btn" class="h1" bindtap="newjobs">Check out your jobs!</button>
 

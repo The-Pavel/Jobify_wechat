@@ -7,14 +7,12 @@
     <view class="line-left"></view>
     <view class="black-mask"></view>
     <view class="text">
-      <text class='h1'>Nothing yet, boss.
+      <text class='h1 heading'>Nothing yet, boss.
       Start hiring!</text>
     </view>
   </view>
 
 </view>
-
-
 
 <view class="saved_card">
  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" data-id="{{item.job_id}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="" bindtap='click'> 
