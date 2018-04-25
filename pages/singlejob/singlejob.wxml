@@ -23,8 +23,6 @@
               </view>
             </view>
           </checkbox-group>
-
-          <view class="h3 match">{{job.match_percent}}% Match</view>
           
           <view wx:if="{{job.user_id === user_id}}">
           <view class='fav_count'>Favorited by {{job.fav_count}} people</view>

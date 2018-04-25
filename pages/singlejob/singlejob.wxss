@@ -6,10 +6,6 @@
   border-radius: 10rpx;
   box-shadow: 3px 3px 1px 1px #BDBDBD;
 }
-.match{
-  text-align: center;
-  margin-bottom: 20rpx;
-}
 #edit_btn {
   /* width: 150rpx; */
   background:#8FBAF3;
