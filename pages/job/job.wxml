@@ -1,6 +1,6 @@
 <!--pages/job/job.wxml-->
 
-<view wx:if="{{jobs.length == 0}}">
+<view wx:if="{{dataLoaded && jobs.length == 0}}">
   <view class="square">
     <view class="line-top"></view>
     <view class="line-right"></view>

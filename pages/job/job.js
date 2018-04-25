@@ -10,7 +10,8 @@ Page({
     activeIndex: 0,
     jobCard: false,
     saveJobBtn: false,
-    indicatorDots: true
+    indicatorDots: true,
+    dataLoaded: false
   },
   
 
@@ -67,10 +68,9 @@ Page({
       success: function (res) {
         console.log(res)
 
-        page.setData(res.data);
+        page.setData({jobs: res.data.jobs, dataLoaded: true});
 
-        // console.log(res.data)
-        console.log(page.data.jobs)
+        // console.log(page.data.jobs)
         let jobs = page.data.jobs
         
         jobs = jobs.map(j => {

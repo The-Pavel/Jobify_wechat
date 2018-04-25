@@ -3,7 +3,7 @@ Page({
   data: {
     loading: true,
     companyLogo: null,
-    
+    dataLoaded: false
   },
    
 
@@ -34,7 +34,7 @@ Page({
 
 
   onLoad: function (options) {
-    setTimeout(this.stopLoad, 6000)
+    setTimeout(this.stopLoad, 3000)
     const page = this
     const user = wx.getStorageSync('user')
     wx.request({
@@ -42,7 +42,7 @@ Page({
       // url: `http://localhost:3000/api/v1/users/${user.id}`,
       success: function(res) {
         // console.log(res.data.tag_list)
-        page.setData({tags: res.data.tag_list})
+        page.setData({tags: res.data.tag_list, dataLoaded: true})
         // wx.setStorageSync('user_tags', res.data.tag_list)
       }
     })
