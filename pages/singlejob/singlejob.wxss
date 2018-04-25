@@ -1,10 +1,14 @@
 /* pages/singlejob/singlejob.wxss */
-
+page {
+  background: #F4F4F4;
+}
 .job_card {
-  margin: 50rpx 50rpx 50rpx 50rpx;
-  border: 2rpx solid #BDBDBD;
-  border-radius: 10rpx;
-  box-shadow: 3px 3px 1px 1px #BDBDBD;
+  margin: 50rpx 15rpx 50rpx 15rpx;
+  /* border: 2rpx solid #BDBDBD; */
+  border-radius: 25rpx;
+  background: white;
+  box-shadow: 3px 3px 1px 1px rgba(0,0,0,0.1);
+  padding-bottom: 30rpx;
 }
 #edit_btn {
   /* width: 150rpx; */
