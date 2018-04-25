@@ -81,7 +81,7 @@ Page({
     console.log(page.data)
 
     this.setData({
-      scrollTop: this.data.scrollTop + 480
+      scrollTop: this.data.scrollTop + 450
     })
  
     page.data.count++
