@@ -106,7 +106,7 @@ swiper {
     height: auto;
     background: white;
     border: 1px solid #8FBAF3;
-    border-radius: 18px;
+    border-radius: 20rpx;
 }
 
 
