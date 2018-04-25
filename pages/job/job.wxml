@@ -49,7 +49,7 @@
               </view>
             </view>
         
-          <view class="h3 match">{{job.match_percent}}% Match</view>
+          <view class="h3 match">Match: {{job.match_percent}}</view>
 
           <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
             <view class="heading" wx:if="{{job.salary !== null}}">
