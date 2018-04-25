@@ -86,17 +86,23 @@ Page({
 // after edit, upload the form back to the server 
   bindSubmit: function (e) {
     //collect data from form
+    console.log(e.detail.value)
     let page = this
-    let new_job = e.detail.value
     let user = wx.getStorageSync('user')
-  
-  
-    // new_job.id = page.job.id
+    let new_job = e.detail.value
+    console.log(new_job)
+
     new_job.tag_list = page.data.tag_list
     new_job.user_id = user.id
     new_job.image = page.data.image
     new_job.attachment = page.data.attachment
 
+    if (new_job.email.length === 0 || new_job.company.length === 0 || new_job.title.length === 0 || (new_job.tag_list.length < 1 || new_job.tag_list.length > 5) || (new_job.description.length < 20 || new_job.description.length > 300)) {
+      wx.showToast({
+        title: 'Error!',
+        image: '/image/warning.png'
+      })
+    } else {
 
     wx.request({
       url: `https://jobify.wogengapp.cn/api/v1/jobs/${page.data.id}`,
@@ -113,7 +119,7 @@ Page({
         })
       }
     })
-
+  }
   },
 
   /**

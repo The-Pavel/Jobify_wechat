@@ -8,7 +8,7 @@
     <view class="line-left"></view>
     <view class="black-mask"></view>
     <view class="text">
-      <text class='h1'>Still looking 
+      <text class='h1'>Still looking
       for that
       perfect match!</text>
     </view>
@@ -17,15 +17,15 @@
 </view>
 
   <swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}" indicator-color="#8FBAF3" indicator-active-color="#024583">
-  <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}"> 
-    <swiper-item class="swipe" bindchange="changeIndicatorDots" > 
+  <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}">
+    <swiper-item class="swipe" bindchange="changeIndicatorDots" >
 
     <!-- <image id="right-arrow" src="/image/rightarrow.png"/>
     <view id="arrow-label">swipe</view> -->
 
-    <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/> 
+    <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/>
         <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>
-        <text class="save1">+</text>  
+        <text class="save1">+</text>
 
       <view class="job_card">
         <view class="company_info">
@@ -37,8 +37,8 @@
         </view>
           <view class="job_info">
           <view class="h1 title">{{job.title}}</view>
-         
-          
+
+
             <view id = "container1">
               <view class="label-1" wx:for="{{job.tag_list}}" wx:for-item="tag">
                 <label>
@@ -49,43 +49,46 @@
                 </label>
               </view>
             </view>
-        
-          <view class="h3 match">{{job.match_percent}}% Match</view>
 
-          <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
-          <view wx:if="{{job.attachment !== null}}">
-            <button bindtap="showJd" id="button2" data-id="{{job.attachment}}">Save Attachment</button>
-          </view>
-        
-    
-            <view class="heading" wx:if="{{job.salary !== null}}">
+          <view class="h3 match">Match: {{job.match_percent}}</view>
+
+
+          <view wx:if="{{job.description}}" id="job-desc" class="desc">{{job.description}}</view>
+            <view class="heading" wx:if="{{job.salary}}">
+
               <text class="h3">Salary: </text>
-              <text class="desc">{{job.salary}}</text>    
+              <text class="desc">{{job.salary}}</text>
             </view>
-            <view class="heading" wx:if="{{job.location !== null}}">
+            <view class="heading" wx:if="{{job.location}}">
               <text class="h3">Location: </text>
-              <text class="desc">{{job.location}}</text>    
+              <text class="desc">{{job.location}}</text>
+            </view>
+            <view class="heading" wx:if="{{job.email}}">
+              <text class="h3">Email: </text>
+              <text class="desc">{{job.email}}</text>
+            </view>
+            <view class="heading" wx:if="{{job.phone}}">
+              <text class="h3">Phone: </text>
+              <text class="desc">{{job.phone}}</text>
             </view>
 
-            <view wx:if="{{job.email !== null}}" class="desc">{{job.email}}</view>
-              <view wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</view>  
-              <view class="heading" wx:if="{{job.wechat !== null}}">
+              <view class="heading" wx:if="{{job.wechat}}">
                 <text class="h3">WeChat: </text>
-                <text class="desc">@{{job.wechat}}</text>    
+                <text class="desc">@{{job.wechat}}</text>
               </view>
 
-            </view> 
+            </view>
 
 
-              
-            
+
+
         <view class="job_post_time">
           <view class="h3">Job posted on: {{job.created_at}}</view>
           <view class="notice">Jobs appear up to 30 days from date of posting</view>
         </view>
-        
+
       </view>
      </swiper-item>
   </block>
-</swiper> 
+</swiper>
 
