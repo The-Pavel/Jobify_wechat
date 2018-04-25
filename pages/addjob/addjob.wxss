@@ -18,12 +18,12 @@
 .form {
   background-color: #F4F4F4;
   padding:60rpx 40rpx;
-  
 }
 
 textarea {
     padding: 25rpx 0;
     fill-opacity: 40rpx;
+    width: 630rpx;
 }
 .preset {
   padding: 25rpx 0;
@@ -32,9 +32,8 @@ textarea {
   color:#888888;
 }
 .textarea-wrp {
-    padding: 0 25rpx;
+    padding: 0 5rpx 0 35rpx;
     background-color: #fff;
-    /* font-weight: bolder; */
     color: #024583;
     font-size: 28rpx; 
 }

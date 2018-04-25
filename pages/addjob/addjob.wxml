@@ -63,11 +63,11 @@
       </view>
 
       
-      <button class="button2" bindtap='uploadDesc' class="text" class="desc" class="button2">+ Img Attachment (1 pg max)</button>
+      <button class="button2" bindtap='uploadDesc' class="text" class="desc" class="button2">+ Img Attachment (1 pg max.)</button>
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">3. What are you looking for?</view>
+      <view class="page-section-title">3. What are you looking for? (5 tags max.)</view>
 
        <!-- <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
       {{arrayitem}}

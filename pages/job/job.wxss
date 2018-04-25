@@ -6,12 +6,17 @@ page {
 .wx-swiper-dot {
   display: inline-flex;
   height: 18rpx;
-  margin-bottom: 2150rpx;
+  margin-bottom: 2148rpx;
 }
 swiper {
    height: 2200rpx !important; 
 }
 .h3 {
+  color: #024583;
+}
+.match{
+  text-align: center;
+  margin-bottom: 20rpx;
   color: #024583;
 }
 .job_card {
@@ -50,7 +55,7 @@ swiper {
   font-size: 30rpx;
   background-color: #F2F2F2;
 }
-.location {
+.heading {
   margin-top: 30rpx;
 }
 .job_post_time {
@@ -109,9 +114,9 @@ swiper {
   display: inline-flex;  
   flex-wrap: wrap; 
   height: auto;
-  width: 660rpx;
+  width: 610rpx;
   justify-content: center;
-  margin: 20rpx 30rpx;
+  margin: 20rpx 50rpx 20rpx 50rpx;
   transform: translateX(-50rpx);
 }  
 
@@ -133,7 +138,7 @@ swiper {
 }
 
 #job-desc {
-  text-align:justify;
+  text-align:left;
   text-justify:inter-word;
   font-size: 28rpx;
 }
