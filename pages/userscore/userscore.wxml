@@ -5,7 +5,7 @@
    <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap='toprofile'></image>
      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  <view wx:if="{{tags.length == 0}}">
+  <view wx:if="{{dataLoaded && tags.length == 0}}">
   <view class="square" bindtap='redirection'>
     <view class="line-top"></view>
     <view class="line-right"></view>
