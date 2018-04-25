@@ -140,6 +140,17 @@ swiper {
     color: #8FBAF3;
 }
 
+#button2{
+  background: white;
+  border: none;
+  margin-top: 20rpx;
+  color: black;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  
+  fill-opacity: 40rpx;
+}
+
 
 .label-1{
     margin-top: 15rpx;
