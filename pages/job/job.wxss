@@ -3,6 +3,7 @@ page {
   background: #F4F4F4;
 }
 
+
 .wx-swiper-dot {
   display: inline-flex;
   height: 18rpx;

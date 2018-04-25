@@ -157,7 +157,7 @@ Page({
         method: 'POST',
         data: answer,
         success: function(res) {
-          wx.navigateTo({
+          wx.reLaunch({
             url: '/pages/userscore/userscore',
           })
         }
