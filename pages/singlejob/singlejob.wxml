@@ -9,7 +9,7 @@
         </view>
         <view class="job_info">
           <view class="h1">{{job.title}}</view>
-          <view class="job_type">Looking for:</view>
+          <!-- <view class="job_type">Looking for:</view> -->
 
            <checkbox-group class="group" >
             <view id = "container1">
@@ -24,29 +24,35 @@
             </view>
           </checkbox-group>
 
-
+          <view wx:if="{{job.user_id === user_id}}">
+          <view class='fav_count'>Favorited by {{job.fav_count}} people</view>
+        </view>
 
           <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
+
             <view wx:if="{{job.salary !== null}}">
-              <text class="h3">Salary: </text>
-              <text class="desc">{{job.salary}}</text>    
+              <view class="h3" wx:if="{{job.salary !== null}}">Salary: </view>
+              <view class="desc" wx:if="{{job.salary !== null}}">{{job.salary}}</view>    
             </view>
-            <view wx:if="{{job.location !== null}}">
+            <view class="location" wx:if="{{job.location !== null}}">
               <text class="h3">Location: </text>
               <text class="desc">{{job.location}}</text>    
             </view>
+
             <view wx:if="{{job.email !== null}}" class="desc">{{job.email}}</view>
-            <text wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</text> | <text wx:if="{{job.wechat !== null}}" class="desc">WeChat: @{{job.wechat}}</text>
-        </view>
+              <view wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</view>  
+              <view class="location" wx:if="{{job.wechat !== null}}">
+                <text class="h3">WeChat: </text>
+                <text class="desc">@{{job.wechat}}</text>    
+              </view>
+              </view>
+        
         <view wx:if="{{job.user_id === user_id}}">
-          <view class='fav_count'>Favorited by {{job.fav_count}} people</view>
-        </view>
-        <view wx:if="{{job.user_id === user_id}}">
-          <button bindtap="editJob" class="edit_btn" data-id = "{{job.id}}">Edit</button>
+          <button bindtap="editJob" id="edit_btn" data-id = "{{job.id}}">Edit</button>
         </view>
         <view class="job_post_time">
           <view class="h3">Job posted on: {{job.created_at}}</view>
           <view class="notice">Jobs appear up to 30 days from date of posting</view>
         </view>
-        <image src="/image/save.png" class="save"/> 
+        <!-- <image src="/image/save.png" class="save"/>  -->
       </view>

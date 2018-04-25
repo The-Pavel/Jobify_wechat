@@ -17,7 +17,14 @@
   justify-content: center;
   padding: 15rpx 15rpx 15rpx 15rpx;
 }
-
+.job_title{
+  color: #888888;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.job_info{
+  color: #888888;
+}
 /* Left swipe delete */
 
 .touch-item {
