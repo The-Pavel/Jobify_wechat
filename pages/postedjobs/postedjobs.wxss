@@ -18,7 +18,7 @@
   padding: 15rpx 15rpx 15rpx 15rpx;
 }
 .job_title{
-  color: #888888;
+  color: #024583;
   font-weight: bold;
   font-size: 35rpx;
 }

@@ -10,7 +10,11 @@
   width: 100rpx;
   height: 100rpx;
 }
-
+#desc {
+  margin-top: 15rpx;
+  font-weight: bolder;
+  color: #888888;
+}
 .form {
   background-color: #F4F4F4;
   padding:60rpx 40rpx;
@@ -19,23 +23,28 @@
 
 textarea {
     padding: 25rpx 0;
-    font-size: 28rpx;
-    font-family: Roboto;
-    font-weight: lighter;
     fill-opacity: 40rpx;
+}
+.preset {
+  padding: 25rpx 0;
+  font-size: 28rpx;
+  font-weight: lighter; 
+  color:#888888;
 }
 .textarea-wrp {
     padding: 0 25rpx;
     background-color: #fff;
-    font-weight: lighter;
-    color: #888888;
-    font-size: 28rpx;
+    /* font-weight: bolder; */
+    color: #024583;
+    font-size: 28rpx; 
 }
-
 .checkbox {
   padding-left:30rpx;
 }
-
+.page-section-title {
+  color: #024583;
+  font-weight: bolder;
+}
  /* .page-section-details {
   margin-top: 5rpx;
   color: #888888;
@@ -60,15 +69,13 @@ textarea {
   margin: 5rpx;
   width: auto;
 }
+
 .label-1__text{
-  /* display: inline-block; */
   text-align: center;
   line-height: 30rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   font-family: Roboto;
-  color: #8FBAF3;
-  /* font-weight: lighter; */
-  /* fill-opacity: 40rpx; */
+  fill-opacity: 40rpx;
 }
 
 .label-1__shape {
@@ -107,7 +114,6 @@ textarea {
 .desc2{
   font-size: 28rpx;
   font-family: Roboto;
-  font-weight: lighter;
   fill-opacity: 40rpx;
 }
 

@@ -1,7 +1,7 @@
 <view class="index">
   <view class="hd">
   <image class="logo" src="/image/jobify.png"></image>
-   <view class="desc">Tell us who you’re looking for.</view>
+   <view id="desc">Tell us who you’re looking for.</view>
   </view>
 </view>
 
@@ -19,9 +19,9 @@
 
         <textarea auto-focus="true"
               type="text"
-              class="desc"
-              class="info"
+              class="desc2"
               placeholder="Company Name (required)"
+              placeholder-class="preset" 
               name="company" auto-height />
 
 
@@ -29,16 +29,16 @@
 
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder="location" name="location" auto-height />
+        <textarea class="desc2" placeholder-class="preset" placeholder="Location" name="location" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder="email@email.com (required)" name="email" auto-height />
+        <textarea class="desc2" placeholder-class="preset" placeholder="email@email.com (required)" name="email" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder="+86 185******" name="phone" auto-height />
+        <textarea class="desc2" placeholder-class="preset" placeholder="+86 185******" name="phone" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder="wechat" name="wechat" auto-height />
+        <textarea class="desc2" placeholder-class="preset" placeholder="WeChat" name="wechat" auto-height />
       </view>
 
 
@@ -53,13 +53,13 @@
       <view class="page-section-title">2. Your offer</view>
 
         <view class="textarea-wrp">
-          <textarea placeholder="Job Title (required)" class="desc2" name="title" auto-height />
+          <textarea placeholder="Job Title (required)" placeholder-class="preset"  class="desc2" name="title" auto-height />
         </view>
         <view class="textarea-wrp">
-          <textarea placeholder="Salary" class="desc2" name="salary" auto-height />
+          <textarea placeholder="Salary" placeholder-class="preset" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea style="height: 12em" class="desc2" placeholder="Job Description (min 20 characters)" name="description" maxlength="-1" />
+        <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Job Description (min 20 characters)" name="description" maxlength="-1" />
       </view>
 
       
