@@ -1,4 +1,6 @@
-
+page {
+  background: #F4F4F4;
+}
 .hd {
   font-size: 30rpx;
   text-align: center;
