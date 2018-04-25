@@ -11,7 +11,11 @@
   width: 100rpx;
   height: 100rpx;
 }
-
+#desc {
+  margin-top: 15rpx;
+  font-weight: bolder;
+  color: #888888;
+}
 .form {
   background-color: #F4F4F4;
   padding:60rpx 40rpx;
@@ -20,20 +24,25 @@
 
 textarea {
     padding: 25rpx 0;
-    font-weight: lighter;
-    font-size: 28rpx;
-    font-family: Roboto;
-    font-weight: lighter;
     fill-opacity: 40rpx;
+}
+.preset {
+  padding: 25rpx 0;
+  font-size: 28rpx;
+  font-weight: lighter; 
+  color:#888888;
 }
 .textarea-wrp {
     padding: 0 25rpx;
     background-color: #fff;
-    font-weight: lighter;
-    color: #888888;
-    font-size: 28rpx;
+    font-weight: bolder;
+    color: #024583;
+    font-size: 28rpx; 
 }
-
+.page-section-title {
+  color: #024583;
+  font-weight: bolder;
+}
 .checkbox {
   padding-left:30rpx;
 }
@@ -76,8 +85,8 @@ textarea {
   vertical-align: middle;
   height: 50rpx;
   background: white;
-  border: 2px solid #8FBAF3;
-  border-radius: 12px;
+  border: 1px solid #8FBAF3;
+  border-radius: 50rpx;
 }
 
 #container1{  

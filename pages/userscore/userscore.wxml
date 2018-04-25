@@ -49,7 +49,7 @@
 
 <!--need to insert profile underneath  -->
 
-   
+    <button id="job-btn" class="h1" bindtap="newjobs">Check out your jobs!</button>
 
 
 <!-- <image class="avatar" src="{{userInfo.avatarUrl}}" bindtap='toprofile'/>-->
