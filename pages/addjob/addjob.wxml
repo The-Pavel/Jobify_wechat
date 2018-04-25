@@ -93,7 +93,7 @@
 
 
     <view class="btn-area">
-      <button class="button3" formType="submit" bindtap="bindSubmit" loading="{{loading}}">Post Job</button>
+      <button class="button3" formType="submit" loading="{{loading}}">Post Job</button>
     </view>
   </view>
 

@@ -42,7 +42,11 @@
       </view>
 
     </view>
-
+     <button bindtap='uploadlogo'class="desc" class="button2">
+        <!-- <textarea placeholder="upload picture" name="image"
+        auto-height /> -->
+      + Add Company Logo</button>
+      
     <view class="page-section">
       <view class="page-section-title" style='margin-top: 10rpx;'>2. Your offer</view>
 

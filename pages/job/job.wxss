@@ -102,9 +102,9 @@ swiper {
 .save1 {
   color:#024583;
   position:absolute;
-  left:615rpx;
-  top:65rpx;
-  font-size: 25rpx;
+  left:630rpx;
+  top:63rpx;
+  font-size: 35rpx;
 }
 .label-1__icon {
     position: relative;
