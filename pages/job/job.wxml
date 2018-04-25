@@ -54,8 +54,8 @@
 
 
           <view wx:if="{{job.description}}" id="job-desc" class="desc">{{job.description}}</view>
+          <button wx:if="{{job.attachment}}"id="button2" bindtap='showJd' data-id="{{job.attachment}}">Save Attachment</button>
             <view class="heading" wx:if="{{job.salary}}">
-
               <text class="h3">Salary: </text>
               <text class="desc">{{job.salary}}</text>
             </view>
