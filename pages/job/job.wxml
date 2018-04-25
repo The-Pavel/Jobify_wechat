@@ -50,21 +50,27 @@
               </view>
             </view>
         
-          <view class="h3 match">{{job.match_percent}}% Match</view>
+          <view class="h3 match">Match: {{job.match_percent}}</view>
 
-          <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
-            <view class="heading" wx:if="{{job.salary !== null}}">
+          <view wx:if="{{job.description}}" id="job-desc" class="desc">{{job.description}}</view>
+            <view class="heading" wx:if="{{job.salary}}">
               <text class="h3">Salary: </text>
               <text class="desc">{{job.salary}}</text>    
             </view>
-            <view class="heading" wx:if="{{job.location !== null}}">
+            <view class="heading" wx:if="{{job.location}}">
               <text class="h3">Location: </text>
               <text class="desc">{{job.location}}</text>    
             </view>
-
-            <view wx:if="{{job.email !== null}}" class="desc">{{job.email}}</view>
-              <view wx:if="{{job.phone !== null}}" class="desc">{{job.phone}}</view>  
-              <view class="heading" wx:if="{{job.wechat !== null}}">
+            <view class="heading" wx:if="{{job.email}}">
+              <text class="h3">Email: </text>
+              <text class="desc">{{job.email}}</text>    
+            </view>
+            <view class="heading" wx:if="{{job.phone}}">
+              <text class="h3">Phone: </text>
+              <text class="desc">{{job.phone}}</text>    
+            </view>
+ 
+              <view class="heading" wx:if="{{job.wechat}}">
                 <text class="h3">WeChat: </text>
                 <text class="desc">@{{job.wechat}}</text>    
               </view>

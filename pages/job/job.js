@@ -67,7 +67,6 @@ Page({
       data: {id: user.id},
       success: function (res) {
         console.log(res)
-
         page.setData({jobs: res.data.jobs, dataLoaded: true});
 
         // console.log(page.data.jobs)
@@ -79,7 +78,7 @@ Page({
         })
 
         page.setData({ jobs: jobs})
-        
+        console.log(jobs)
       }
     })
   },

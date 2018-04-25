@@ -59,7 +59,7 @@
           <textarea placeholder="Salary" placeholder-class="preset" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Job Description (min 20 characters)" name="description" maxlength="-1" />
+        <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Job Description (20-300 characters)" name="description" maxlength="-1" />
       </view>
 
       
