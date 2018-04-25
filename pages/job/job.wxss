@@ -103,7 +103,7 @@ swiper {
   color:#024583;
   position:absolute;
   left:615rpx;
-  top:50rpx;
+  top:65rpx;
   font-size: 25rpx;
 }
 .label-1__icon {
