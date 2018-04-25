@@ -84,6 +84,30 @@ Page({
     })
   },
 
+  showJd: function(e) {
+    console.log(e.currentTarget.dataset.id)
+    wx.showLoading({
+      title: 'Loading',
+      duration: 500
+    })
+    wx.getImageInfo({
+      src: `${e.currentTarget.dataset.id}`,
+           success: function (ret) {
+        const path = ret.path;
+        wx.saveImageToPhotosAlbum({
+          filePath: path,
+          success(result) {
+            console.log(result)
+            wx.showToast({
+              title: 'Saved!',
+              icon: 'success'
+            })
+          }
+        })
+      }
+    })
+  },
+
 
   saveJob: function(e) {
     console.log(e)
