@@ -17,7 +17,7 @@ Page({
       { name: 'talkative', value: 'talkative' },
       { name: 'empathetic', value: 'empathetic' },
       { name: 'agreeable', value: 'agreeable' },
-      { name: 'warm- hearted', value: 'warm- hearted' },
+      { name: 'warm- hearted', value: 'warm-hearted' },
       { name: 'collaborative', value: 'collaborative' },
       { name: 'independent', value: 'independent' },
       { name: 'determined', value: 'determined' },
@@ -38,36 +38,47 @@ Page({
 
   bindSubmit: function (e) {
     //collect data from form
+    console.log(e.detail.value)
     let page = this
-    let new_job = e.detail.value
     let user = wx.getStorageSync('user')
-//     debugger
-
+    let new_job = e.detail.value
     console.log(new_job)
-    console.log(page.data.tag_list)
+   
     new_job.tag_list = page.data.tag_list
     new_job.user_id = user.id
     new_job.image = page.data.image
-    new_job.attachment= page.data.attachment
+    new_job.attachment = page.data.attachment
+ 
+    if (new_job.email.length === 0 || new_job.company.length === 0 || new_job.title.length === 0 || (new_job.tag_list.length < 1 || new_job.tag_list.length > 5)) {
+      wx.showToast({
+        title: 'Incomplete!',
+        image: '/image/warning.png'
+      })
+    } else {
+      
+      //     debugger
+
+     
 
 
-    wx.request({
-      url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
-      // url: 'http://localhost:3000/api/v1/jobs/',
-      method: 'POST',
-      data: new_job,
-      success: function (res) {
-        wx.showToast({
-          title: 'Created!',
-          icon: 'success',
-          duration: 2000
-        })
-        wx.reLaunch({
-          url: '/pages/index/index',
-        })
-      }
-    })
-
+      wx.request({
+        url: 'https://jobify.wogengapp.cn/api/v1/jobs/',
+        // url: 'http://localhost:3000/api/v1/jobs/',
+        method: 'POST',
+        data: new_job,
+        success: function (res) {
+          wx.showToast({
+            title: 'Created!',
+            icon: 'success',
+            duration: 2000
+          })
+          wx.reLaunch({
+            url: '/pages/index/index',
+          })
+        }
+      })
+}
+    
     // relaunch at index
     // wx.reLaunch({
     //   url: '/pages/index/index'

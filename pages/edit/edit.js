@@ -17,7 +17,7 @@ Page({
       { name: 'talkative', value: 'talkative' },
       { name: 'empathetic', value: 'empathetic' },
       { name: 'agreeable', value: 'agreeable' },
-      { name: 'warm- hearted', value: 'warm- hearted' },
+      { name: 'warm- hearted', value: 'warm-hearted' },
       { name: 'collaborative', value: 'collaborative' },
       { name: 'independent', value: 'independent' },
       { name: 'determined', value: 'determined' },
@@ -129,7 +129,32 @@ Page({
   onShow: function () {
   
   },
-
+  uploadlogo: function () {
+    var that = this
+    wx.chooseImage({
+      success: function (data) {
+        wx.showToast({
+          title: 'Success',
+          icon: "success"
+        })
+        const tempFiles = data.tempFilePaths[0]
+        const file = new AV.File("company", {
+          blob: {
+            uri: tempFiles
+          }
+        })
+        file.save()
+          .then(savedFile => {
+            const companyLogo = savedFile.attributes.url
+            console.log('hello ' + companyLogo)
+            that.setData({ image: companyLogo })
+          })
+          .catch(err => {
+            console.error(err)
+          })
+      }
+    })
+  },
   uploadDesc: function () {
     var that = this
     wx.chooseImage({

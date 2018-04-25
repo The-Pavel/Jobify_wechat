@@ -24,7 +24,8 @@
     <view id="arrow-label">swipe</view> -->
 
     <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/> 
-        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>  
+        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>
+        <text class="save1">+</text>  
 
       <view class="job_card">
         <view class="company_info">
@@ -49,7 +50,7 @@
               </view>
             </view>
         
-          <view class="h3 match">Match: {{job.match_percent}}</view>
+          <view class="h3 match">{{job.match_percent}}% Match</view>
 
           <view wx:if="{{job.description !== null}}" id="job-desc" class="desc">{{job.description}}</view>
             <view class="heading" wx:if="{{job.salary !== null}}">

@@ -81,8 +81,15 @@ Page({
 
     console.log(page.data)
 
-    this.setData({
-      scrollTop: this.data.scrollTop + 450
+    wx.getSystemInfo({
+      success: (res) => {
+        console.log(res)
+        const offset = res.screenWidth / 750 * 460 * 2;
+        console.log(offset);
+        this.setData({
+          scrollTop: this.data.scrollTop + offset
+        })
+      }
     })
  
     page.data.count++
@@ -123,23 +130,17 @@ Page({
 
     console.log(page.data)
 
+    wx.getSystemInfo({
+      success: (res) => {
+        console.log(res)
+        const offset = res.screenWidth / 750 * 460 * 2;
+        console.log(offset);
+        this.setData({
+          scrollTop: this.data.scrollTop + offset
+        })
+      }
+    }) 
 
-
-    this.setData({
-      scrollTop: this.data.scrollTop + 480
-    })
-    // this.data.index++
-    // console.log(this.data.showNoButton)
-    // const questions = this.data.questions
-
-    // for (var i = 0; i < questions.length; ++i) {
-    //   if (questions[i] === this.data.toView) {
-    //     this.setData({
-    //       toView: questions[i + 1]
-    //     })
-    //     break
-    //   }
-    // }
     page.data.count++
     if (page.data.count == page.data.questions.length) {
       wx.showToast({

@@ -1,14 +1,14 @@
 /* pages/singlejob/singlejob.wxss */
-
-.job_card {
-  margin: 50rpx 50rpx 50rpx 50rpx;
-  border: 2rpx solid #BDBDBD;
-  border-radius: 10rpx;
-  box-shadow: 3px 3px 1px 1px #BDBDBD;
+page {
+  background: #F4F4F4;
 }
-.match{
-  text-align: center;
-  margin-bottom: 20rpx;
+.job_card {
+  margin: 50rpx 15rpx 50rpx 15rpx;
+  /* border: 2rpx solid #BDBDBD; */
+  border-radius: 25rpx;
+  background: white;
+  box-shadow: 3px 3px 1px 1px rgba(0,0,0,0.1);
+  padding-bottom: 30rpx;
 }
 #edit_btn {
   /* width: 150rpx; */
@@ -80,16 +80,16 @@
     height: auto;
     background: white;
     border: 1px solid #8FBAF3;
-    border-radius: 18px;
+    border-radius: 20px;
 }
 
 #container1{  
   display: inline-flex;  
   flex-wrap: wrap; 
   height: auto;
-  width: 600rpx;
+  width: 620rpx;
   justify-content: center;
-  margin: 20rpx 20rpx;
+  margin: 20rpx 50rpx;
   transform: translateX(-50rpx);
 }  
 
