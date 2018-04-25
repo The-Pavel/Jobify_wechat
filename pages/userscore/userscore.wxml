@@ -24,7 +24,7 @@
 
 
 <!--NEED TO LINK BACKEND TO QUIZ  -->
-  <view class="h1">My Personality Type</view>
+  <view class="h1">My Personality Tags</view>
   <view wx:if="{{loading == true}}">
       <view id="loading-wrapper">
         <view id="loading-text">You are...</view>
