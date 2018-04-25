@@ -12,7 +12,8 @@ Page({
     scrollTop: 0,
     index: 0,
     count: 0,
-    sending: false
+    sending: false,
+    dataLoaded: false
   },
 
   /**
@@ -32,7 +33,7 @@ Page({
       data: data,
       success: function (res) {
         console.log(res)
-        page.setData(res.data) 
+        page.setData({questions: res.data.questions, dataLoaded: true}) 
 
         // console.log(res.data)
        

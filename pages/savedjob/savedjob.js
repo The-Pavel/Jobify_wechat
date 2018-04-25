@@ -4,7 +4,8 @@ Page({
     saved_jobs: [],
     items: [],
     startX: 0, //开始坐标
-    startY: 0
+    startY: 0,
+    dataLoaded: false
   },
   onShow: function () {
     this.data.items = []
@@ -17,7 +18,7 @@ Page({
       method: 'GET',
       data: data,
       success: function(res) {
-        page.setData({saved_jobs: res.data})
+        page.setData({saved_jobs: res.data, dataLoaded: true})
         console.log(res)
 
         for (var i = 0; i < page.data.saved_jobs.length; i++) {

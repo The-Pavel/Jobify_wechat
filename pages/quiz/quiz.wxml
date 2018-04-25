@@ -1,5 +1,5 @@
 <!--pages/quiz/quiz.wxml-->
-<view wx:if="{{questions.length == 0}}">
+<view wx:if="{{dataLoaded && questions.length == 0}}">
   <view class="square" bindtap='redirection'>
     <view class="line-top"></view>
     <view class="line-right"></view>

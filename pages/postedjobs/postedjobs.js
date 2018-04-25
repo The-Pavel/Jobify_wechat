@@ -4,7 +4,8 @@ Page({
     my_jobs: [],
     items: [],
     startX: 0, //开始坐标
-    startY: 0
+    startY: 0,
+    dataLoaded: false
   },
   onLoad: function () {
     const page = this
@@ -18,7 +19,7 @@ Page({
       data: data,
       success: function (res) {
       console.log(res)
-      page.setData({ my_jobs: res.data })
+      page.setData({ my_jobs: res.data, dataLoaded: true })
       // console.log(page.data.my_jobs)
       for (var i = 0; i < page.data.my_jobs.length; i++) {
         page.data.items.push({

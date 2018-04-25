@@ -212,7 +212,7 @@ body {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 20px;
 
-  animation: fadein 6s ease-in;
+  animation: fadein 3s ease-in;
 
 }
 
