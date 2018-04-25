@@ -3,28 +3,7 @@ Page({
   data: {
     loading: true,
     companyLogo: null,
-    checkboxItems: [
-      { name: "outgoing", value: 'outgoing' },
-      { name: 'aggressive', value: 'aggressive' },
-      { name: 'assertive', value: 'assertive' },
-      { name: 'sociable', value: 'sociable' },
-      { name: 'extraverted', value: 'extraverted' },
-      { name: 'distant', value: 'distant' },
-      {name: 'talkative', value:'talkative'},
-      { name: 'empathetic', value: 'empathetic' },
-      { name: 'light- hearted', value: 'light-hearted' },
-      { name: 'agreeable', value: 'agreeable' },
-      { name: 'warm- hearted', value: 'warm-hearted' },
-      { name: 'collaborative', value: 'collaborative' },
-      { name: 'independent', value: 'independent' },
-      { name: 'stubborn', value: 'stubborn' },
-      { name: 'direct', value: 'direct' },
-      { name: 'unemotional', value: 'unemotional' },
-      { name: 'responsible', value: 'responsible' },
-      { name: 'conscientious', value: 'conscientious' },
-      { name: 'structure- freak', value: 'structure-freak' },
-      { name: 'non- conflicting', value: 'non-conflicting' }]
-
+    
   },
    
 
@@ -62,9 +41,9 @@ Page({
       url: `https://jobify.wogengapp.cn/api/v1/users/${user.id}`,
       // url: `http://localhost:3000/api/v1/users/${user.id}`,
       success: function(res) {
-        console.log(res.data.tag_list)
+        // console.log(res.data.tag_list)
         page.setData({tags: res.data.tag_list})
-        wx.setStorageSync('user_tags', res.data.tag_list)
+        // wx.setStorageSync('user_tags', res.data.tag_list)
       }
     })
   },
