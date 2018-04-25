@@ -10,6 +10,16 @@ page {
   box-shadow: 3px 3px 1px 1px rgba(0,0,0,0.1);
   padding-bottom: 30rpx;
 }
+#button2{
+  background: white;
+  border: none;
+  margin-top: 20rpx;
+  color: black;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  
+  fill-opacity: 40rpx;
+}
 #edit_btn {
   /* width: 150rpx; */
   background:#8FBAF3;
