@@ -16,68 +16,70 @@
 
 </view>
 
-  <swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}" indicator-color="#8FBAF3" indicator-active-color="#024583">
+<swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}" indicator-color="#8FBAF3" indicator-active-color="#024583">
   <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}">
-    <swiper-item class="swipe" bindchange="changeIndicatorDots" >
+    <swiper-item class="swipe" bindchange="changeIndicatorDots">
 
-    
-      <image data-id="{{job.id}}" src="/image/tosave.png" id="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/>
+
+      <image data-id="{{job.id}}" src="/image/tosave.png" id="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}" />
       <text data-id="{{job.id}}" id="save1" wx:if="{{!job.saveJobBtn}}" bindtap="saveJob">+</text>
-     
+
       <image data-id="{{job.id}}" src="/image/save.png" id="save" wx:else/>
-    
+
 
       <view class="job_card">
         <view class="company_info">
-          <image class="job_logo" wx:if="{{job.image !== null}}" src="{{job.image}}"/>
-          <image wx:else class="job_logo" src="/image/jobify.png"/>
+          <image class="job_logo" wx:if="{{job.image !== null}}" src="{{job.image}}" />
+          <image wx:else class="job_logo" src="/image/jobify.png" />
           <text class="h1 title">
           {{job.company}}</text>
           <!-- <view class="desc">company description</view> -->
         </view>
-          <view class="job_info">
+        <view class="job_info">
           <view class="h1 title">{{job.title}}</view>
 
 
-            <view id = "container1">
-              <view class="label-1" wx:for="{{job.tag_list}}" wx:for-item="tag">
-                <label>
-                  <checkbox hidden value="{{tag.name}}" checked="{{tag.checked}}"></checkbox>
-                  <view class="label-1__icon">
-                    <view class="label-1__text">{{tag}}</view>
-                  </view>
-                </label>
-              </view>
+          <view id="container1">
+            <view class="label-1" wx:for="{{job.tag_list}}" wx:for-item="tag">
+              <label>
+                <checkbox hidden value="{{tag.name}}" checked="{{tag.checked}}"></checkbox>
+                <view class="label-1__icon">
+                  <view class="label-1__text">{{tag}}</view>
+                </view>
+              </label>
             </view>
+          </view>
 
           <view class="h3 match">Match: {{job.match_percent}}</view>
-
+           
 
           <view wx:if="{{job.description}}" id="job-desc" class="desc">{{job.description}}</view>
-          <button wx:if="{{job.attachment}}"id="button2" bindtap='showJd' data-id="{{job.attachment}}">Save Attachment</button>
-            <view class="heading" wx:if="{{job.salary}}">
-              <text class="h3">Salary: </text>
-              <text class="desc">{{job.salary}}</text>
-            </view>
-            <view class="heading" wx:if="{{job.location}}">
-              <text class="h3">Location: </text>
-              <text class="desc">{{job.location}}</text>
-            </view>
-            <view class="heading" wx:if="{{job.email}}">
-              <text class="h3">Email: </text>
-              <text class="desc">{{job.email}}</text>
-            </view>
-            <view class="heading" wx:if="{{job.phone}}">
-              <text class="h3">Phone: </text>
-              <text class="desc">{{job.phone}}</text>
-            </view>
+           
+          <button wx:if="{{job.attachment}}" bindtap='showJd' id="button2" data-id="{{job.attachment}}">Attachment</button>
+          <!-- <image src="/image/face.png" wx:if="{{job.attachment}}" bindtap='showJd' id="button2" data-id="{{job.attachment}}"/> -->
 
-              <view class="heading" wx:if="{{job.wechat}}">
-                <text class="h3">WeChat: </text>
-                <text class="desc">@{{job.wechat}}</text>
-              </view>
+          <view class="heading" wx:if="{{job.salary}}">
+            <text class="h3">Salary: </text>
+            <text class="desc">{{job.salary}}</text>
+          </view>
+          <view class="heading" wx:if="{{job.location}}">
+            <text class="h3">Location: </text>
+            <text class="desc">{{job.location}}</text>
+          </view>
+          <view class="heading" wx:if="{{job.email}}">
+            <text class="h3">Email: </text>
+            <text class="desc">{{job.email}}</text>
+          </view>
+          <view class="heading" wx:if="{{job.phone}}">
+            <text class="h3">Phone: </text>
+            <text class="desc">{{job.phone}}</text>
+          </view>
+          <view class="heading" wx:if="{{job.wechat}}">
+            <text class="h3">WeChat: </text>
+            <text class="desc">@{{job.wechat}}</text>
+          </view>
 
-            </view>
+        </view>
 
 
 
@@ -88,7 +90,6 @@
         </view>
 
       </view>
-     </swiper-item>
+    </swiper-item>
   </block>
 </swiper>
-

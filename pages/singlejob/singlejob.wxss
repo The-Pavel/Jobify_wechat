@@ -11,14 +11,14 @@ page {
   padding-bottom: 30rpx;
 }
 #button2{
-  background: white;
-  border: none;
-  margin-top: 20rpx;
-  color: black;
+  background: #8FBAF3;
+  margin: 20rpx 20rpx 20rpx 0;
+  color: white;
   font-size: 28rpx;
-  font-family: Roboto; 
-  
-  fill-opacity: 40rpx;
+  font-family: Roboto;  
+  border-radius: 20rpx;
+  text-align: left;
+  width: 200rpx; 
 }
 #edit_btn {
   /* width: 150rpx; */
@@ -82,15 +82,15 @@ page {
   font-weight: lighter;
 }
 .label-1__icon {
-    position: relative;
-    margin: 0rpx 10rpx;
-     /* display: inline-block;  */
-    vertical-align: middle;
-    width: auto;
-    height: auto;
-    background: white;
-    border: 1px solid #8FBAF3;
-    border-radius: 20px;
+  position: relative;
+  margin: 0rpx 10rpx;
+    /* display: inline-block;  */
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  background: white;
+  border: 1px solid #8FBAF3;
+  border-radius: 20px;
 }
 
 #container1{  
