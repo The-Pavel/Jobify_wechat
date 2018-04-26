@@ -2,8 +2,6 @@
 page {
   background: #F4F4F4;
 }
-
-
 .wx-swiper-dot {
   display: inline-flex;
   height: 18rpx;
@@ -28,7 +26,6 @@ swiper {
   box-shadow: 3px 3px 1px 1px rgba(0,0,0,0.1);
   padding-bottom: 30rpx;
 }
-
 .h1.title {
   text-align: center;
   margin: 0 auto;
@@ -64,7 +61,6 @@ swiper {
   padding: 30rpx 0rpx 0rpx 0rpx;
   border-top: 0.5px solid #BDBDBD;
 }
-
 .notice{
   margin: 20rpx 0;
   color: #888888;
@@ -136,23 +132,21 @@ swiper {
   margin: 20rpx 50rpx 20rpx 50rpx;
   transform: translateX(-50rpx);
 }  
-
 #button2{
-  background: white;
-  border: none;
-  margin-top: 20rpx;
-  color: black;
+  background: #8FBAF3;
+  margin: 20rpx 20rpx 20rpx 0;
+  color: white;
   font-size: 28rpx;
-  font-family: Roboto; 
-  fill-opacity: 40rpx; 
+  font-family: Roboto;  
+  border-radius: 20rpx;
+  text-align: left;
+  width: 200rpx; 
 }
-
 #job-desc {
   text-align:left;
   text-justify:inter-word;
   font-size: 28rpx;
 }
-
 .h1 {
   font-style: Roboto, sans-serif;
   font-size: 50rpx;
@@ -160,7 +154,6 @@ swiper {
   color: #8FBAF3;
   /* widxth: 100rpx; */
 }
-
 .square {
   /* background: #0245AC; */
   width: 500rpx;
