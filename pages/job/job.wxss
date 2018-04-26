@@ -138,14 +138,9 @@ swiper {
 }  
 
 #button2{
-  background: white;
-  border: none;
-  margin-top: 20rpx;
-  color: black;
-  font-size: 28rpx;
-  font-family: Roboto; 
-  
-  fill-opacity: 40rpx;
+  background:#8FBAF3;
+  color: white;
+  margin: 20rpx 40rpx; 
 }
 
 #job-desc {
