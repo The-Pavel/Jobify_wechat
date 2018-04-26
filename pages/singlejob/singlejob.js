@@ -12,7 +12,7 @@ Page({
     console.log(e.currentTarget.dataset.id)
     wx.showLoading({
       title: 'Loading',
-      duration: 500
+      duration: 1000
     })
     wx.getImageInfo({
       src: `${e.currentTarget.dataset.id}`,
@@ -24,7 +24,8 @@ Page({
             console.log(result)
             wx.showToast({
               title: 'Saved!',
-              icon: 'success'
+              icon: 'success',
+              duration: 2000
             })
           }
         })
