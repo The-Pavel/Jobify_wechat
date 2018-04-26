@@ -90,7 +90,7 @@ swiper {
   font-size: 20rpx;
   color:#888888;
 }
-.save {
+#save {
   height: 100rpx;
   width: 80rpx;
   /* margin: 0rpx 300rpx 30rpx 300rpx; */
@@ -99,12 +99,12 @@ swiper {
   top:50rpx;
   font-size: 30rpx;
 }
-.save1 {
+#save1 {
   color:#024583;
   position:absolute;
   left:630rpx;
-  top:63rpx;
-  font-size: 35rpx;
+  top:65rpx;
+  font-size: 28rpx;
 }
 .label-1{
   margin: 5rpx;
@@ -138,9 +138,13 @@ swiper {
 }  
 
 #button2{
-  background:#8FBAF3;
-  color: white;
-  margin: 20rpx 40rpx; 
+  background: white;
+  border: none;
+  margin-top: 20rpx;
+  color: black;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  fill-opacity: 40rpx; 
 }
 
 #job-desc {
