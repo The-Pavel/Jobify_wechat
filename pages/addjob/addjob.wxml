@@ -13,32 +13,34 @@
   <view class="page-body">
 
     <view class="page-section">
-      <view class="page-section-title">1. Your contact details</view>
+      <view class="page-section-title">1. CONTACT</view>
       <view class="textarea-wrp">
-
+      <text id="label">Company Name*</text>
 
         <textarea auto-focus="true"
               type="text"
-              class="desc2"
-              placeholder="Company Name (required)"
+              id="desc2"
+              placeholder="Your company name (required)"
               placeholder-class="preset" 
               name="company" auto-height />
 
-
-        <!--  <textarea auto-focus="true" placeholder="Company Name" name="company" auto-height />  -->
-
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder-class="preset" placeholder="Location" name="location" auto-height />
+        <text id="label">Location</text>
+        <textarea class="desc2" placeholder-class="preset" placeholder="Position location" name="location" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder-class="preset" placeholder="email@email.com (required)" name="email" auto-height />
+      <text id="label">Email*</text>
+        <textarea class="desc2" placeholder-class="preset" placeholder="name@domain.com (required)" name="email" auto-height />
       </view>
       <view class="textarea-wrp">
+        <text id="label">Phone Number</text>
         <textarea class="desc2" placeholder-class="preset" placeholder="+86 185******" name="phone" auto-height />
+        
       </view>
       <view class="textarea-wrp">
-        <textarea class="desc2" placeholder-class="preset" placeholder="WeChat" name="wechat" auto-height />
+      <text id="label">WeChat</text>
+        <textarea class="desc2" placeholder-class="preset" placeholder="WeChat_UserName" name="wechat" auto-height />
       </view>
 
 
@@ -50,16 +52,19 @@
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">2. Your offer</view>
+      <view class="page-section-title">2. POSITION</view>
 
         <view class="textarea-wrp">
-          <textarea placeholder="Job Title (required)" placeholder-class="preset"  class="desc2" name="title" auto-height />
+        <text id="label">Job Title*</text>
+          <textarea placeholder="Position title (required)" placeholder-class="preset"  class="desc2" name="title" auto-height />
         </view>
         <view class="textarea-wrp">
-          <textarea placeholder="Salary" placeholder-class="preset" class="desc2" name="salary" auto-height />
+        <text id="label">Salary</text>
+          <textarea placeholder="¥ per month/year" placeholder-class="preset" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-        <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Job Description (20-300 characters)" name="description" maxlength="-1" />
+      <text id="label">Job Description (20-300 characters)</text>
+        <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Summary of the position you are looking for" name="description" maxlength="-1" />
       </view>
 
       
@@ -67,7 +72,7 @@
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">3. What are you looking for? (5 tags max.)</view>
+      <view class="page-section-title">3. PERSONALITY FIT (5 tags max.)</view>
 
        <!-- <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
       {{arrayitem}}

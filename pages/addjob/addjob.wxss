@@ -17,6 +17,14 @@ page {
   font-weight: bolder;
   color: #888888;
 }
+#label {
+  font-weight: bolder;
+}
+#desc2{
+  font-size: 28rpx;
+  font-family: Roboto;
+  fill-opacity: 40rpx;
+}
 .form {
   background-color: #F4F4F4;
   padding:60rpx 40rpx;
@@ -29,7 +37,7 @@ textarea {
 }
 .preset {
   padding: 25rpx 0;
-  font-size: 28rpx;
+  font-size: 25rpx;
   font-weight: lighter; 
   color:#888888;
 }
@@ -43,8 +51,9 @@ textarea {
   padding-left:30rpx;
 }
 .page-section-title {
-  color: #024583;
+  color: #888888;
   font-weight: bolder;
+  font-size: 30rpx;
 }
  /* .page-section-details {
   margin-top: 5rpx;
@@ -60,10 +69,6 @@ textarea {
 }
 
 
-/* #buttonstyle{
- margin: 0 auto;
- background-color: white;
-} */
 
 
 .label-1{
@@ -112,9 +117,5 @@ textarea {
   color: white; 
 }
 
-.desc2{
-  font-size: 28rpx;
-  font-family: Roboto;
-  fill-opacity: 40rpx;
-}
+
 
