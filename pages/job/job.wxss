@@ -4,7 +4,8 @@ page {
 }
 .wx-swiper-dot {
   display: inline-flex;
-  height: 18rpx;
+  height: 10rpx !important; 
+  width: 10rpx !important;
   margin-bottom: 2148rpx;
 }
 swiper {
