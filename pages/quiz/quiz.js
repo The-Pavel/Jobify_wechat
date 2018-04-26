@@ -151,20 +151,28 @@ Page({
   },
 
   sendAnswers: function(e) {
-    setTimeout(this.changeSending, 5000)
-    this.data.answers.forEach(function (answer) {
-      wx.request({
-        url: "https://jobify.wogengapp.cn/api/v1/answers/",
-        // url: 'http://localhost:3000/api/v1/answers/',
-        method: 'POST',
-        data: answer,
-        success: function(res) {
-          wx.reLaunch({
-            url: '/pages/userscore/userscore',
-          })
-        }
+    const page = this
+    if (page.data.answers.length === 0) {
+      wx.showToast({
+        title: 'No Answer!',
+        image: '/image/warning.png'
       })
-    });
+    } else {
+      page.data.answers.forEach(function (answer) {
+        wx.request({
+          url: "https://jobify.wogengapp.cn/api/v1/answers/",
+          // url: 'http://localhost:3000/api/v1/answers/',
+          method: 'POST',
+          data: answer,
+          success: function (res) {
+            wx.reLaunch({
+              url: '/pages/userscore/userscore',
+            })
+          }
+        })
+      });
+    }
+    
 
   },
 

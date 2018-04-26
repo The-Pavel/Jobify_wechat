@@ -14,10 +14,7 @@
   </view>
 
 </view>
-<view wx:if="{{sending === true}}" class="popup">
-  <image id="submit-img" src="/image/Wedges-3s-200px (1).gif"></image>
-  <text id="submit-text">Let's see who you are...</text>
-</view>
+
 
 <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-with-animation="true">
   <view class="question-set" wx:for="{{questions}}" wx:for-item="question" wx:key="question.id" data-question="{{question}}">
