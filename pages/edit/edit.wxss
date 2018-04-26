@@ -18,6 +18,9 @@ page {
   font-weight: bolder;
   color: #888888;
 }
+#label {
+  font-weight: bolder;
+}
 .form {
   background-color: #F4F4F4;
   padding:60rpx 40rpx;
@@ -42,7 +45,7 @@ textarea {
     font-size: 28rpx; 
 }
 .page-section-title {
-  color: #024583;
+  color: #888888;
   font-weight: bolder;
 }
 .checkbox {

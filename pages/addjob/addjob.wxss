@@ -7,7 +7,6 @@ page {
   padding: 50rpx;
   font-weight: lighter;
 }
-
 .logo {
   width: 100rpx;
   height: 100rpx;
