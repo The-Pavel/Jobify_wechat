@@ -66,15 +66,10 @@ textarea {
 .group {
   display: inline-flex;
 }
-
-
-
-
 .label-1{
   margin: 5rpx;
   width: auto;
 }
-
 .label-1__text{
   text-align: center;
   line-height: 30rpx;
@@ -82,7 +77,6 @@ textarea {
   font-family: Roboto;
   fill-opacity: 40rpx;
 }
-
 .label-1__shape {
   padding:0px 10px;
   vertical-align: middle;
