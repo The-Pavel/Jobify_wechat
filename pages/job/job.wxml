@@ -20,12 +20,12 @@
   <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}">
     <swiper-item class="swipe" bindchange="changeIndicatorDots" >
 
-    <!-- <image id="right-arrow" src="/image/rightarrow.png"/>
-    <view id="arrow-label">swipe</view> -->
-
-    <image data-id="{{job.id}}" src="/image/tosave.png" class="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/>
-        <image data-id="{{job.id}}" src="/image/save.png" class="save" wx:else/>
-        <text class="save1">+</text>
+    
+      <image data-id="{{job.id}}" src="/image/tosave.png" id="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}"/>
+      <text data-id="{{job.id}}" id="save1" wx:if="{{!job.saveJobBtn}}" bindtap="saveJob">+</text>
+     
+      <image data-id="{{job.id}}" src="/image/save.png" id="save" wx:else/>
+    
 
       <view class="job_card">
         <view class="company_info">
