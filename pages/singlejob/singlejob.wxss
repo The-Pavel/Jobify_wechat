@@ -11,20 +11,21 @@ page {
   padding-bottom: 30rpx;
 }
 #button2{
-  background: #8FBAF3;
+  background: white;
   margin: 20rpx 20rpx 20rpx 0;
-  color: white;
+  color: #8FBAF3;
   font-size: 28rpx;
   font-family: Roboto;  
   border-radius: 20rpx;
-  text-align: left;
-  width: 200rpx; 
+  border: 5rpx solid #8FBAF3;
+  width: 220rpx; 
 }
 #edit_btn {
   /* width: 150rpx; */
-  background:#8FBAF3;
-  color: white;
+  background: white;
+  color: #8FBAF3;
   margin: 20rpx 40rpx; 
+  border: 5rpx solid #8FBAF3;
 }
 
 .fav_count {
@@ -84,11 +85,10 @@ page {
 .label-1__icon {
   position: relative;
   margin: 0rpx 10rpx;
-    /* display: inline-block;  */
   vertical-align: middle;
   width: auto;
   height: auto;
-  background: white;
+  background: #8FBAF3;
   border: 1px solid #8FBAF3;
   border-radius: 20px;
 }
@@ -104,14 +104,13 @@ page {
 }  
 
 .label-1__text{
-    text-align: center;
-    font-size: 28rpx;
-    font-family: Roboto;
-    font-weight: bolder; 
-    padding: 10rpx; 
-    width: auto;
-    height: auto;
-    color: #8FBAF3;
+  text-align: center;
+  font-size: 28rpx;
+  font-family: Roboto; 
+  padding: 10rpx; 
+  width: auto;
+  height: auto;
+  color: white;
 }
 
 .group {

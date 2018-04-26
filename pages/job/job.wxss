@@ -110,8 +110,8 @@ swiper {
     padding:0px 10px;
   vertical-align: middle;
   height: 40rpx;
-  background: white;
-  border: 1px solid #8FBAF3;
+  background: #8FBAF3;
+  border: 1px solid white;
   border-radius: 50rpx;
 }
 .label-1__text{
@@ -120,7 +120,7 @@ swiper {
   font-size: 28rpx;
   font-family: Roboto;
   fill-opacity: 40rpx;
-  color: #8FBAF3
+  color: white;
 }
 
 #container1{  
@@ -133,14 +133,16 @@ swiper {
   transform: translateX(-50rpx);
 }  
 #button2{
-  background: #8FBAF3;
+  background: white;
   margin: 20rpx 20rpx 20rpx 0;
-  color: white;
+  color: #8FBAF3;
   font-size: 28rpx;
+  font-weight: bolder;
   font-family: Roboto;  
   border-radius: 20rpx;
+  border: 5rpx solid #8FBAF3;
   text-align: left;
-  width: 200rpx; 
+  width: 220rpx; 
 }
 #job-desc {
   text-align:left;

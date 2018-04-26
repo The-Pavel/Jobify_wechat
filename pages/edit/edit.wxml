@@ -63,7 +63,7 @@
           <textarea placeholder="Salary" placeholder-class="preset" value="{{salary}}" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-      <text id="label">Job Description (20-300 characters)</text>
+      <text id="label">Job Description* (20-300 characters)</text>
         <textarea style="height: 12em" class="desc2" placeholder="Job Description" placeholder-class="preset" value="{{description}}" name="description" maxlength="-1" />
       </view>
 
@@ -72,22 +72,17 @@
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">3. PERSONALITY FIT (5 tags max.)</view>
+      <view class="page-section-title">3. PERSONALITY FIT* (5 tags max.)</view>
 
-       <!-- <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
-      {{arrayitem}}
-      </button>  -->
-      <!-- <view class="checkbox">
-          <checkbox value="full-time" checked="true"/>Full time position
-        </view> -->
+      <view class="textarea-wrp"><text class="desc2">Current tags: {{tag_list}}</text></view>
 
-       <checkbox-group class="group" bindchange="checkboxChange" >
+      <checkbox-group class="group" bindchange="checkboxChange" >
       <view id = "container1">
         <view class="label-1" wx:for="{{checkboxItems}}">
           <label>
             <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
             <view class="label-1__shape" style="background:{{item.checked ? '#8FBAF3': 'white'}}">
-              <text style="color: {{item.checked ? 'white': '#8FBAF3'}}" class="label-1__text">{{item.value}}</text>
+               <text style="color: {{item.checked ? 'white': '#8FBAF3'}}" class="label-1__text">{{item.value}}</text> 
             </view>
           </label>
         </view>

@@ -26,10 +26,9 @@ page {
   padding:60rpx 40rpx;
   
 }
-
 textarea {
-    padding: 25rpx 0;
-    fill-opacity: 40rpx;
+  padding: 25rpx 0;
+  fill-opacity: 40rpx;
 }
 .preset {
   padding: 25rpx 0;
@@ -99,7 +98,7 @@ textarea {
   flex-wrap: wrap; 
   height: 80%;
   justify-content: center;
-  margin: 0 20rpx;
+  margin: 20rpx 20rpx;
 }  
 
 .button2{
