@@ -38,7 +38,7 @@
       <view id = "container1">
         <view class="label-1" wx:key="{{tag}}" wx:for="{{tags}}" wx:for-item="tag">
           <view class="label-1__icon">
-            <text class="label-1__text">{{tag}}</text>
+            <text id="label-1__text">{{tag}}</text>
           </view>
         </view>
       </view>

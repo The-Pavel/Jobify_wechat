@@ -29,7 +29,7 @@
 
       <view class="job_card">
         <view class="company_info">
-          <image class="job_logo" wx:if="{{job.image !== null}}" src="{{job.image}}" />
+          <image class="job_logo" wx:if="{{job.image}}" src="{{job.image}}" />
           <image wx:else class="job_logo" src="/image/jobify.png" />
           <text class="h1 title">
           {{job.company}}</text>

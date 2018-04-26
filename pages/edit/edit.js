@@ -1,4 +1,6 @@
 // pages/edit/edit.js
+
+const AV = require('../../utils/av-weapp-min.js')
 Page({
 
   /**
@@ -97,7 +99,7 @@ Page({
     new_job.image = page.data.image
     new_job.attachment = page.data.attachment
 
-    if (new_job.email.length === 0 || new_job.company.length === 0 || new_job.title.length === 0 || (new_job.tag_list.length < 1 || new_job.tag_list.length > 5) || (new_job.description.length < 20 || new_job.description.length > 300)) {
+    if (new_job.email.length === 0 || new_job.company.length === 0 || new_job.title.length === 0 || (new_job.description.length < 20 || new_job.description.length > 300)) {
       wx.showToast({
         title: 'Error!',
         image: '/image/warning.png'
@@ -114,8 +116,8 @@ Page({
           title: 'Updated!',
           icon: 'success'
         })
-        wx.reLaunch({
-          url: '/pages/postedjobs/postedjobs',
+        wx.navigateBack({
+          
         })
       }
     })
