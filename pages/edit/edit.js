@@ -1,38 +1,17 @@
 // pages/edit/edit.js
+
+const AV = require('../../utils/av-weapp-min.js')
+
+const checkboxItems = require('../../utils/checkboxItems.js')
+
+    
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    checkboxItems: [
-      { name: "outgoing", value: 'outgoing' },
-      { name: 'driven', value: 'driven' },
-      { name: 'assertive', value: 'assertive' },
-      { name: 'sociable', value: 'sociable' },
-      { name: 'extraverted', value: 'extraverted' },
-      { name: 'indirect', value: 'indirect' },
-      { name: 'loyal', value: 'loyal' },
-      { name: 'introverted', value: 'introverted' },
-      { name: 'talkative', value: 'talkative' },
-      { name: 'empathetic', value: 'empathetic' },
-      { name: 'agreeable', value: 'agreeable' },
-      { name: 'warm- hearted', value: 'warm-hearted' },
-      { name: 'collaborative', value: 'collaborative' },
-      { name: 'independent', value: 'independent' },
-      { name: 'determined', value: 'determined' },
-      { name: 'direct', value: 'direct' },
-      { name: 'unemotional', value: 'unemotional' },
-      { name: 'responsible', value: 'responsible' },
-      { name: 'level-headed', value: 'level-headed' },
-      { name: 'structure- freak', value: 'structure-freak' },
-      { name: 'perfectionist', value: 'perfectionist' },
-      { name: 'risk-taker', value: 'risk-taker' },
-      { name: 'flexible', value: 'flexible' },
-      { name: 'risk-averse', value: 'risk-averse' },
-      { name: 'passionate', value: 'passionate' },
-      { name: 'thorough', value: 'thorough' },
-      { name: 'intuitive', value: 'intuitive' }]
+    checkboxItems: checkboxItems
   },
 
   /**
@@ -41,6 +20,7 @@ Page({
   // when onload, get load job
   onLoad: function (options) {
     let page = this;
+    console.log(options)
     page.setData({id: options.id})
     wx.showToast({
       title: 'Loading...',
@@ -54,23 +34,23 @@ Page({
 
       method: 'GET',
       success(res) {
-        // console.log(res)
         var job = res.data;
+        const tags = job.tag_list
 
         // Update local data
         page.setData(
           job
         );
-        console.log(job)
         wx.hideToast();
       }
     });
+    // console.log("selected tags outside of API", )
   },
   // this is for the tag
   checkboxChange: function (e) {
     const page = this
     var checked = e.detail.value
-    // console.log(e)
+    console.log('checked:', checked)
     var changed = {}
     for (var i = 0; i < this.data.checkboxItems.length; i++) {
       if (checked.indexOf(this.data.checkboxItems[i].name) !== -1) {
@@ -79,9 +59,21 @@ Page({
         changed['checkboxItems[' + i + '].checked'] = false
       }
     }
+    console.log("page.data:", page.data)
     this.setData(changed)
+    if (e.detail.value.length == 6) {
+      wx.showModal({
+        title: 'STOP',
+        content: 'Please only choose 5 tags',
+        confirmText: "Ok",
+        showCancel: false,
+        success: function (res) {
+          console.log('success')
+        }
+      })
+    }
     page.setData({ tag_list: checked })
-    console.log(page.data.tag_list)
+    console.log('Selected tags', page.data.tag_list)
   },
 // after edit, upload the form back to the server 
   bindSubmit: function (e) {
@@ -97,7 +89,7 @@ Page({
     new_job.image = page.data.image
     new_job.attachment = page.data.attachment
 
-    if (new_job.email.length === 0 || new_job.company.length === 0 || new_job.title.length === 0 || (new_job.tag_list.length < 1 || new_job.tag_list.length > 5) || (new_job.description.length < 20 || new_job.description.length > 300)) {
+    if (new_job.email.length === 0 || new_job.company.length === 0 || new_job.title.length === 0 || (new_job.description.length < 20 || new_job.description.length > 500)) {
       wx.showToast({
         title: 'Error!',
         image: '/image/warning.png'
@@ -114,8 +106,8 @@ Page({
           title: 'Updated!',
           icon: 'success'
         })
-        wx.reLaunch({
-          url: '/pages/postedjobs/postedjobs',
+        wx.navigateBack({
+          
         })
       }
     })

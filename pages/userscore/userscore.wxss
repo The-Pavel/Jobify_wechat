@@ -34,28 +34,29 @@ page{
 
 }
 .label-1{
-    margin: 8rpx 5rpx;  
+    margin: 8rpx 6rpx;  
     width: auto;
-    height: 50rpx;
+    height: 54rpx;
 }
-.label-1__text{
-    text-align: center;
-    line-height: 50rpx;
-    font-size: 28rpx;
-    font-family: Roboto;
-    fill-opacity: 40rpx;
-    padding:10px;
-    color: #8FBAF3;
+#label-1__text{
+  text-align: center;
+  line-height: 50rpx; 
+  font-size: 28rpx;
+  font-weight: bolder;
+  font-family: Roboto;
+  fill-opacity: 35rpx; 
+  padding:0rpx 12rpx 0rpx 12rpx; 
+  color: white;
 }
 
 .label-1__icon {
     position: relative;
     vertical-align: middle;
-    width: auto;
-    height: 50rpx;
-    background: white;
-    border: 2px solid #8FBAF3;
-    border-radius: 20px;
+    /* width: auto;
+    height: 44rpx; */
+    background: #8FBAF3;
+    border: 2rpx solid #8FBAF3;
+    border-radius: 50rpx;
 }
 
 .group {
@@ -132,10 +133,10 @@ box-sizing:border-box;
 }
 
 #job-btn {
-  background: #8FBAF3;
-  color: white;
+  background: white;
+  color: #8FBAF3;
   margin: 15rpx;
-  border: none;
+  border: 3rpx solid #8FBAF3;
   position: fixed;
   bottom: 150rpx;
 }

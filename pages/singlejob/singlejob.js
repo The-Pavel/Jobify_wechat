@@ -37,21 +37,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    console.log(options)
     let page = this;
-    page.setData({user_id: wx.getStorageSync('user').id})
-    // loading specific station data from api
-    const id = options.id
-
-    wx.request({
-            // url: `http://localhost:3000/api/v1/jobs/${id}`,
-            url: `https://jobify.wogengapp.cn/api/v1/jobs/${id}`,
-      success: function (res) {
-        console.log(res.data)
-        page.setData({job: res.data});
-      }
-    })
+    page.setData({ user_id: wx.getStorageSync('user').id, option: options.id })
+    
+    
   },
 
   /**
@@ -65,7 +54,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
+    let page = this;
+    
+
+    wx.request({
+      // url: `http://localhost:3000/api/v1/jobs/${id}`,
+      url: `https://jobify.wogengapp.cn/api/v1/jobs/${page.data.option}`,
+      success: function (res) {
+        console.log(res.data)
+        page.setData({ job: res.data });
+      }
+    })
   },
 
   /**

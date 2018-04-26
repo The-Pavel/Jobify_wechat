@@ -63,7 +63,7 @@
           <textarea placeholder="¥ per month/year" placeholder-class="preset" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-      <text id="label">Job Description (20-300 characters)</text>
+      <text id="label">Job Description* (20-300 characters)</text>
         <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Summary of the position you are looking for" name="description" maxlength="-1" />
       </view>
 
@@ -72,7 +72,7 @@
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">3. PERSONALITY FIT (5 tags max.)</view>
+      <view class="page-section-title">3. PERSONALITY FIT* (5 tags max.)</view>
 
        <!-- <button wx:for= "{{array}}" wx:for-item= "arrayitem" bindtap= "click" size = "mini" id = "buttonstyle">
       {{arrayitem}}

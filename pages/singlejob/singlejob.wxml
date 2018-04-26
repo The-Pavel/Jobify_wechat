@@ -1,7 +1,8 @@
 <!--pages/singlejob/singlejob.wxml-->
 <view class="job_card">
         <view class="company_info">
-          <image class="job_logo" src="{{job.image}}"/>
+          <image class="job_logo" wx:if="{{job.image}}" src="{{job.image}}" />
+          <image wx:else class="job_logo" src="/image/jobify.png" />
           <view class="h1">
             {{job.company}}
           </view>
