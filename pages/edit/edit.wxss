@@ -43,6 +43,29 @@ textarea {
     color: #024583;
     font-size: 28rpx; 
 }
+#textarea-wrp {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0 25rpx;
+    background-color: #fff;
+    font-weight: bolder;
+    color: #024583;
+    font-size: 28rpx; 
+    width: 600rpx;
+    height: auto;
+    text-overflow: none;
+}
+#textarea-wrp2 {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0 25rpx;
+    background-color: #fff;
+    color: #024583;
+    font-size: 28rpx; 
+    width: 600rpx;
+    height: auto;
+    text-overflow: none;
+}
 .page-section-title {
   color: #888888;
   font-weight: bolder;

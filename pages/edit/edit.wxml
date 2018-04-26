@@ -74,7 +74,10 @@
     <view class="page-section">
       <view class="page-section-title">3. PERSONALITY FIT* (5 tags max.)</view>
 
-      <view class="textarea-wrp"><text class="desc2">Current tags: {{tag_list}}</text></view>
+      <view id="textarea-wrp">Current tags:</view>
+      
+        <text wx:for="{{tag_list}}"id="textarea-wrp2" class="desc2"> {{item}}</text>
+
 
       <checkbox-group class="group" bindchange="checkboxChange" >
       <view id = "container1">
