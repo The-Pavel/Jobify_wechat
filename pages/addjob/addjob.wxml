@@ -63,7 +63,7 @@
           <textarea placeholder="¥ per month/year" placeholder-class="preset" class="desc2" name="salary" auto-height />
       </view>
       <view class="textarea-wrp">
-      <text id="label">Job Description* (20-300 characters)</text>
+      <text id="label">Job Description* (20-500 characters)</text>
         <textarea style="height: 12em" class="desc2" placeholder-class="preset"  placeholder="Summary of the position you are looking for" name="description" maxlength="-1" />
       </view>
 
