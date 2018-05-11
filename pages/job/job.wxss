@@ -6,7 +6,9 @@ page {
   display: inline-flex;
   height: 10rpx !important; 
   width: 10rpx !important;
-  margin-bottom: 2148rpx;
+  /* margin-bottom: 2148rpx; */
+  position: sticky;
+  transform: translateY(-2148rpx);
 }
 swiper {
    height: 2200rpx !important; 
@@ -41,6 +43,7 @@ swiper {
   width: 100rpx;
   height: 100rpx;
   padding: 0rpx 0rpx 30rpx 0rpx;
+  z-index: 1000000000;
 }
 .job_info {
   margin: 50rpx 50rpx 50rpx 50rpx;
@@ -87,7 +90,7 @@ swiper {
   font-size: 20rpx;
   color:#888888;
 }
-#save {
+.save {
   height: 100rpx;
   width: 80rpx;
   /* margin: 0rpx 300rpx 30rpx 300rpx; */
@@ -95,13 +98,14 @@ swiper {
   left:600rpx;
   top:50rpx;
   font-size: 30rpx;
+  z-index: 1000000000000;
 }
 #save1 {
   color:#024583;
   position:absolute;
   left:630rpx;
   top:65rpx;
-  font-size: 28rpx;
+  font-size: 35rpx;
 }
 .label-1{
   margin: 5rpx;
