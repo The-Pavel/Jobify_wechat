@@ -24,7 +24,7 @@
 
 
 <!--NEED TO LINK BACKEND TO QUIZ  -->
-  <view class="h1">My Personality Tags</view>
+  <view id="personality-title" class="h1">My Personality Tags</view>
   <view wx:if="{{loading == true}}">
       <view id="loading-wrapper">
         <view id="loading-text">You are...</view>
@@ -44,7 +44,8 @@
       </view>
     <!-- </checkbox-group> -->
 
-    <button id="job-btn" class="h1" bindtap="newjobs">Check out your jobs!</button>
+    <button id="job-btn" bindtap="newjobs">Check out your jobs!</button>
+    <button id="quiz-btn"  bindtap="continueQuiz">Or continue the quiz!</button>
 
 
 <!-- <image class="avatar" src="{{userInfo.avatarUrl}}" bindtap='toprofile'/>-->

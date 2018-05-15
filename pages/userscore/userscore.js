@@ -15,7 +15,13 @@ Page({
   },
 
   backtoquiz: function (e) {
-    wx.reLaunch({
+    wx.navigateTo({
+      url: `/pages/quiz/quiz`,
+    })
+  },
+
+  continueQuiz: function (e) {
+    wx.navigateTo({
       url: `/pages/quiz/quiz`,
     })
   },
@@ -34,7 +40,7 @@ Page({
 
 
   onLoad: function (options) {
-    setTimeout(this.stopLoad, 3000)
+    setTimeout(this.stopLoad, 1000)
     const page = this
     const user = wx.getStorageSync('user')
     wx.request({

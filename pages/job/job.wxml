@@ -17,14 +17,19 @@
 </view>
 
 <swiper bindchange="changeswiper" indicator-dots="{{indicatorDots}}" indicator-color="#8FBAF3" indicator-active-color="#024583">
-  <block wx:for="{{jobs}}" wx:for-item="job" wx:key="{{jobs.id}}">
+  <block wx:for="{{jobs}}" wx:for-item="job">
     <swiper-item class="swipe" bindchange="changeIndicatorDots">
 
+      <view data-id="{{job.id}}" wx:if="{{!job.saveJobBtn}}" bindtap="saveJob">
+        <image data-id="{{job.id}}" src="/image/tosave.png" class="save"/>
+        <view data-id="{{job.id}}" id="save1" wx:if="{{!job.saveJobBtn}}">+</view>
+      </view>
+      <view wx:else>
+        <image data-id="{{job.id}}" src="/image/save.png" class="save"/>
+      </view>
+      <!--  -->
 
-      <image data-id="{{job.id}}" src="/image/tosave.png" id="save" bindtap="saveJob" wx:if="{{!job.saveJobBtn}}" />
-      <text data-id="{{job.id}}" id="save1" wx:if="{{!job.saveJobBtn}}" bindtap="saveJob">+</text>
-
-      <image data-id="{{job.id}}" src="/image/save.png" id="save" wx:else/>
+      
 
 
       <view class="job_card">
